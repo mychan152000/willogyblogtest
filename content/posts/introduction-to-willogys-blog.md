@@ -1,7 +1,7 @@
 ---
 title: Introduction to Willogy's blog
 date: 2021-04-06T18:14:45.547Z
-published: false
+published: true
 tags:
   - music
   - gaming
