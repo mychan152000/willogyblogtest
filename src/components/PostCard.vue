@@ -1,4 +1,5 @@
 <template>
+<div class="col-lg-6 col-md-6 col-sm-12">
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
       <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
@@ -12,6 +13,7 @@
 
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
+  </div>
   </div>
 </template>
 

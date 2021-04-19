@@ -1,4 +1,5 @@
 <template>
+
   <div id="app">
 
     <header class="header">
@@ -6,9 +7,9 @@
         <Logo v-if="showLogo" />
       </div>
 
-      <div class="header__right">
+      <!-- <div class="header__right">
         <ToggleTheme />
-      </div>
+      </div> -->
     </header>
 
     <main class="main">
@@ -16,16 +17,16 @@
     </main>
 
     <footer class="footer">
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//www.suits.at"> SUITS </a></span>
+      <span class="footer__copyright">Copyright © Willogy {{ new Date().getFullYear() }}. </span>
     </footer>
 
   </div>
 </template>
 
 <script>
+
 import Logo from '~/components/Logo.vue'
-import ToggleTheme from '~/components/ToggleTheme.vue'
+// import ToggleTheme from '~/components/ToggleTheme.vue'
 
 export default {
   props: {
@@ -33,7 +34,6 @@ export default {
   },
   components: {
     Logo,
-    ToggleTheme
   }
 }
 </script>

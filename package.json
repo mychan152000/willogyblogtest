@@ -11,7 +11,10 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "gridsome": "^0.7.23"
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "gridsome": "^0.7.23",
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "node-sass": "^5.0.0",
