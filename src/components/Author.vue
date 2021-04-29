@@ -6,13 +6,10 @@
 		</h1>
 
 		<p class="author__intro">
-			A simple, hackable & minimalistic starter for Gridsome that uses Netlify CMS for content.
+			Explore our community features, case studies, opinion pieces, and more
 		</p>
 
-		<p class="author__links">
-			<a href="//twitter.com/suits_at">Follow on Twitter</a>
-			<a href="https://github.com/suits-at/netlifycms-gridsome">GitHub</a>
-		</p>
+	
 
 	</div>
 </template>
@@ -32,10 +29,11 @@ export default {
 </script>
 
 <style lang="scss">
+
 .author {
-	margin: 0 auto;
+	margin: 0 5%;
 	max-width: 500px;
-	text-align: center;
+	text-align: left;
 	padding-bottom: calc(var(--space) / 2);
 
 	&__image {
@@ -50,7 +48,6 @@ export default {
 	}
 
 	&__site-title {
-		margin: 0 auto;
 		font-size: 1.5em;
 		max-width: 400px;
 	}

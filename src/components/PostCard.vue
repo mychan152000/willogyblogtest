@@ -1,5 +1,5 @@
 <template>
-<div class="col-lg-6 col-md-6 col-sm-12">
+<div class="col-lg-6 col-md-12 col-sm-12">
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
       <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
@@ -31,10 +31,12 @@ export default {
 </script>
 
 <style lang="scss">
+
 .post-card {
   margin-bottom: var(--space);
   position: relative;
-
+  box-shadow: 1px 2px 2px 2px rgba(0,0,0,.1);
+  
   &__header {
     margin-left: calc(var(--space) * -1);
     margin-right: calc(var(--space) * -1);
@@ -47,7 +49,10 @@ export default {
       display: none;
     }
   }
-
+  &__content {
+    padding:0%;
+    margin:0%;
+  }
   &__image {
     min-width: 100%;
   }
@@ -58,7 +63,7 @@ export default {
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+    box-shadow: 5px 10px 30px 10px rgba(0,0,0,.1);
   }
 
   &__tags {
@@ -76,6 +81,12 @@ export default {
     overflow: hidden;
     text-indent: -9999px;
     z-index: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .post-card {
+      width: 100%;
+
   }
 }
 </style>

@@ -16,8 +16,13 @@
       <slot/>
     </main>
 
-    <footer class="footer">
+    <footer class="footer flex">
       <span class="footer__copyright">Copyright © Willogy {{ new Date().getFullYear() }}. </span>
+      <ul class="footer__list">
+        <li>Follow on <a href="https://Willogy.io" style="color:#6B17E6" target="_blank">Willogy.io</a></li>
+        <li><a href="https://willogy.io/#" target="_blank">Products</a></li>
+        <li><a href="https://willogy.io/#about" target="_blank">About</a></li>
+      </ul>
     </footer>
 
   </div>
@@ -39,6 +44,12 @@ export default {
 </script>
 
 <style lang="scss">
+.footer li{
+  display: inline;
+   margin: 0px 12px;   
+
+
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -68,18 +79,21 @@ export default {
 
 .footer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: calc(var(--space) / 2);
   text-align: center;
   font-size: .8em;
 
   > span {
     margin: 0 .35em;
+    
   }
 
   a {
     color: currentColor;
+  }
+  &__list {
+    list-style-type: none;
   }
 }
 </style>

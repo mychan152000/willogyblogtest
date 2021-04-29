@@ -1,16 +1,18 @@
 <template>
-  <Layout :show-logo="false">
+  <div class="container">
+  <Layout :show-logo="true">
     <!-- Author intro -->
     <Author :show-title="true" />
 
     <!-- List posts -->
     <div class="posts container-fluid">
-      <div class="row">
+      <div class="row" >
         <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
       </div>
     </div>
 
   </Layout>
+  </div>
 </template>
 
 <page-query>
@@ -55,3 +57,6 @@ export default {
   }
 }
 </script>
+<style  scoped>
+
+</style>
