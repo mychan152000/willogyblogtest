@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Articles',
-  siteDescription: 'Explore our community features, case studies, opinion pieces, and more',
+  siteName: 'Willogy Insights',
+  siteDescription: 'Knowledge is common. Our insights and experience on-top of them is unique',
 
   templates: {
     Post: '/:title',

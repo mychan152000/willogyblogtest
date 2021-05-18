@@ -6,7 +6,7 @@
 		</h1>
 
 		<p class="author__intro">
-			Explore our community features, case studies, opinion pieces, and more
+			{{ $static.metadata.siteDescription }}
 		</p>
 
 	
@@ -17,7 +17,8 @@
 <static-query>
 query {
   metadata {
-    siteName
+    siteName,
+		siteDescription
   }
 }
 </static-query>

@@ -19,7 +19,7 @@
     <footer class="footer flex">
       <span class="footer__copyright">Copyright © Willogy {{ new Date().getFullYear() }}. </span>
       <ul class="footer__list">
-        <li>Follow on <a href="https://Willogy.io" style="color:#6B17E6" target="_blank">Willogy.io</a></li>
+        <li>Follow on <a href="https://willogy.io" style="color:#6B17E6" target="_blank">Willogy.io</a></li>
         <li><a href="https://willogy.io/#" target="_blank">Products</a></li>
         <li><a href="https://willogy.io/#about" target="_blank">About</a></li>
       </ul>
@@ -58,6 +58,8 @@ export default {
   padding: 0 calc(var(--space) / 2);
   top:0;
   z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 
   &__left,
   &__right {
