@@ -13,7 +13,9 @@ description: >-
 
   Let's get this problem enlightened a bit through exploring the sufferings of AI formation in the paper “Why AI is harder than we think”
 ---
+In recent years, AI has appeared a lot in the media. Is it really miraculous as people say, or just a hype?
 
+Let's get this problem enlightened a bit through exploring the sufferings of AI formation in the paper “Why AI is harder than we think”
 
 - - -
 
