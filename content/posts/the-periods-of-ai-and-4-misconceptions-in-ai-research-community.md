@@ -28,7 +28,8 @@ The author also points out 4 fallacies that have long (and still) existed in the
 * **“The lure of wishful mnemonics”**: This fallacy is to reflect the way researchers use words in their program/procedure description. They named their program‘s operations with words such as “UNDERSTAND” or “THOUGHT”,... “Wishful mnemonics” is what Drew McDermott called these aspirational terms \[2]. Using such human words can unintentionally cause a risk of misunderstandings to people that AI has achieved common sense as humans even though it hasn’t. Currently, work on AI is still filled with such wishful mnemonics.
 * **“Intelligence is all in the brain”**: Simulating AI by only the human brain part is not sufficient, there must be some connections with the body. Nevertheless, researchers have just focused on increasing the computational power of resources for AI to reach the human-level ability. According to a number of cognitive scientists:  “Our thoughts are grounded, or inextricably associated with perception, action, and emotion, and that our brain and body work together to have cognition” \[1].
 
-- - -
+
+
 
 All in all, it is just a matter of time until AI replaces humans. No one knows when it will happen, maybe next year, next century, next millennium or even more than that. Whether it happens or not, only one thing we can perceive for now is that AI will definitely be able to support us do most of the things in the near future.
 
