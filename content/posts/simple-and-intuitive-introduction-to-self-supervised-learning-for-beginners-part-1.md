@@ -13,6 +13,10 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
   Self-supervised learning as \"The machine predicts any parts of its input for
   any observed part\"._\r\n"
 ---
+
+
+> *In the speech at AAAI 2020, Yann LeCun described Self-supervised learning as "The machine predicts any parts of its input for any observed part".*
+
 ### MOTIVATIONS AND IDEAS
 
 Data makes a major contribution in the performance of today's machine learning/deep learning model. In general, having a big and good quality enough dataset is the main factor that makes your model perform well or not. However, the data collection and annotation work usually costs a lot of time and effort.
@@ -33,7 +37,7 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 
 </p>
 <p align=center>
-    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\[2]).</em>
+    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\[2]).</em>
 </p>
 
 A pretext task is the task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
@@ -61,7 +65,7 @@ Here are some pretext tasks.
 
 <table>
 <tr>
-    <td><pre><b>Figure 3: Predicting rotation of image as a pretext task (image from \\[6]).</b>
+    <td><pre><b>Figure 3: Predicting rotation of image as a pretext task (image from \\\[6]).</b>
 
 &#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</pre>
 
@@ -161,10 +165,9 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 ![3 types of Self-Supervised Learning](../../static/images/uploads/3_types_of_ssl.jpg "3 types of Self-Supervised Learning")
 
-
 </p>
 <p align=center>
-    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\[3]).</em>
+    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\\[3]).</em>
 </p>
 
 * **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct it into some types of outputs required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used by downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
@@ -215,7 +218,7 @@ Among the three, the contrastive model seems to be the one that is best suited f
     <img src="images/contrastive_learning_intuition.JPG" width="420" alt>
 </p>
 <p align=center>
-    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\[4]).</em>
+    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\\[4]).</em>
 </p>
 
 Having known about the different properties of these model types, we definitely also need to know a little information about their advantages and disadvantages:
