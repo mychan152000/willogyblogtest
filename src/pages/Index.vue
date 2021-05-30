@@ -58,5 +58,9 @@ export default {
 }
 </script>
 <style  scoped>
+table th, table td, table pre { 
+  word-break: break-all !important;
+}
+
 
 </style>
