@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-  <Layout :show-logo="true">
-    <!-- Author intro -->
-    <Author :show-title="true" />
+    <Layout :show-logo="true">
+      <!-- Author intro -->
+      <Author :show-title="true" />
 
-    <!-- List posts -->
-    <div class="posts container-fluid">
-      <div class="row" >
-        <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+      <!-- List posts -->
+      <div class="posts container-fluid">
+        <div class="row" >
+          <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+        </div>
       </div>
-    </div>
 
-  </Layout>
+    </Layout>
   </div>
 </template>
 
