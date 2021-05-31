@@ -85,13 +85,16 @@ Here are some pretext tasks.
   <col span="1" style="width: 20%;">
 
 </colgroup>
+
+
 <tr>
     <td>
 
 ![color transformation task](../../static/images/uploads/color_transformation_as_pretext_task.jpg "Pretext Task: Color Transformation")
 
 </td>
-    <td><b>Figure 2: Color Transformation as a pretext task (image from \[4]).</b>
+    <td>\
+<b>Figure 2: Color Transformation as a pretext task (image from \[4]).</b>
 (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
