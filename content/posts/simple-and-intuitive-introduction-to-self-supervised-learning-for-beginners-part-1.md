@@ -1,6 +1,6 @@
 ---
-title: Simple and intuitive introduction to Self-Supervised Learning for
-  beginners - Part 1
+title: "Self-Supervised Learning - Part 1: Simple and intuitive introduction for
+  beginners"
 date: 2021-05-25T04:23:38.820Z
 published: true
 tags:
