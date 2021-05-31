@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
+  icon: './src/assets/logo.svg',
   siteName: 'Willogy Insights',
   siteDescription: 'Knowledge is common. Our insights and experience on-top of them is unique',
 
