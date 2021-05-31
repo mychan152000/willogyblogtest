@@ -46,23 +46,16 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
   border-collapse: collapse;
   width: 50%;
 }
-
-\#tabletype2 td, #tabletype2 th {
-
-  width: 20%;
-  border: 1px solid #ddd;
-  padding: 8px;
-}
 </style>
 
 
 
 ### MOTIVATIONS AND IDEAS
 
-Data makes a major contribution in the performance of today's machine learning/deep learning model. In general, having a big and good quality enough dataset is the main factor that makes your model perform well or not. However, the data collection and annotation work usually costs a lot of time and effort.
+Data makes a major contribution to the performance of today's machine learning/deep learning model. In general, having a big and good quality enough dataset is the main factor that makes your model perform well or not. However, the data collection and annotation work usually cost a lot of time and effort.
 This is where Self-supervised learning (SSL) comes in to help. The main goal of SSL is to learn visual features from large-scale unlabeled images. 
 
-What makes SSL different from other methods is it takes advantage of ‘pseudo labels’, instead of human-annotated labels. These pseudo labels are automatically generated and completely away from the human force, which we get through very simple operations. For example, a color image is the label of a grayscale image, which we just need to convert color image to grayscale image to have a pair of (input, label). Full-content image is the label of image occluded by a small region, which we just need a random crop to have a pair of (input, label).
+What makes SSL different from other methods is it takes advantage of ‘pseudo labels’, instead of human-annotated labels. These pseudo labels are automatically generated and completely away from the human force, which we get through very simple operations. For example, a color image is the label of a grayscale image, which we just need to convert color image to grayscale image to have a pair of (input, label). A full-content image is the label of an image occluded by a small region, which we just need a random crop to have a pair of (input, label).
 
 Another advantage of SSL is its ability to extract "common sense" features. Take image classification as an example, to recognize between dog and cat, supervised methods may only need to extract feature representation in some way providing that they are correctly classified. Usually, this type of learning is not similar enough to that of humans. Self-supervised learning is also created for this reason, it can extract feature representation that has common sense properties, such as color, rotation angle, object position, context,... Common sense helps improve 2 things about generalization: the learned representation from one dataset gives good performance when evaluating on another dataset, the learned representation by this problem can be used well on another problem.
 
@@ -86,7 +79,12 @@ A downstream task is a task that is used for model finetuning. It can be any one
 
 Here are some pretext tasks.
 
-<table id="tabletype2">
+<table id="tabletype2" style="width: 100%">\
+<colgroup>\
+  <col span="1" style="width: 5%;">\
+  <col span="1" style="width: 20%;">
+
+</colgroup>
 <tr>
     <td>
 
