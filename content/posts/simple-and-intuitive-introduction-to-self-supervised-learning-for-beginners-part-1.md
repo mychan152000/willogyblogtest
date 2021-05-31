@@ -15,24 +15,25 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
 ---
 > *In the speech at AAAI 2020, Yann LeCun described Self-supervised learning as "The machine predicts any parts of its input for any observed part".*
 
-
 <style>
-table {
+#tabletype1 {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  //width: 100%;
 }
 
-td, th {
+#tabletype1 td, #tabletype1 th {
+
+  width: 20%;
   border: 1px solid #ddd;
-  padding: 8px;
+  //padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+#tabletype1 tr:nth-child(even){background-color: #f2f2f2;}
 
-tr:hover {background-color: #ddd;}
+#tabletype1 tr:hover {background-color: #ddd;}
 
-th {
+#tabletype1 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
@@ -61,7 +62,7 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 
 </p>
 <p align=center>
-    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\\[2]).</em>
+    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\\\[2]).</em>
 </p>
 
 A pretext task is the task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
@@ -70,7 +71,7 @@ A downstream task is a task that is used for model finetuning. It can be any one
 
 Here are some pretext tasks.
 
-<table>
+<table width="100">
 <tr>
     <td>
 
@@ -89,7 +90,7 @@ Here are some pretext tasks.
 
 <table>
 <tr>
-    <td><pre><b>Figure 3: Predicting rotation of image as a pretext task (image from \\\\[6]).</b>
+    <td><pre><b>Figure 3: Predicting rotation of image as a pretext task (image from \\\\\[6]).</b>
 
 &#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</pre>
 
@@ -151,7 +152,7 @@ The pictures shown above are just some types of pretext tasks, there are a lot m
 
 Reading until now, you may have question of how to discriminate Self-supervised learning with other learning methods. Below is the table that provides definitions of 5 learning methods with respect to data samples.
 
-<table>
+<table id="tabletype1">
 <tr>
     <th id="colTitle1" width="40%">Learning method</th>
     <th id="colTitle2" width="60%">Definition</th>
@@ -191,7 +192,7 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 </p>
 <p align=center>
-    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\\\[3]).</em>
+    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\\\\[3]).</em>
 </p>
 
 * **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct it into some types of outputs required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used by downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
@@ -200,7 +201,7 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 Here are some pretext tasks which correspond to each model type:
 
-<table>
+<table id="tabletype1">
 <tr>
     <th id="colTitle1" width="30%">Model type</th>
     <th id="colTitle2" width="70%">Pretext tasks</th>
@@ -242,7 +243,7 @@ Among the three, the contrastive model seems to be the one that is best suited f
     <img src="images/contrastive_learning_intuition.JPG" width="420" alt>
 </p>
 <p align=center>
-    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\\\[4]).</em>
+    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\\\\[4]).</em>
 </p>
 
 Having known about the different properties of these model types, we definitely also need to know a little information about their advantages and disadvantages:
