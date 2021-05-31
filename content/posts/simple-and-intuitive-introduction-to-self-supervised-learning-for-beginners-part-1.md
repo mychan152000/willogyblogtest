@@ -46,6 +46,13 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
   border-collapse: collapse;
   width: 50%;
 }
+
+\#tabletype2 td, #tabletype2 th {
+
+  width: 20%;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 </style>
 
 
