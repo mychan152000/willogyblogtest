@@ -19,14 +19,14 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
 #tabletype1 {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  //width: 100%;
+  width: 100%;
 }
 
 #tabletype1 td, #tabletype1 th {
 
   width: 20%;
   border: 1px solid #ddd;
-  //padding: 8px;
+  padding: 8px;
 }
 
 #tabletype1 tr:nth-child(even){background-color: #f2f2f2;}
@@ -40,7 +40,15 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
   background-color: #000000;
   color: white;
 }
+
+\#tabletype2 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
 </style>
+
+
 
 ### MOTIVATIONS AND IDEAS
 
@@ -53,7 +61,7 @@ Another advantage of SSL is its ability to extract "common sense" features. Take
 
 ### PRETEXT TASKS AND DOWNSTREAM TASKS
 
-When telling about SSL, we certainly have to mention pretext tasks and downstream tasks. The common sense feature is learned through solving pretext tasks (coloring grayscale images, rotating images, super resolution on images, ...). Afterwards, learned knowledge from the above tasks is used to solve downstream tasks - tasks at higher level of difficulty (image classification, object segmentation, ...)
+When telling about SSL, we certainly have to mention pretext tasks and downstream tasks. The common-sense feature is learned through solving pretext tasks (coloring grayscale images, rotating images, super resolution on images, ...). Afterward, learned knowledge from the above tasks is used to solve downstream tasks - tasks at a higher level of difficulty (image classification, object segmentation, ...)
 
 <p align=center>
     
@@ -65,34 +73,34 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
     <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\\\[2]).</em>
 </p>
 
-A pretext task is the task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
+A pretext task is a task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
 
 A downstream task is a task that is used for model finetuning. It can be any one of familiar vision tasks like classification or detection where there is a lack of annotated data. Usually, this type of task is utilized to assess the quality of features learned by SSL.
 
 Here are some pretext tasks.
 
-<table width="100">
+<table id="tabletype2">
 <tr>
     <td>
 
 ![color transformation task](../../static/images/uploads/color_transformation_as_pretext_task.jpg "Pretext Task: Color Transformation")
 
 </td>
-    <td><pre><b>Figure 2: Color Transformation as a pretext task (image from [4]).</b>
+    <td><b>Figure 2: Color Transformation as a pretext task (image from \[4]).</b>
 (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
 (d) Color distortion (Jitter)
-&#8680; By solving this task (color inpainting), a model can grasp the “common sense” of what the color of dog/grass should be.</pre>
+&#8680; By solving this task (color inpainting), a model can grasp the “common sense” of what the color of dog/grass should be.
 </td>
 </tr>
 </table>
 
-<table>
+<table id="tabletype2">
 <tr>
-    <td><pre><b>Figure 3: Predicting rotation of image as a pretext task (image from \\\\\[6]).</b>
+    <td><b>Figure 3: Predicting rotation of image as a pretext task (image from \\\\\[6]).</b>
 
-&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</pre>
+&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.
 
 </td>
     <td>
@@ -103,27 +111,27 @@ Here are some pretext tasks.
 </tr>
 </table>
 
-<table>
+<table id="tabletype2">
 <tr>
     <td>
 
 ![Solving jigsaw puzzle (context-based)](../../static/images/uploads/solving_jigsaw_puzzle_as_pretext_task.jpg "Pretext Task: Solving jigsaw puzzle (context-based)")
 
 </td>
-    <td><pre><b>Figure 4: Solving jigsaw puzzle (context-based) as a pretext task (image from [4]).</b>
+    <td><b>Figure 4: Solving jigsaw puzzle (context-based) as a pretext task (image from \[4]).</b>
 (a) Original image
 (b) Reshuffled image
 The anchor is the original image while the positive sample is the reshuffled image.
-&#8680; By solving this task, a model can grasp the “common sense” of which location each part of a tiger should locate. Through this, a model can know the overall shape of a tiger and the correlative positions of different parts, not just its detailed information of each separated part.</pre>
+&#8680; By solving this task, a model can grasp the “common sense” of which location each part of a tiger should locate. Through this, a model can know the overall shape of a tiger and the correlative positions of different parts, not just its detailed information of each separated part.
 </td>
 </tr>
 </table>
 
-<table>
+<table id="tabletype2">
 <tr>
-    <td><pre><b>Figure 5: Relative position prediction (context-based) as a pretext task (image from [5]).</b>
+    <td><b>Figure 5: Relative position prediction (context-based) as a pretext task (image from \[5]).</b>
 Given 2 sub images, we need to find the relative positions of them in the original image.
-&#8680; Like solving jigsaw puzzles, a model can grasp the knowledge about the overall shape and the relative positions of different parts of a cat.</pre>
+&#8680; Like solving jigsaw puzzles, a model can grasp the knowledge about the overall shape and the relative positions of different parts of a cat.
 </td>
     <td>
 
@@ -133,15 +141,15 @@ Given 2 sub images, we need to find the relative positions of them in the origin
 </tr>
 </table>
 
-<table>
+<table id="tabletype2">
 <tr>
     <td>
 
 ![Predicting the corrupted region of an image](../../static/images/uploads/predicting_corrupted_region_of_images_as_pretext_task.jpg "Pretext Task: Predicting the corrupted region of an image")
 
 </td>
-    <td><pre><b>Figure 6: Predicting the corrupted region of an image as a pretext task (image from [2]).</b>
-&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.</pre>
+    <td><b>Figure 6: Predicting the corrupted region of an image as a pretext task (image from \[2]).</b>
+&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.
 </td>
 </tr>
 </table>
