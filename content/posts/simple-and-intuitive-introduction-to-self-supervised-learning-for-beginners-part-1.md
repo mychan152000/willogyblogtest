@@ -82,7 +82,7 @@ Here are some pretext tasks.
 <table id="tabletype2" style="width: 100%">\
 <colgroup>\
   <col span="1" style="width: 5%;">\
-  <col span="1" style="width: 20%;">
+  <col span="1" style="width: 5%;">
 
 </colgroup>
 
