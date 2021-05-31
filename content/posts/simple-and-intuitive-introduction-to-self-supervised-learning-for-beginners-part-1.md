@@ -70,7 +70,7 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 
 </p>
 <p align=center>
-    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\\\[2]).</em>
+    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \[2]).</em>
 </p>
 
 A pretext task is a task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
@@ -90,7 +90,8 @@ Here are some pretext tasks.
 (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
-(d) Color distortion (Jitter)
+(d) Color distortion (Jitter)\
+
 &#8680; By solving this task (color inpainting), a model can grasp the “common sense” of what the color of dog/grass should be.
 </td>
 </tr>
@@ -121,7 +122,8 @@ Here are some pretext tasks.
     <td><b>Figure 4: Solving jigsaw puzzle (context-based) as a pretext task (image from \[4]).</b>
 (a) Original image
 (b) Reshuffled image
-The anchor is the original image while the positive sample is the reshuffled image.
+The anchor is the original image while the positive sample is the reshuffled image.\
+
 &#8680; By solving this task, a model can grasp the “common sense” of which location each part of a tiger should locate. Through this, a model can know the overall shape of a tiger and the correlative positions of different parts, not just its detailed information of each separated part.
 </td>
 </tr>
@@ -148,7 +150,8 @@ Given 2 sub images, we need to find the relative positions of them in the origin
 ![Predicting the corrupted region of an image](../../static/images/uploads/predicting_corrupted_region_of_images_as_pretext_task.jpg "Pretext Task: Predicting the corrupted region of an image")
 
 </td>
-    <td><b>Figure 6: Predicting the corrupted region of an image as a pretext task (image from \[2]).</b>
+    <td><b>Figure 6: Predicting the corrupted region of an image as a pretext task (image from \[2]).</b>\
+
 &#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.
 </td>
 </tr>
