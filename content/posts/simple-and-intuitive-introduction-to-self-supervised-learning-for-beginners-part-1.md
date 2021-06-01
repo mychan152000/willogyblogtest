@@ -223,10 +223,13 @@ Here are some pretext tasks which correspond to each model type:
 Among the three, the contrastive model seems to be the one that is best suited for nearly all visual classification tasks due to the essence of finding the contrastive relation of 2 images, which tries to keep 2 same-class images near and 2 different-class images apart.
 
 <p align=center>
-    <img src="images/contrastive_learning_intuition.JPG" width="420" alt>
+
+![](../../static/images/uploads/contrastive_learning_intuition.jpg)
+
+
 </p>
 <p align=center>
-    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\\\\\[4]).</em>
+    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \[4]).</em>
 </p>
 
 Having known about the different properties of these model types, we definitely also need to know a little information about their advantages and disadvantages:
