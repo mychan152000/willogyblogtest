@@ -266,7 +266,7 @@ Having known about the different properties of these model types, we definitely 
 
 ### SEVERAL LAST WORDS
 
-Self-supervised learning has appeared in many aspects of NLP, but in computer vision its impact has not achieved equal status. This is due to the fact that ImageNet pretraining has been so popular and successful that pretraining on pretext tasks of SSL has not received much attention yet. One more reason is NLP is a discrete domain while CV is a continuous domain, which means that the learning space of CV is much bigger than that of NLP.
+Self-supervised learning has appeared in many aspects of NLP, but in computer vision its impact has not achieved equal status. This is because ImageNet pretraining has been so popular and successful that pretraining on pretext tasks of SSL has not received much attention yet. One more reason is NLP is a discrete domain while CV is a continuous domain, which means that the learning space of CV is much bigger than that of NLP.
 
 As we can infer, contrastive learning methods presently seem to work better than other Self-supervised learning methods for computer vision. Concurrently, there have been some researches that is toward non-contrastive methods applied to joint embedding architectures ([DeeperCluster](https://openaccess.thecvf.com/content_ICCV_2019/html/Caron_Unsupervised_Pre-Training_of_Image_Features_on_Non-Curated_Data_ICCV_2019_paper.html), [MoCo-v2](https://arxiv.org/abs/1912.03330), [ClusterFit](https://arxiv.org/abs/2003.04297), [SwAV](https://arxiv.org/abs/2006.09882), [SimSiam](https://arxiv.org/abs/2011.10566), ...) as an alternative to contrastive learning in the future.
 
