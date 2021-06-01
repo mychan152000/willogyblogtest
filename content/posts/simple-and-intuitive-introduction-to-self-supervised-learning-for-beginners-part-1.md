@@ -79,7 +79,7 @@ Here are some pretext tasks.
 
 <p align=center>
 
-![](../../static/images/uploads/color_transformation_as_pretext_task_cancel_noise.jpg)
+![](../../static/images/uploads/color_transformation_as_pretext_task_cancel_and_psnr_large.jpg)
 
 </p>
 <p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\\[4]).</em> (a) Original
