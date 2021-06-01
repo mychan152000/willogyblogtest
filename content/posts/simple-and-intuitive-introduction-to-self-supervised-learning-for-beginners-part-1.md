@@ -175,10 +175,10 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 </p>
 <p align=center>
-    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\\\\\[3]).</em>
+    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \[3]).</em>
 </p>
 
-* **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct it into some types of outputs required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used by downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
+* **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct into some types of outputs required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used by downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
 * **Contrastive model**: usually receives 2 inputs. With each input, the encoder can encode it into a latent vector. Then we will have 2 latent vectors that are used to compute similarity. (E.g.: mutual information maximization). The latent vector can be used by downstream tasks. A contrastive similarity (E.g.: InfoNCE) metric is used in the end.
 * **Generative-contrastive (adversarial) model**: the generator tries to generate spurious samples and discriminator tries to discriminate these samples from the real ones. (E.g.: GAN). Its latent vector is just implicitly modeled. GAN discriminator has more parameters than contrastive discriminator. Distributional divergence is leveraged as loss (E.g.: Wasserstein distance) in the end.
 
