@@ -68,7 +68,7 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 </p>
 
 <p align=center>
-    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\[2]).</em>
+    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\[2]).</em>
 </p>
 
 A pretext task is a task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
@@ -79,10 +79,10 @@ Here are some pretext tasks.
 
 <p align=center>
 
-![](../../static/images/uploads/color_transformation_as_pretext_task.jpg)
+![](../../static/images/uploads/color_transformation_as_pretext_task_cancel_noise.jpg)
 
 </p>
-<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\[4]).</em> (a) Original
+<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\\[4]).</em> (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
 (d) Color distortion (Jitter)</p>
@@ -95,7 +95,7 @@ Here are some pretext tasks.
 
 </p>
 
-<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from \\[6]). </em></p>
+<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from \\\[6]). </em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</p>
 
@@ -104,7 +104,7 @@ Here are some pretext tasks.
 ![](../../static/images/uploads/solving_jigsaw_puzzle_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from \\[4]).</em> (a) Original image
+<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from \\\[4]).</em> (a) Original image
 (b) Reshuffled image.
 The anchor is the original image while the positive sample is the reshuffled image.</p>
 
@@ -115,7 +115,7 @@ The anchor is the original image while the positive sample is the reshuffled ima
 ![](../../static/images/uploads/relative_position_prediction_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 5:</b> Relative position prediction (context-based) as a pretext task (Image from \\[5]).</em> Given 2 sub images, we need to find the relative positions of them in the original image.</p>
+<p align=center><em><b>Figure 5:</b> Relative position prediction (context-based) as a pretext task (Image from \\\[5]).</em> Given 2 sub images, we need to find the relative positions of them in the original image.</p>
 
 <p align=center>&#8680; Like solving jigsaw puzzles, a model can grasp the knowledge about the overall shape and the relative positions of different parts of a cat.</p>
 
@@ -124,7 +124,7 @@ The anchor is the original image while the positive sample is the reshuffled ima
 ![](../../static/images/uploads/predicting_corrupted_region_of_images_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 6:</b> Predicting the corrupted region of an image as a pretext task (Image from \\[2]).</em></p>
+<p align=center><em><b>Figure 6:</b> Predicting the corrupted region of an image as a pretext task (Image from \\\[2]).</em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.</p>
 
@@ -174,7 +174,7 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 </p>
 <p align=center>
-    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\[3]).</em>
+    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\\[3]).</em>
 </p>
 
 * **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct into some types of outputs required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used by downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
@@ -227,7 +227,7 @@ Among the three, the contrastive model seems to be the one that is best suited f
 
 </p>
 <p align=center>
-    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\[4]).</em>
+    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\\[4]).</em>
 </p>
 
 Having known about the different properties of these model types, we definitely also need to know a little information about their advantages and disadvantages:
