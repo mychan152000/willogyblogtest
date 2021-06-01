@@ -63,7 +63,7 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 
 <p align=center style="width: 10px;">
 
-![](../../static/images/uploads/ssl_general_pipeline.png)
+![](../../static/images/uploads/ssl_general_pipeline.jpg)
 
 </p>
 
@@ -79,7 +79,7 @@ Here are some pretext tasks.
 
 <p align=center>
 
-![](../../static/images/uploads/color_transformation_as_pretext_task_cancel_and_psnr_large.jpg)
+![](../../static/images/uploads/color_transformation_as_pretext_task.jpg)
 
 </p>
 <p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\\[4]).</em> (a) Original
