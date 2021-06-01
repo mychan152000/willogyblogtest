@@ -191,32 +191,32 @@ Here are some pretext tasks which correspond to each model type:
 </tr>
 <tr>
     <td>Generative</td>
-    <td><pre>
-- Next word/sentence prediction
-- Next pixel prediction
-- Image reconstruction
+    <td>
+- Next word/sentence prediction<br>
+- Next pixel prediction<br>
+- Image reconstruction<br>
 - Link prediction
-</pre></td>
+</td>
 </tr>
 <tr>
     <td>Contrastive</td>
-    <td><pre>
-- Relative position prediction
-- Jigsaw
-- Inpainting
-- Mutual information maximization
+    <td>
+- Relative position prediction<br>
+- Jigsaw<br>
+- Inpainting<br>
+- Mutual information maximization<br>
 - Cluster discrimination
-</pre></td>
+</td>
 </tr>
 <tr>
     <td>Generative-contrastive</td>
-    <td><pre>
-- Image colorization
-- Inpainting
-- Super resolution
-- Link prediction
+    <td>
+- Image colorization<br>
+- Inpainting<br>
+- Super resolution<br>
+- Link prediction<br>
 - Node classification
-</pre></td>
+</td>
 </tr>
 </table>
 
