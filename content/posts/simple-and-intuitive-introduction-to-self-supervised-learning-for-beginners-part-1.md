@@ -129,7 +129,7 @@ The anchor is the original image while the positive sample is the reshuffled ima
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.</p>
 
-The pictures shown above are just some types of pretext tasks, there are a lot more than that. And in practice, the selection of pretext tasks to use is a very significant factor that influences the performance of SSL. An efficacious pretext task guarantees deep models can exploit semantic features through solving it. However, we should not go around with this for too long, just fast and easy. Additionally, we can also let an SSL model solve multiple tasks at the same time, which is inherently called multi-task learning.
+The pictures shown above are just some types of pretext tasks, there are a lot more than that. And in practice, the selection of pretext tasks to use is a very significant factor that influences the performance of SSL. An efficacious pretext task guarantees deep models can exploit semantic features through solving it. However, we should not stick with choosing which tasks to use for too long, quickly go with the simples ones. Additionally, we can also let an SSL model solve multiple tasks at the same time, which is inherently called multi-task learning.
 
 ### HOW TO DISCRIMINATE SELF-SUPERVISED LEARNING WITH OTHER LEARNING APPROACHES
 
