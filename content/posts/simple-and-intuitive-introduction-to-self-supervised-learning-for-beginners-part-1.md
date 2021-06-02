@@ -68,10 +68,10 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 </p>
 
 <p align=center>
-    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\[2]).</em>
+    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \[2]).</em>
 </p>
 
-A pretext task is a task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks are: colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
+A pretext task is a task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks such as colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruption, ...
 
 A downstream task is a task that is used for model finetuning. It can be any one of familiar vision tasks like classification or detection where there is a lack of annotated data. Usually, this type of task is utilized to assess the quality of features learned by SSL.
 
@@ -82,7 +82,7 @@ Here are some pretext tasks.
 ![](../../static/images/uploads/color_transformation_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\\[4]).</em> (a) Original
+<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \[4]).</em> (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
 (d) Color distortion (Jitter)</p>
@@ -95,7 +95,7 @@ Here are some pretext tasks.
 
 </p>
 
-<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from \\\[6]). </em></p>
+<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from \[6]). </em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</p>
 
@@ -104,7 +104,7 @@ Here are some pretext tasks.
 ![](../../static/images/uploads/solving_jigsaw_puzzle_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from \\\[4]).</em> (a) Original image
+<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from \[4]).</em> (a) Original image
 (b) Reshuffled image.
 The anchor is the original image while the positive sample is the reshuffled image.</p>
 
@@ -115,7 +115,7 @@ The anchor is the original image while the positive sample is the reshuffled ima
 ![](../../static/images/uploads/relative_position_prediction_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 5:</b> Relative position prediction (context-based) as a pretext task (Image from \\\[5]).</em> Given 2 sub images, we need to find the relative positions of them in the original image.</p>
+<p align=center><em><b>Figure 5:</b> Relative position prediction (context-based) as a pretext task (Image from \[5]).</em> Given 2 sub images, we need to find the relative positions of them in the original image.</p>
 
 <p align=center>&#8680; Like solving jigsaw puzzles, a model can grasp the knowledge about the overall shape and the relative positions of different parts of a cat.</p>
 
@@ -124,7 +124,7 @@ The anchor is the original image while the positive sample is the reshuffled ima
 ![](../../static/images/uploads/predicting_corrupted_region_of_images_as_pretext_task.jpg)
 
 </p>
-<p align=center><em><b>Figure 6:</b> Predicting the corrupted region of an image as a pretext task (Image from \\\[2]).</em></p>
+<p align=center><em><b>Figure 6:</b> Predicting the corrupted region of an image as a pretext task (Image from \[2]).</em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.</p>
 
@@ -161,7 +161,7 @@ Reading until now, you may have question of how to discriminate Self-supervised 
 </tr>
 </table>
 
-Regardless of what category a learning method is included in, it will use similar network architectures as methods in the other categories. Some of the popular architectures are: AlexNet, VGG, GoogLeNet, ResNet, DenseNet, ...
+Regardless of what category a learning method is included in, it will use similar network architectures as methods in the other categories. Some of the popular architectures such as AlexNet, VGG, GoogLeNet, ResNet, DenseNet, ...
 
 ### CATEGORIES OF SELF-SUPERVISED LEARNING
 
@@ -174,12 +174,12 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 </p>
 <p align=center>
-    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\\[3]).</em>
+    <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \[3]).</em>
 </p>
 
-* **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct into some types of outputs required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used by downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
-* **Contrastive model**: usually receives 2 inputs. With each input, the encoder can encode it into a latent vector. Then we will have 2 latent vectors that are used to compute similarity. (E.g.: mutual information maximization). The latent vector can be used by downstream tasks. A contrastive similarity (E.g.: InfoNCE) metric is used in the end.
-* **Generative-contrastive (adversarial) model**: the generator tries to generate spurious samples and discriminator tries to discriminate these samples from the real ones. (E.g.: GAN). Its latent vector is just implicitly modeled. GAN discriminator has more parameters than contrastive discriminator. Distributional divergence is leveraged as loss (E.g.: Wasserstein distance) in the end.
+* **Generative model**: the generator includes 2 smaller parts - encoder and decoder. The encoder encodes an input into a latent vector. From this latent vector, the decoder can reconstruct it into some types of outputs that are required for a current problem. (E.g.: graph generation (with applications in drug and material designs)). The latent vector can be used for downstream tasks. This type of model does not have a discriminator. A reconstruction loss is used in the end.
+* **Contrastive model**: usually receives 2 inputs. With each input, the encoder can encode it into a latent vector. Then we will have 2 latent vectors that are used to compute similarity. (E.g.: mutual information maximization). The latent vector can be used for downstream tasks. A contrastive similarity (E.g.: InfoNCE) metric is used in the end.
+* **Generative-contrastive (adversarial) model**: the generator tries to generate spurious samples and the discriminator tries to discriminate these samples from the real ones. (E.g.: GAN). Its latent vector is just implicitly modeled. GAN discriminator has more parameters than contrastive discriminator. Distributional divergence is leveraged as loss (E.g.: Wasserstein distance) in the end.
 
 Here are some pretext tasks which correspond to each model type:
 
@@ -227,7 +227,7 @@ Among the three, the contrastive model seems to be the one that is best suited f
 
 </p>
 <p align=center>
-    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\\[4]).</em>
+    <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \[4]).</em>
 </p>
 
 Having known about the different properties of these model types, we definitely also need to know a little information about their advantages and disadvantages:
@@ -247,7 +247,7 @@ Having known about the different properties of these model types, we definitely 
 
   * <span ><b>PROS</b></span>: Having assumed classification as the downstream applications, only the encoder is engaged and the decoder is discarded in contrastive learning.
 
-    \=> Therefore, contrastive models are mostly light-weight and perform better in discriminative downstream tasks.
+    \=> Therefore, contrastive models are mostly lightweight and perform better in discriminative downstream tasks.
   * <span style="color:gray"><b>CONS</b></span>: Contrastive is an emerging field and still has many problems to be solved:
 
     * Contrastive pre-training does not show good results in the NLP.
@@ -264,9 +264,9 @@ Having known about the different properties of these model types, we definitely 
 
 ### SEVERAL LAST WORDS
 
-Self-supervised learning has appeared in many aspects of NLP, but in computer vision its impact has not achieved equal status. This is because ImageNet pretraining has been so popular and successful that pretraining on pretext tasks of SSL has not received much attention yet. One more reason is NLP is a discrete domain while CV is a continuous domain, which means that the learning space of CV is much bigger than that of NLP.
+Self-supervised learning has appeared in many aspects of NLP, but in computer vision, its impact has not achieved equal status. This is because ImageNet pretraining has been so popular and successful that pretraining on pretext tasks of SSL has not received much attention yet. One more reason is NLP is a discrete domain while CV is a continuous domain, which means that the learning space of CV is much bigger than that of NLP.
 
-As we can infer, contrastive learning methods presently seem to work better than other Self-supervised learning methods for computer vision. Concurrently, there have been some researches that is toward non-contrastive methods applied to joint embedding architectures ([DeeperCluster](https://openaccess.thecvf.com/content_ICCV_2019/html/Caron_Unsupervised_Pre-Training_of_Image_Features_on_Non-Curated_Data_ICCV_2019_paper.html), [MoCo-v2](https://arxiv.org/abs/1912.03330), [ClusterFit](https://arxiv.org/abs/2003.04297), [SwAV](https://arxiv.org/abs/2006.09882), [SimSiam](https://arxiv.org/abs/2011.10566), ...) as an alternative to contrastive learning in the future.
+As we can infer, contrastive learning methods presently seem to work better than other self-supervised learning methods for computer vision. Concurrently, there have been some researches that are toward non-contrastive methods applied to joint embedding architectures ([DeeperCluster](https://openaccess.thecvf.com/content_ICCV_2019/html/Caron_Unsupervised_Pre-Training_of_Image_Features_on_Non-Curated_Data_ICCV_2019_paper.html), [MoCo-v2](https://arxiv.org/abs/1912.03330), [ClusterFit](https://arxiv.org/abs/2003.04297), [SwAV](https://arxiv.org/abs/2006.09882), [SimSiam](https://arxiv.org/abs/2011.10566), ...) as an alternative to contrastive learning in the future.
 
 ### REFERENCES
 
