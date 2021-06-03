@@ -15,17 +15,24 @@ The survey is constituted by the personal opinions of 352 researchers (in machin
 
 There are 32 milestones that are given to the researchers to ask them when each milestone would become possible. Some interesting milestones are: writing a high school essay, generating a top 40 pop song, writing a New York Times bestseller,...
 
-<p align=center>
- 
-
-![](../../static/images/uploads/4.jpg)
 
 
 <p align=center>
-    <em><b>Figure 1:</b> Timeline of Median Estimates (with 50% intervals) for AI Achieving Human Performance (Image from \[1]).</em>
+
+![](../../static/images/uploads/milestones1.jpg)
+
 </p>
 
 
+
+<p align=center>
+ 
+
+![](../../static/images/uploads/milestones2.jpg)
+
+<p align=center>
+    <em><b>Figure 1:</b> Timeline of Median Estimates (with 50% intervals) for AI Achieving Human Performance (Image from \\[1]).</em>
+</p>
 
 Specifically, they believe that there is only less than 37 years (median) from 2016 when AI can become a surgeon. And also in accordance with their opinions, AI can even itself become an AI researcher in 40 years to about 200 years or more (median) from 2016. 
 
