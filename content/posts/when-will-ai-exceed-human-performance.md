@@ -11,11 +11,11 @@ description: "In the previous post, we have discussed some difficulties in AI.
   the survey “Viewpoint: When Will AI Exceed Human Performance? Evidence from AI
   Experts” \\[1]."
 ---
+In the previous post, we have discussed some difficulties in AI. But what do scientists in this domain really think about AI? If you want to know, you should continue reading. This post is written as a brief summary of the survey “Viewpoint: When Will AI Exceed Human Performance? Evidence from AI Experts” \[1].
+
 The survey is constituted by the personal opinions of 352 researchers (in machine learning, computer science theory, statistics, and neuroscience), who come from 43 countries. Some of them are researchers with high citations.
 
 There are 32 milestones that are given to the researchers to ask them when each milestone would become possible. Some interesting milestones are: writing a high school essay, generating a top 40 pop song, writing a New York Times bestseller,...
-
-
 
 <p align=center>
 
@@ -23,15 +23,13 @@ There are 32 milestones that are given to the researchers to ask them when each 
 
 </p>
 
-
-
 <p align=center>
  
 
 ![](../../static/images/uploads/milestones2.jpg)
 
 <p align=center>
-    <em><b>Figure 1:</b> Timeline of Median Estimates (with 50% intervals) for AI Achieving Human Performance (Image from \\[1]).</em>
+    <em><b>Figure 1:</b> Timeline of Median Estimates (with 50% intervals) for AI Achieving Human Performance (Image from \\\[1]).</em>
 </p>
 
 Specifically, they believe that there is only less than 37 years (median) from 2016 when AI can become a surgeon. And also in accordance with their opinions, AI can even itself become an AI researcher in 40 years to about 200 years or more (median) from 2016. 
