@@ -1,5 +1,5 @@
 ---
-title: WHEN WILL AI EXCEED HUMAN PERFORMANCE?
+title: When will AI exceed Human performance?
 date: 2021-06-03T15:10:32.452Z
 published: true
 tags:
