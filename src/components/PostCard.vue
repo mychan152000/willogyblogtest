@@ -56,7 +56,9 @@ export default {
   }
 
   &__title {
-    margin-top: 0;
+    margin-bottom: 1em;
+    padding: 0.8em 0;
+    font-size: 1.6em;
   }
 
   &:hover {

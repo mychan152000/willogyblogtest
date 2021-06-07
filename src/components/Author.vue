@@ -32,8 +32,8 @@ export default {
 <style lang="scss">
 
 .author {
-	margin: 0 5%;
-	max-width: 500px;
+	margin: 3em 4em;
+	max-width: 60vw;
 	text-align: left;
 	padding-bottom: calc(var(--space) / 2);
 

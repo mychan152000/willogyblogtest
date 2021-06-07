@@ -77,6 +77,11 @@ query Post ($id: ID!) {
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
+  margin: 1.8em 1em;
+
+  &__text {
+    font-size: 2em;
+  }
 }
 
 .post {
