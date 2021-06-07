@@ -1,5 +1,5 @@
 ---
-title: "The periods of AI and 4 misconceptions in AI Research community "
+title: "4 Misconceptions in AI Research community "
 date: 2021-05-18T16:23:55.376Z
 published: true
 tags:
