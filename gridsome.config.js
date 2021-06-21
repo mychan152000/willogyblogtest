@@ -8,6 +8,7 @@ module.exports = {
   icon: './src/assets/logo.svg',
   siteName: 'Willogy Insights',
   siteDescription: 'Knowledge is common. Our insights and experience on-top of them is unique',
+  titleTemplate: '%s - Willogy.Insights',
 
   templates: {
     Post: '/:title',
