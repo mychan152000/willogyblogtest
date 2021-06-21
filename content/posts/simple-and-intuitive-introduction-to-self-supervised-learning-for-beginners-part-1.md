@@ -53,7 +53,7 @@ Here are some pretext tasks.
 ![color transformation task](../../static/images/uploads/color_transformation_as_pretext_task.jpg "Pretext Task: Color Transformation")
 
 </td>
-    <td><pre><b>Figure 2: Color Transformation as a pretext task (image from [4]).</b>
+    <td><pre style="word-break: break-all;"><b>Figure 2: Color Transformation as a pretext task (image from [4]).</b>
 (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
@@ -128,30 +128,30 @@ The pictures shown above are just some types of pretext tasks, there are a lot m
 Reading until now, you may have question of how to discriminate Self-supervised learning with other learning methods. Below is the table that provides definitions of 5 learning methods with respect to data samples.
 
 <table>
-<tr>
-    <th id="colTitle1" width="40%">Learning method</th>
-    <th id="colTitle2" width="60%">Definition</th>
-</tr>
-<tr>
-    <td>Supervised learning</td>
-    <td>requires data samples with human annotated labels for training</td>
-</tr>
-<tr>
-    <td>Unsupervised learning</td>
-    <td>Data samples don’t have any labels or correct outputs</td>
-</tr>
-<tr>
-    <td>Weakly supervised learning</td>
-    <td>Data samples only have coarse-grained labels or inaccurate labels</td>
-</tr>
-<tr>
-    <td>Semi-supervised learning</td>
-    <td>Dataset is comprised of 2 parts: small amount of labeled data and large amount of unlabeled data</td>
-</tr>
-<tr>
-    <td>Self-supervised learning</td>
-    <td>Data samples has pseudo labels instead of human annotated labels; or labels from a coexisting modality (visual content and sound in a video)</td>
-</tr>
+    <tr>
+        <th id="colTitle1" width="40%">Learning method</th>
+        <th id="colTitle2" width="60%">Definition</th>
+    </tr>
+    <tr>
+        <td>Supervised learning</td>
+        <td>requires data samples with human annotated labels for training</td>
+    </tr>
+    <tr>
+        <td>Unsupervised learning</td>
+        <td>Data samples don’t have any labels or correct outputs</td>
+    </tr>
+    <tr>
+        <td>Weakly supervised learning</td>
+        <td>Data samples only have coarse-grained labels or inaccurate labels</td>
+    </tr>
+    <tr>
+        <td>Semi-supervised learning</td>
+        <td>Dataset is comprised of 2 parts: small amount of labeled data and large amount of unlabeled data</td>
+    </tr>
+    <tr>
+        <td>Self-supervised learning</td>
+        <td>Data samples has pseudo labels instead of human annotated labels; or labels from a coexisting modality (visual content and sound in a video)</td>
+    </tr>
 </table>
 
 Regardless of what category a learning method is included in, it will use similar network architectures as methods in the other categories. Some of the popular architectures are: AlexNet, VGG, GoogLeNet, ResNet, DenseNet, ...

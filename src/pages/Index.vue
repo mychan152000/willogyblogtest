@@ -53,7 +53,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Home'
+    title: 'Willogy Insights'
   }
 }
 </script>
