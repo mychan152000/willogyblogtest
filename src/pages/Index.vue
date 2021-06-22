@@ -54,18 +54,37 @@ export default {
   },
   metaInfo() {
     return {
-        ...this.$ogp({
-          title: 'Willogy Insights',
-          description: 'Knowledge is common. Our insights and experience on-top of them is unique',
-          image: '~/assets/logo.svg'
-        }),
-        title: 'Willogy Insights',
-        link: [
-          {rel: 'canonical', href: 'https://eager-shaw-eecd63.netlify.app/'}
-        ],
-      }
-    } 
+      link: [
+      {rel: 'canonical', href: 'https://eager-shaw-eecd63.netlify.app/'}
+      ],
+      title: 'Willogy Insights',
+      meta: [
+        {
+          name: "description",
+          content: 'Knowledge is common. Our insights and experience on-top of them is unique'
+        },
+        {
+          property: "og:title",
+          content: 'Willogy Insights'
+        },
+        {
+          name: "twitter:card",
+          content: './src/assets/logo.svg' ? "summary_large_image" : "summary",
+        },
+        
+        {
+          property: "og:description",
+          cotent: 'Knowledge is common. Our insights and experience on-top of them is unique'
+        },
+        {
+          property: "og:image",
+          content: './src/assets/logo.svg' || ""
+        },
+      ]
+    };
   }
+}
+ 
 </script>
 <style  scoped>
 table th, table td, table pre { 
