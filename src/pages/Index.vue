@@ -52,13 +52,20 @@ export default {
     Author,
     PostCard
   },
-  metaInfo: {
-    title: 'Willogy Insights',
-    link: [
-      {rel: 'canonical', href: 'https://eager-shaw-eecd63.netlify.app/'}
-    ]
+  metaInfo() {
+    return {
+        ...this.$ogp({
+          title: 'your-title',
+          description: 'your-description',
+          image: 'your-image-url'
+        }),
+        title: 'Willogy Insights',
+        link: [
+          {rel: 'canonical', href: 'https://eager-shaw-eecd63.netlify.app/'}
+        ],
+      }
+    } 
   }
-}
 </script>
 <style  scoped>
 table th, table td, table pre { 

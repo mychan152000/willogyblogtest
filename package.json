@@ -15,6 +15,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "gridsome": "^0.7.23",
+    "gridsome-plugin-ogp": "^0.0.14",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "nuxt-seo": "^1.5.0",
     "vue": "^2.6.12"

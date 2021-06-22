@@ -18,6 +18,9 @@ module.exports = {
 
   plugins: [
     {
+      use: 'gridsome-plugin-ogp'
+    },
+    {
       use: '@gridsome/plugin-sitemap',
       options: {
         exclude: ['/exclude-me'],

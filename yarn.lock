@@ -4616,6 +4616,11 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+gridsome-plugin-ogp@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-ogp/-/gridsome-plugin-ogp-0.0.14.tgz#1978ca13661bfef4c04d4a21fbb9a843894b9be3"
+  integrity sha512-IxYHFAlgeIfkf1QNgKypjmA4ZS6Qlh9ONX8KljZdmLTQmg+V5em+YX4liq2diyhgD+WI2lePRhdJtHbUBTDJdw==
+
 gridsome-plugin-robots-txt@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/gridsome-plugin-robots-txt/-/gridsome-plugin-robots-txt-1.0.2.tgz#0ea1e0748166e22e1aaae54f240d00f61c776ab6"
