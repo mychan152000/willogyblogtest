@@ -74,6 +74,14 @@ export default {
           cotent: this.$page.post.excerpt
         },
         {
+          property: "og:type",
+          cotent: 'article, blog, content, research'
+        },
+        {
+          property: "og:url",
+          cotent: 'https://eager-shaw-eecd63.netlify.app'
+        },
+        {
           property: "og:image",
           content: this.$page.post.cover_image || ""
         },

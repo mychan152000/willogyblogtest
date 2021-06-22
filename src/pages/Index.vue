@@ -77,6 +77,14 @@ export default {
           cotent: 'Knowledge is common. Our insights and experience on-top of them is unique'
         },
         {
+          property: "og:type",
+          cotent: 'article, blog, content, research, insights'
+        },
+        {
+          property: "og:url",
+          cotent: 'https://eager-shaw-eecd63.netlify.app'
+        },
+        {
           property: "og:image",
           content: './src/assets/logo.svg' || ""
         },
