@@ -9,6 +9,7 @@ module.exports = {
   siteName: 'Willogy Insights',
   siteDescription: 'Knowledge is common. Our insights and experience on-top of them is unique',
   titleTemplate: '%s - Willogy.Insights',
+  siteUrl: 'https://eager-shaw-eecd63.netlify.app/',
 
   templates: {
     Post: '/:title',
@@ -17,9 +18,44 @@ module.exports = {
 
   plugins: [
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/exclude-me'],
+        config: {
+          '/': {
+            changefreq: 'weekly',
+            priority: 0.5,
+            lastmod: '2020-02-19',
+          },
+          
+        }
+      }
+    },
+    {
+      use: 'gridsome-plugin-robots-txt',
+      options: {
+        host: 'https://eager-shaw-eecd63.netlify.app/',
+        sitemap: 'https://eager-shaw-eecd63.netlify.app//configs/sitemap.xml',
+        policy: [
+          {
+            userAgent: "Googlebot",
+            allow: "/",
+            disallow: "/search",
+            crawlDelay: 2
+          },
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: "/search",
+            crawlDelay: 10,
+            cleanParam: "ref /"
+          }
+        ]
+      }
+    },
+    {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
-      use: 'gridsome-plugin-seo',
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',

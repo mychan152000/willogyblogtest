@@ -48,22 +48,12 @@ import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
 
 export default {
-  metaInfo () {
-    return this.$seo({
-      title: '%s - Willogy.Insights', // Uses the titleTemplate in Gridsome config
-      description: 'Knowledge is common. Our insights and experience on-top of them is unique',
-      keywords: 'AI Research, AI Engineer, Software Engineer, Robotic, Computer Vision, Willogy',
-      openGraph: {
-        title: 'Willogy',
-        type: 'website', 
-      },
-      twitter: {
-        title: 'Willogy',
-        type: 'summary'
-      },
-      link: [],   // any links
-      script: []  // any scripts
-    })
+  components: {
+    Author,
+    PostCard
+  },
+  metaInfo: {
+    title: 'Willogy Insights'
   }
 }
 </script>
