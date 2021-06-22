@@ -53,7 +53,10 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: 'Willogy Insights'
+    title: 'Willogy Insights',
+    link: [
+      {rel: 'canonical', href: 'https://eager-shaw-eecd63.netlify.app/'}
+    ]
   }
 }
 </script>
