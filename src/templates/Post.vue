@@ -52,36 +52,27 @@ export default {
   //     ]
   //   }
   // }
-  metaInfo() {
-    return {
-      title: this.$page.post.title,
-      meta: [
-        {
-          name: "description",
-          content: this.$page.post.excerpt
-        },
-        {
-          property: "og:title",
-          content: this.$page.post.title
-        },
-        {
-          name: "twitter:card",
-          content: this.$page.post.image ? "summary_large_image" : "summary",
-        },
-        {
-          name: "twitter:creator",
-          content: "@drewtown_chi"
-        },
-        {
-          property: "og:description",
-          cotent: this.$page.post.excerpt
-        },
-        {
-          property: "og:image",
-          content: this.$page.post.image || ""
-        }
-      ]
-    };
+  metaInfo () {
+    return this.$seo({
+      title: this.$page.post.title, // Uses the titleTemplate in Gridsome config
+      description: this.$page.post.excerpt,
+      image: this.$page.post.cover_image,
+      keywords: 'AI Research, AI Engineer, Software Engineer, Robotic, Computer Vision, Willogy',
+      openGraph: {
+        title: 'Insights',
+        type: 'article',
+        image: this.$page.post.cover_image,
+        description: this.$page.post.excerpt,
+      },
+      twitter: {
+        title: this.$page.post.title,
+        type: this.$page.post.excerpt,
+        image: this.$page.post.cover_image,
+        description: this.$page.post.excerpt,
+      },
+      link: [],   // any links
+      script: []  // any scripts
+    })
   }
 }
 </script>

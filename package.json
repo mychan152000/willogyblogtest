@@ -14,6 +14,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "gridsome": "^0.7.23",
+    "gridsome-plugin-seo": "^1.0.2",
     "vue": "^2.6.12"
   },
   "devDependencies": {

@@ -3048,7 +3048,7 @@ debug@^3.1.1, debug@^3.2.6:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.1.0, debug@^4.1.1:
+debug@^4.1.0, debug@^4.1.1, debug@^4.2.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
   integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
@@ -4482,6 +4482,14 @@ gray-matter@^4.0.2:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+gridsome-plugin-seo@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gridsome-plugin-seo/-/gridsome-plugin-seo-1.0.2.tgz#272a98196ffb6d03263c06152e57528abcf772c3"
+  integrity sha512-iDCbNb4F+zMvzpXPyL7NAky0s3IN52LFLI8Bysor/wtw4vFTpdAhKsa/t4efihNNIpNi9QRUiknmNC34o/6P/Q==
+  dependencies:
+    lodash "^4.17.20"
+    nuxt-seo "^1.3.1"
 
 gridsome@^0.7.23:
   version "0.7.23"
@@ -6564,6 +6572,13 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+
+nuxt-seo@^1.3.1:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/nuxt-seo/-/nuxt-seo-1.5.0.tgz#bd65d84830efd0a755d6e1c99765f5faa3d69a58"
+  integrity sha512-YIq0gSuSUpANuVn3dTCtAkq5ViJrCA1ht1/NosHQrUOtIw7T2wLPUfeW7I6gqYNsZi7FEf+CjTaH7LWfWaf5jg==
+  dependencies:
+    debug "^4.2.0"
 
 oauth-sign@~0.9.0:
   version "0.9.0"

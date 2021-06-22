@@ -19,6 +19,7 @@ module.exports = {
     {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
+      use: 'gridsome-plugin-seo',
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',
