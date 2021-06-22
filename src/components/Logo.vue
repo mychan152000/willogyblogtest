@@ -1,7 +1,7 @@
 <template>
 	<g-link class="logo" to="/">
 	  <span class="logo__text">
-	   <g-image class="image" src="~/assets/logo.svg" width="50" height="50"/>
+	   <g-image class="image" src="~/assets/logo.svg" title="Willogy logo" alt="Willogy logo" width="50" height="50"/>
 	  </span>
 	</g-link>
 </template>
