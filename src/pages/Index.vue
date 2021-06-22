@@ -55,7 +55,7 @@ export default {
   metaInfo() {
     return {
       link: [
-      {rel: 'canonical', href: 'https://eager-shaw-eecd63.netlify.app/'}
+      {rel: 'canonical', href: 'https://insights.willogy.io'}
       ],
       title: 'Willogy Insights',
       meta: [
