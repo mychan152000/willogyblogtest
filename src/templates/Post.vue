@@ -57,10 +57,10 @@ export default {
     return {
       ...this.$ogp({
         title: $page.post.title,
-        description: this.$page.post.description,
+        description: $page.post.description,
         image: $page.post.cover_image,
       }),
-      title: $page.post.title,
+      title: this.$page.post.title,
     }
   } 
 }
