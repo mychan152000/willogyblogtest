@@ -58,10 +58,6 @@ export default {
       title: this.$page.post.title,
       meta: [
         {
-          name: "description",
-          content: this.$page.post.excerpt
-        },
-        {
           property: "og:title",
           content: this.$page.post.title
         },
@@ -77,10 +73,7 @@ export default {
           property: "og:type",
           cotent: 'article, blog, content, research'
         },
-        {
-          property: "og:url",
-          cotent: 'https://eager-shaw-eecd63.netlify.app'
-        },
+        
         {
           property: "og:image",
           content: this.$page.post.cover_image || ""

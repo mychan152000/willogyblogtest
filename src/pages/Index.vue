@@ -60,10 +60,6 @@ export default {
       title: 'Willogy Insights',
       meta: [
         {
-          name: "description",
-          content: 'Knowledge is common. Our insights and experience on-top of them is unique'
-        },
-        {
           property: "og:title",
           content: 'Willogy Insights'
         },
@@ -80,10 +76,7 @@ export default {
           property: "og:type",
           cotent: 'article, blog, content, research, insights'
         },
-        {
-          property: "og:url",
-          cotent: 'https://eager-shaw-eecd63.netlify.app'
-        },
+        
         {
           property: "og:image",
           content: './src/assets/logo.svg' || ""
