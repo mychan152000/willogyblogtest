@@ -22,9 +22,8 @@
     </div>
 
     <div class="post-comments">
-      <Disqus shortname="willogy-insights" :identifier="$page.post.title" />
+      <Disqus shortname="willogy-insights" :identifier="$page.post.title" />            
     </div>
-
     <Author class="post-author" />
   </Layout>
 </template>
@@ -33,7 +32,6 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-
 export default {
   components: {
     Author,
