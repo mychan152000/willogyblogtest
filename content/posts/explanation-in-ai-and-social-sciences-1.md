@@ -1,5 +1,5 @@
 ---
-title: Explanation in AI and Social Sciences [1]
+title: Explanation in AI and Social Sciences
 date: 2021-06-24T17:11:54.430Z
 published: true
 tags:
@@ -11,7 +11,8 @@ description: Knowing what an AI model will do and why it does that is very
   The existence of this field will help to solve current AI problems of ethical
   concerns and a lack of credibility from users. To acknowledge this, the AI
   field had better gain knowledge from philosophy, psychology and, cognitive
-  science of how humans define and evaluate explanations.
+  science of how humans define and evaluate explanations. The content of this
+  post is based on \[1].
 ---
 Many AI subfields will get considerable advantage from the ability of explanation, such as “justifying autonomous agent behavior, debugging machine learning models, explaining medical decision-making” \[1]. However, the author say that most of the recent research in XAI still depends a lot on the researchers’ intuitions to specify what is a good explanation. In the paper, the author defines the term “Explainable AI” as “an explanatory agent revealing underlying causes to its or another agent’s decision making” \[1].
 
