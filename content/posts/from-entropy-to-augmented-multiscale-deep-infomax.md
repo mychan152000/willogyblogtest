@@ -67,25 +67,25 @@ Two examples to show when entropy is low and when it is high.
 
 Given that:
 
-![equation](https://latex.codecogs.com/gif.latex?P%28X%3Dheads%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D)
+![equation](../../static/images/uploads/equ2.gif)
 
-![equation](https://latex.codecogs.com/gif.latex?P%28X%3Dtails%29%20%3D%20%5Cfrac%7B1%7D%7B2%7D)
+![equation](../../static/images/uploads/equ3.gif)
 
 Using entropy equation, we have:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28P%29%20%26%20%3D%20-%5Csum_%7Bx%20%5Cin%20%5C%7Bheads%2Ctails%5C%7D%7D%20P%28x%29%20%5Clog%20P%28x%29%20%5C%5C%20%26%20%3D%20-%5Cleft%20%5B%20%5Cfrac%7B1%7D%7B2%7D%20%5Clog%20%5Cfrac%7B1%7D%7B2%7D%20&plus;%20%5Cfrac%7B1%7D%7B2%7D%20%5Clog%20%5Cfrac%7B1%7D%7B2%7D%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%20-%5Cleft%20%5B%20-%5Cfrac%7B1%7D%7B2%7D%20&plus;%20-%5Cfrac%7B1%7D%7B2%7D%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%201%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ4.gif)
 
 **Example 2** Compute the entropy of an unfair coin
 
 Given that:
 
-![equation](https://latex.codecogs.com/gif.latex?P%28X%3Dheads%29%20%3D%20%5Cfrac%7B3%7D%7B4%7D)
+![equation](../../static/images/uploads/equ5.gif)
 
-![equation](https://latex.codecogs.com/gif.latex?P%28X%3Dtails%29%20%3D%20%5Cfrac%7B1%7D%7B4%7D)
+![equation](../../static/images/uploads/equ6.gif)
 
 Using entropy equation, we have:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28P%29%20%26%20%3D%20-%5Csum_%7Bx%20%5Cin%20%5C%7Bheads%2Ctails%5C%7D%7D%20P%28x%29%20%5Clog%20P%28x%29%20%5C%5C%20%26%20%3D%20-%5Cleft%20%5B%20%5Cfrac%7B3%7D%7B4%7D%20%5Clog%20%5Cfrac%7B3%7D%7B4%7D%20&plus;%20%5Cfrac%7B1%7D%7B4%7D%20%5Clog%20%5Cfrac%7B1%7D%7B4%7D%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%20-%5Cleft%20%5B%20%5Cfrac%7B3%7D%7B4%7D%28-0.41503749928%29%20&plus;%20%5Cfrac%7B1%7D%7B4%7D%28-2%29%29%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%200.81127812446%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ7.gif)
 
 \=> The entropy value is less than that in example 1. Because the coin will appear heads most of the time, which means it is more predictable (less unpredictable). Thus, the entropy is low.
 
@@ -93,11 +93,11 @@ Using entropy equation, we have:
 
 Given that:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20P%28X%3D1%29%20%26%20%3D%20%5Cfrac%7B1%7D%7B2%7D%20%5C%5C%20P%28X%3D2%29%20%26%20%3D%20%5Cfrac%7B1%7D%7B4%7D%20%5C%5C%20P%28X%3D3%29%20%26%20%3D%200%20%5C%5C%20P%28X%3D4%29%20%26%20%3D%200%20%5C%5C%20P%28X%3D5%29%20%26%20%3D%20%5Cfrac%7B1%7D%7B8%7D%20%5C%5C%20P%28X%3D6%29%20%26%20%3D%20%5Cfrac%7B1%7D%7B8%7D%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ8.gif)
 
 Using entropy equation, we have:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28P%29%20%26%20%3D%20-%5Csum_%7Bx%20%5Cin%20%5C%7B1%2C2%2C3%2C4%2C5%2C6%5C%7D%7D%20P%28x%29%20%5Clog%20P%28x%29%20%5C%5C%20%26%20%3D%20-%5Cleft%20%5B%20%5Cfrac%7B1%7D%7B2%7D%20%5Clog%20%5Cfrac%7B1%7D%7B2%7D%20&plus;%20%5Cfrac%7B1%7D%7B4%7D%20%5Clog%20%5Cfrac%7B1%7D%7B4%7D%20&plus;%200%20%5Clog%200%20&plus;%200%20%5Clog%200%20&plus;%20%5Cfrac%7B1%7D%7B8%7D%20%5Clog%20%5Cfrac%7B1%7D%7B8%7D%20&plus;%20%5Cfrac%7B1%7D%7B8%7D%20%5Clog%20%5Cfrac%7B1%7D%7B8%7D%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%20-%5Cleft%20%5B%20-%5Cfrac%7B1%7D%7B2%7D%20&plus;%20-%5Cfrac%7B1%7D%7B2%7D%20&plus;%200%20&plus;%200%20&plus;%20-%5Cfrac%7B3%7D%7B8%7D%20&plus;%20-%5Cfrac%7B3%7D%7B8%7D%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%201.75%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ9.gif)
 
 \=> The more values a random variable can take, the more unpredictable it becomes.
 
@@ -109,7 +109,7 @@ Mutual information can also be defined as “the reduction in uncertainty about 
 
 The equation for mutual information of two random variables X and Y where joint distribution is represented as P<sub>XY</sub>(x,y):
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20I%28X%2CY%29%20%26%20%3D%20%5Csum_%7Bx%20%5Cin%20X%7D%5Csum_%7By%20%5Cin%20Y%7D%20P_%7BXY%7D%28x%2Cy%29%20%5Clog%20%5Cfrac%7BP_%7BXY%7D%28x%2Cy%29%7D%7BP_%7BX%7D%28x%29P_%7BY%7D%28y%29%7D%20%5C%5C%20%26%20%3D%20%5Csum_%7Bx%2Cy%7D%20P_%7BXY%7D%28x%2Cy%29%20%5Clog%20%5Cfrac%7BP_%7BXY%7D%28x%2Cy%29%7D%7BP_%7BX%7D%28x%29P_%7BY%7D%28y%29%7D%20%5C%5C%20%26%20%3D%20E_%7BP_%7BXY%7D%7D%20%5Clog%20%5Cfrac%7BP_%7BXY%7D%7D%7BP_%7BX%7DP_%7BY%7D%7D%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ10.gif)
 
 where P<sub>X</sub>(x) and P<sub>Y</sub>(y) are the marginals.
 
@@ -127,41 +127,41 @@ Considering that the sender is represented by a pattern set X including x<sub>i<
 
 The Shannon entropy equation on X and on Y:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28X%29%20%26%20%3D%20-%5Csum_%7Bx%7D%20p%28x%29%20%5Cln%20p%28x%29%20%5C%5C%20H%28Y%29%20%26%20%3D%20-%5Csum_%7By%7D%20p%28y%29%20%5Cln%20p%28y%29%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ11.gif)
 
 The formula of conditional entropy, it measures the uncertainty of X given Y:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28X%7CY%29%20%26%20%3D%20-%5Csum_%7By%7Dp%28y%29%5Cleft%20%5B%20%5Csum_%7Bx%7Dp%28x%7Cy%29%20%5Cln%20p%28x%7Cy%29%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%20-%5Csum_%7Bx%7D%5Csum_%7By%7D%20p%28x%2Cy%29%20%5Cln%20p%28x%7Cy%29%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ12.gif)
 
 The formula of joint entropy (the entropy of a joint probability distribution) on X and Y:
 
-![equation](https://latex.codecogs.com/gif.latex?H%28X%2CY%29%20%3D%20-%5Csum_%7Bx%2Cy%7D%20p%28x%2Cy%29%20%5Cln%20p%28x%2Cy%29)
+![equation](../../static/images/uploads/equ13.gif)
 
 Then, the equation mutual information will be:
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%29%20%3D%20H%28X%29%20-%20H%28X%7CY%29) (represented as the reduction in uncertainty about variable X)
+![equation](../../static/images/uploads/equ14.gif)
 
 Let's verify if it is equal to the above equation for mutual information of two random variables X and Y:
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Cbegin%7Balign*%7D%20I%28X%2CY%29%20%26%20%3D%20H%28X%29%20-%20H%28X%7CY%29%20%5C%5C%20%26%20%3D%20-%5Csum_%7Bx%7Dp%28x%29%20%5Cln%20p%28x%29%20-%20%5Cleft%20%28-%5Csum_%7By%7Dp%28y%29%20%5Cleft%20%5B%20%5Csum_%7Bx%7Dp%28x%7Cy%29%20%5Cln%20p%28x%7Cy%29%20%5Cright%20%5D%20%5Cright%20%29%20%5C%5C%20%26%20%3D%20%5Csum_%7By%7Dp%28y%29%20%5Cleft%20%5B%20%5Csum_%7Bx%7Dp%28x%7Cy%29%20%5Cln%20p%28x%7Cy%29%20%5Cright%20%5D%20-%5Csum_%7Bx%7Dp%28x%29%20%5Cln%20p%28x%29%20%5C%5C%20%26%20%3D%20%5Csum_%7By%7Dp%28y%29%20%5Cleft%20%5B%20%5Csum_%7Bx%7D%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28y%29%7D%20%5Cln%20%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28y%29%7D%20%5Cright%20%5D%20-%5Csum_%7Bx%7D%5Csum_%7By%7Dp%28x%2Cy%29%20%5Cln%20p%28x%29%20%5C%5C%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ15.gif)
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Cbegin%7Balign*%7D%20%26%20%28Because%20%5C%3B%20p%28x%7Cy%29%20%3D%20%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28y%29%7D%20%5C%3B%20and%20%5C%3B%20p%28x%29%20%3D%20%5Csum_%7By%7Dp%28x%2Cy%29%29%20%5C%5C%20%5Ccolor%7Bwhite%7D%7BI%28X%2CY%29%7D%20%26%20%3D%20%5Csum_%7Bx%7D%5Csum_%7By%7D%5Cfrac%7Bp%28y%29p%28x%2Cy%29%7D%7Bp%28y%29%7D%20%5Cln%20%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28y%29%7D%20-%5Csum_%7Bx%7D%5Csum_%7By%7Dp%28x%2Cy%29%20%5Cln%20p%28x%29%20%5C%5C%20%26%20%3D%20%5Csum_%7Bx%7D%5Csum_%7By%7Dp%28x%2Cy%29%20%5Cln%20%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28y%29%7D%20-%5Csum_%7Bx%7D%5Csum_%7By%7Dp%28x%2Cy%29%20%5Cln%20p%28x%29%20%5C%5C%20%26%20%3D%20%5Csum_%7Bx%7D%5Csum_%7By%7Dp%28x%2Cy%29%5Cleft%20%5B%20%5Cln%20%5Cleft%20%28%20%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28y%29%7D%20%5Cright%20%29%20-%20%5Cln%20p%28x%29%20%5Cright%20%5D%20%5C%5C%20%26%20%3D%20%5Csum_%7Bx%7D%5Csum_%7By%7Dp%28x%2Cy%29%20%5Cln%20%5Cleft%20%28%20%5Cfrac%7Bp%28x%2Cy%29%7D%7Bp%28x%29p%28y%29%7D%20%5Cright%20%29%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ16.gif)
 
 So yes, they are equal except for the difference in the base of the log. For your information, the log base can be 2, 10, or e, which depends on what information units an information system needs.
 
 And with a theorem H(X|Y) = H(X, Y) - H(Y) of conditional entropy (if X and Y are discrete random variables), the mutual information formula can also be written as:
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%29%20%3D%20H%28X%29%20&plus;%20H%28Y%29%20-%20H%28X%2CY%29)
+![equation](../../static/images/uploads/equ17.gif)
 
 To be more clearly about the above formula, let’s consider 2 cases:
 
 * **Ideal channel:** for any given i, x_i = y_i. All the things sent by the sender are received by the receiver. And we can prove that (more details in \[2]):
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28X%2CY%29%20%26%20%3D%20H%28X%29%20%3D%20H%28Y%29%20%5C%5C%20%5CRightarrow%20I%28X%2CY%29%20%26%20%3D%20H%28X%29%20&plus;%20H%28Y%29%20-%20H%28Y%29%20%5C%5C%20%5CRightarrow%20I%28X%2CY%29%20%26%20%3D%20H%28X%29%20%3D%20H%28Y%29%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ18.gif)
 
 * **Fully disturbed channel:** the output is totally not affected by the input, which means p(y_j | x_i) = p(y_j) => p(x_i, y_j) = p(x_i).p(y_j). We can prove that (more details in \[2]):
 
-![equation](https://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20H%28X%2CY%29%20%26%20%3D%20H%28X%29%20&plus;%20H%28Y%29%20%5C%5C%20%5CRightarrow%20I%28X%2CY%29%20%26%20%3D%20H%28X%29%20&plus;%20H%28Y%29%20-%20H%28X%29%20-%20H%28Y%29%20%5C%5C%20%5CRightarrow%20I%28X%2CY%29%20%26%20%3D%200%20%5Cend%7Balign*%7D)
+![equation](../../static/images/uploads/equ19.gif)
 
 Finally, the mutual information can be defined as a measurement which quantifies the transmitted information in the channel.
 
@@ -177,11 +177,11 @@ Reformulation of the expression for the mutual information \[2]:
 
 For discrete variables:
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%29%20%3D%20%5Csum_%7Bx%7Dp%28x%29%5Csum_%7By%7DP%28y%7Cx%29%20%5Cln%20%5Cfrac%7BP%28y%7Cx%29%7D%7B%5Csum_%7Bz%7DP%28y%7Cz%29p%28z%29%7D)
+![equation](../../static/images/uploads/equ20.gif)
 
 For continuous variables:
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7B&plus;%5Cinfty%7D%20dXp%28X%29%20%5Cint_%7B-%5Cinfty%7D%5E%7B&plus;%5Cinfty%7D%20dYP%28Y%7CX%29%20%5Cln%20%5Cfrac%7BP%28Y%7CX%29%7D%7B%5Cint_%7B-%5Cinfty%7D%5E%7B&plus;%5Cinfty%7D%20d%5Ctilde%7BX%7D%20P%28Y%7C%5Ctilde%7BX%7D%29%20p%28%5Ctilde%7BX%7D%29%7D)
+![equation](../../static/images/uploads/equ21.gif)
 
 ### Properties
 
@@ -189,19 +189,25 @@ Mutual information is closely related to the Kullback-Leibler divergence - a mea
 
 The equation of Kullback-Leibler divergence of two distributions P(z) and Q(z):
 
-![equation](https://latex.codecogs.com/gif.latex?D_%7BKL%7D%28P%28z%29%7C%7CQ%28z%29%29%20%5Cequiv%20%5Csum_%7Bz%7DP%28z%29%20%5Clog%20%5Cleft%20%5B%20%5Cfrac%7BP%28z%29%7D%7BQ%28z%29%7D%20%5Cright%20%5D)
+![equation](../../static/images/uploads/equ22.gif)
 
 The mutual information is actually the Kullback-Leibler distance between the joint distribution of X and Y, and the product of the marginal probabilities:
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%29%20%3D%20D_%7BKL%7D%28P_%7BXY%7D%28x%2Cy%29%7C%7CP_%7BX%7D%28x%29P_%7BY%7D%28y%29%29)
+![equation](../../static/images/uploads/equ23.gif)
 
 The symmetric property in mutual information:
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%29%20%3D%20I%28Y%2CX%29)
+![equation](../../static/images/uploads/equ24.gif)
 
-The additive property for independent variables in mutual information. If ![equation](https://latex.codecogs.com/gif.latex?P_%7BXYWZ%7D%28x%2Cy%2Cw%2Cz%29%20%3D%20P_%7BXY%7D%28x%2Cy%29P_%7BWZ%7D%28w%2Cz%29), then:
+The additive property for independent variables in mutual information. If
 
-![equation](https://latex.codecogs.com/gif.latex?I%28X%2CY%2CW%2CZ%29%20%3D%20I%28X%2CY%29%20&plus;%20I%28W%2CZ%29)
+![](../../static/images/uploads/equ25.gif)
+
+ 
+
+then:
+
+![equation](../../static/images/uploads/equ26.gif)
 
 ## The InfoMax principle \[7, 8]
 
