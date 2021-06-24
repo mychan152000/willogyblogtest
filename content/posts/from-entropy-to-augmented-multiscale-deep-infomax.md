@@ -1,5 +1,6 @@
 ---
-title: From Entropy to Augmented Multiscale Deep InfoMax
+title: "Self-Supervised Learning - Part 2: From Entropy to Augmented Multiscale
+  Deep InfoMax"
 date: 2021-06-24T15:21:35.648Z
 published: true
 tags:
@@ -15,6 +16,39 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   about the underlying basis of the InfoMax principle which includes entropy,
   mutual information, their properties, and relations.
 ---
+<style>
+#tabletype1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tabletype1 td, #tabletype1 th {
+
+  width: 20%;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tabletype1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabletype1 tr:hover {background-color: #ddd;}
+
+#tabletype1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}
+
+#tabletype2 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+</style>
+
 ## Entropy \[1, 2]
 
 The knowledge of entropy is required to understand mutual information.
@@ -23,7 +57,7 @@ The entropy calculates the “unpredictability” of a random variable, which me
 
 The entropy equation: 
 
-![equation](https://latex.codecogs.com/gif.latex?H%28X%29%3D-%5Csum_%7Bx%20%5Cin%20X%7DP%28x%29%20%5Clog%20P%28x%29)
+![](https://latex.codecogs.com/gif.latex?H%28X%29%3D-%5Csum_%7Bx%20%5Cin%20X%7DP%28x%29%20%5Clog%20P%28x%29)
 
 Two examples to show when entropy is low and when it is high. 
 
@@ -173,7 +207,7 @@ In terms of a perceptual network with local feedforward connections \[7] (see Fi
 
  In particular, there are some things that the InfoMax principle quantitatively implies about this perceptual network. Below is a table in which the first column holds some pieces of information about the InfoMax principle we notice in the paper \[7] and the second column is our comment:
 
-<table>
+<table id="tabletype1">
 <tr>
     <th id="colTitle1" width="50%">From the paper \[7]</th>
     <th id="colTitle2" width="50%">Our comment (if have)</th>
