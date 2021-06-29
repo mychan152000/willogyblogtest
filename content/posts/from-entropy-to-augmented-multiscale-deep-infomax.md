@@ -50,7 +50,7 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
 
 img {
 
-  width: 50%;
+  width: 20%;
 
   margin: auto;
 
@@ -126,7 +126,7 @@ Suppose we have an information system that can be split into 3 components: sende
 ![](../../static/images/uploads/sender_channel_receiver.jpg)
 
 <p align=center>
-    <em><b>Figure 1:</b> The formal decomposition Sender-Channel-Receiver (Image from \\\[2]).</em>
+    <em><b>Figure 1:</b> The formal decomposition Sender-Channel-Receiver (Image from \\\\[2]).</em>
 </p>
 
 Considering that the sender is represented by a pattern set X including x<sub>i</sub>s and the corresponding probability density function p(x<sub>i</sub>), the receiver is represented by a pattern set Y including y<sub>i</sub>s and the corresponding probability density function p(y<sub>i</sub>). The channel is characterized by the conditional probability matrix P(y<sub>j</sub> | x<sub>i</sub>) in which each element is the conditional probability density function pairwise calculated between elements in X and Y.
@@ -222,14 +222,14 @@ In terms of a perceptual network with local feedforward connections \[7] (see Fi
 ![](../../static/images/uploads/self_adaptive_network.jpg)
 
 <p align=center>
-    <em><b>Figure 2:</b> A layered self-adaptive network with local feedforward connections (Image from \\\[7]).</em>
+    <em><b>Figure 2:</b> A layered self-adaptive network with local feedforward connections (Image from \\\\[7]).</em>
 </p>
 
  In particular, there are some things that the InfoMax principle quantitatively implies about this perceptual network. Below is a table in which the first column holds some pieces of information about the InfoMax principle we notice in the paper \[7] and the second column is our comment:
 
 <table id="tabletype1">
 <tr>
-    <th id="colTitle1" width="50%">From the paper \\\\[7]</th>
+    <th id="colTitle1" width="50%">From the paper \\\\\[7]</th>
     <th id="colTitle2" width="50%">Our comment (if have)</th>
 </tr>
 <tr>
