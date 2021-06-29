@@ -65,6 +65,8 @@ The entropy calculates the “unpredictability” of a random variable, which me
 
 The entropy equation:
 
+
+
 ![](../../static/images/uploads/equ1.gif)
 
 Two examples to show when entropy is low and when it is high. 
