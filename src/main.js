@@ -27,7 +27,7 @@ export default function (Vue, { router, head, isClient }) {
     api: GithubV3,
     owner: 'mychan152000',
     repo: 'willogyblogtest',
-    clientId: '930b75648c58908042a3',
-    clientSecret: 'a8e8f88e3d547e3041f7f62fd28d88a9d6acd591',
+    clientId: '8df817f6fe85b570f293',
+    clientSecret: '136ef75400102361a3e55bd32a8e3dc1004283a3',
   })
 }
