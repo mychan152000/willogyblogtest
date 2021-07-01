@@ -9,7 +9,7 @@ module.exports = {
   siteName: 'Willogy Insights',
   siteDescription: 'Knowledge is common. Our insights and experience on-top of them is unique',
   titleTemplate: '%s - Willogy.Insights',
-  siteUrl: 'https://eager-shaw-eecd63.netlify.app/',
+  siteUrl: 'https://insights.willogy.io/',
 
   templates: {
     Post: '/:title',
@@ -34,8 +34,8 @@ module.exports = {
     {
       use: 'gridsome-plugin-robots-txt',
       options: {
-        host: 'https://eager-shaw-eecd63.netlify.app/',
-        sitemap: 'https://eager-shaw-eecd63.netlify.app//configs/sitemap.xml',
+        host: 'https://insights.willogy.io/',
+        sitemap: 'https://insights.willogy.io//configs/sitemap.xml',
         policy: [
           {
             userAgent: "Googlebot",
