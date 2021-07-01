@@ -24,7 +24,7 @@
     <div class="post-comments">
       <section class='comments' aria-labelledby="comment">
         <h2 id="comment">Comments</h2>
-        <Disqus />
+        <Vssue title="Vssue Demo" />
       </section>      
     </div>
     <Author class="post-author" />
@@ -35,14 +35,13 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-import { Disqus } from 'vue-disqus'
 
 export default {
   components: {
     Author,
     PostMeta,
     PostTags,
-    Disqus
+    
   },
   //OLD META INFO 
   // metaInfo () {
