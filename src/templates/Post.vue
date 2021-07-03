@@ -22,10 +22,9 @@
     </div>
 
     <div class="post-comments">
-      <section class='comments' aria-labelledby="comment">
-        <h2 id="comment">Comments</h2>
-        <Vssue title="Vssue Demo" />
-      </section>      
+        <Vssue
+          :options="options"
+        />
     </div>
     <Author class="post-author" />
   </Layout>
@@ -35,13 +34,28 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-
+import { VssueComponent } from 'vssue'
+import GithubV3 from '@vssue/api-github-v3'
+import 'vssue/dist/vssue.css'
 export default {
   components: {
     Author,
     PostMeta,
     PostTags,
-    
+  'Vssue': VssueComponent,
+
+  },
+  data () {
+    return {
+      title: 'Vssue Demo',
+      options: {
+        api: GithubV3,
+        owner: 'mychan152000',
+        repo: 'willogyblogtest',
+        clientId: 'de5c6da0b78fa8de0f4a',
+        clientSecret: 'ee1064d0008030d7043a139d45e25200300cc4c6' // only required for some of the platforms
+      },
+    }
   },
   //OLD META INFO 
   // metaInfo () {
