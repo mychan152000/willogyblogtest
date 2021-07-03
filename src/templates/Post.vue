@@ -22,40 +22,37 @@
     </div>
 
     <div class="post-comments">
-        <Vssue
-          :options="options"
-        />
+        <div class="vue-utterances" ref="vueUtterances">
+          <!-- utterances comment here -->
+        </div>
     </div>
     <Author class="post-author" />
   </Layout>
+  
 </template>
-
+<script >
+</script>
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-import { VssueComponent } from 'vssue'
-import GithubV3 from '@vssue/api-github-v3'
-import 'vssue/dist/vssue.css'
+
 export default {
   components: {
     Author,
     PostMeta,
     PostTags,
-  'Vssue': VssueComponent,
-
   },
-  data () {
-    return {
-      title: 'Vssue Demo',
-      options: {
-        api: GithubV3,
-        owner: 'mychan152000',
-        repo: 'willogyblogtest',
-        clientId: 'de5c6da0b78fa8de0f4a',
-        clientSecret: 'ee1064d0008030d7043a139d45e25200300cc4c6' // only required for some of the platforms
-      },
-    }
+  mounted() {
+    let utterances = document.createElement("script");
+    utterances.async = true;
+    utterances.setAttribute("src", "https://utteranc.es/client.js");
+    utterances.setAttribute("repo","mychan152000/willogyblogtest");
+    utterances.setAttribute("issue-term", "pathname");
+    utterances.setAttribute("theme", "github-light");
+    utterances.setAttribute("async", true);
+    utterances.setAttribute("crossorigin", "anonymous");
+    this.$refs.vueUtterances.appendChild(utterances);
   },
   //OLD META INFO 
   // metaInfo () {
