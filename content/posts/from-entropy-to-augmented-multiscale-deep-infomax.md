@@ -48,15 +48,8 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   width: 50%;
 }
 
-.image {
-
+.equation-image img {
   width: 50%;
-
-  margin: auto;
-
-}
-img[alt=eqimage] {
-    width: 50%;
   margin: auto;
 }
 </style>
@@ -69,9 +62,13 @@ The entropy calculates the “unpredictability” of a random variable, which me
 
 The entropy equation:
 
-<img src="../../static/images/uploads/equ1.gif" class="image" alt="alt">
 
-![eqimage](../../static/images/uploads/equ1.gif)
+<div class="equation-image">
+
+![](../../static/images/uploads/equ1.gif)
+
+</div>
+
 
 Two examples to show when entropy is low and when it is high. 
 
