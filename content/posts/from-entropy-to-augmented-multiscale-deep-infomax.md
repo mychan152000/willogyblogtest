@@ -55,6 +55,10 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   margin: auto;
 
 }
+img[alt=eqimage] {
+    width: 50%;
+  margin: auto;
+}
 </style>
 
 ## Entropy \[1, 2]
@@ -67,7 +71,7 @@ The entropy equation:
 
 <img src="../../static/images/uploads/equ1.gif" class="image" alt="alt">
 
-![](../../static/images/uploads/equ1.gif)
+![eqimage](../../static/images/uploads/equ1.gif)
 
 Two examples to show when entropy is low and when it is high. 
 
@@ -75,21 +79,21 @@ Two examples to show when entropy is low and when it is high.
 
 Given that:
 
-![equation](../../static/images/uploads/equ2.gif)
+![eqimage](../../static/images/uploads/equ2.gif)
 
-![equation](../../static/images/uploads/equ3.gif)
+![eqimage](../../static/images/uploads/equ3.gif)
 
 Using entropy equation, we have:
 
-![equation](../../static/images/uploads/equ4.gif)
+![eqimage](../../static/images/uploads/equ4.gif)
 
 **Example 2** Compute the entropy of an unfair coin
 
 Given that:
 
-![equation](../../static/images/uploads/equ5.gif)
+![eqimage](../../static/images/uploads/equ5.gif)
 
-![equation](../../static/images/uploads/equ6.gif)
+![eqimage](../../static/images/uploads/equ6.gif)
 
 Using entropy equation, we have:
 
