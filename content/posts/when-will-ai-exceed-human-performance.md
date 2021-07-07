@@ -26,14 +26,14 @@ There are 32 milestones that are given to the researchers to ask them when each 
 
 <div class="general-ai-image-75">
 
-![](../../static/images/uploads/milestones1.jpg)
+![general ai high-level machine intelligence human performance surgeon go lego retail starcraft](../../static/images/uploads/milestones1.jpg)
 
 </div>
 
 <div class="general-ai-image-75">
  
 
-![](../../static/images/uploads/milestones2.jpg)
+![ai risks research full automation of labor](../../static/images/uploads/milestones2.jpg)
 
 </div>
     <em><b>Figure 1:</b> Timeline of Median Estimates (with 50% intervals) for AI Achieving Human Performance (Image from [1]).</em>
