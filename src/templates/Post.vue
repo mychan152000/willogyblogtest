@@ -47,7 +47,7 @@ export default {
     let utterances = document.createElement("script");
     utterances.async = true;
     utterances.setAttribute("src", "https://utteranc.es/client.js");
-    utterances.setAttribute("repo","willogy-team/insights-cms");
+    utterances.setAttribute("repo","mychan152000/willogyblogtest");
     utterances.setAttribute("issue-term", "pathname");
     utterances.setAttribute("theme", "github-light");
     utterances.setAttribute("async", true);
