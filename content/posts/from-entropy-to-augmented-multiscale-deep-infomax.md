@@ -52,6 +52,11 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   width: 50%;
   margin: auto;
 }
+
+.equation-image-30 img {
+  width: 30%;
+  margin: auto;
+}
 </style>
 
 ## Entropy [1, 2]
@@ -100,7 +105,7 @@ Using entropy equation, we have:
 
 Given that:
 
-<div class="" width="10%">
+<div class="equation-image-30">
 
 ![eqimage](../../static/images/uploads/equ5.gif)
 
