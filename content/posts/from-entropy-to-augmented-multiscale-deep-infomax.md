@@ -53,6 +53,11 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   margin: auto;
 }
 
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-25 img {
+  width: 25%;
+  margin: auto;
+}
+
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30 img {
   width: 30%;
   margin: auto;
@@ -144,7 +149,7 @@ Given that:
 
 Using entropy equation, we have:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
 ![entropy](../../static/images/uploads/equ7.gif)
 
@@ -164,7 +169,7 @@ Given that:
 
 Using entropy equation, we have:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80">
 
 ![entropy](../../static/images/uploads/equ9.gif)
 
@@ -300,7 +305,7 @@ For discrete variables:
 
 For continuous variables:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![mutual information](../../static/images/uploads/equ21.gif)
 
@@ -328,7 +333,7 @@ The mutual information is actually the Kullback-Leibler distance between the joi
 
 The symmetric property in mutual information:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-25">
 
 ![mutual information](../../static/images/uploads/equ24.gif)
 
