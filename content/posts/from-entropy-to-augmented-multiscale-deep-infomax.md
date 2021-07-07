@@ -108,13 +108,13 @@ Given that:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![eqimage](../../static/images/uploads/equ2.gif)
+![entropy](../../static/images/uploads/equ2.gif)
 
 </div>
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![eqimage](../../static/images/uploads/equ3.gif)
+![entropy](../../static/images/uploads/equ3.gif)
 
 </div>
 
@@ -122,7 +122,7 @@ Using entropy equation, we have:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![eqimage](../../static/images/uploads/equ4.gif)
+![entropy](../../static/images/uploads/equ4.gif)
 
 </div>
 
@@ -132,13 +132,13 @@ Given that:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![eqimage](../../static/images/uploads/equ5.gif)
+![entropy](../../static/images/uploads/equ5.gif)
 
 </div>
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![eqimage](../../static/images/uploads/equ6.gif)
+![entropy](../../static/images/uploads/equ6.gif)
 
 </div>
 
@@ -146,7 +146,7 @@ Using entropy equation, we have:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ7.gif)
+![entropy](../../static/images/uploads/equ7.gif)
 
 </div>
 
@@ -158,15 +158,15 @@ Given that:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-20">
 
-![equation](../../static/images/uploads/equ8.gif)
+![entropy](../../static/images/uploads/equ8.gif)
 
 </div>
 
 Using entropy equation, we have:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
-![equation](../../static/images/uploads/equ9.gif)
+![entropy](../../static/images/uploads/equ9.gif)
 
 </div>
 
@@ -182,7 +182,7 @@ The equation for mutual information of two random variables X and Y where joint 
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
-![equation](../../static/images/uploads/equ10.gif)
+![mutual information](../../static/images/uploads/equ10.gif)
 
 </div>
 
@@ -194,7 +194,7 @@ Suppose we have an information system that can be split into 3 components: sende
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
-![](../../static/images/uploads/sender_channel_receiver.jpg)
+![mutual information](../../static/images/uploads/sender_channel_receiver.jpg)
 
 </div>
 
@@ -208,7 +208,7 @@ The Shannon entropy equation on X and on Y:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![equation](../../static/images/uploads/equ11.gif)
+![mutual information](../../static/images/uploads/equ11.gif)
 
 </div>
 
@@ -216,7 +216,7 @@ The formula of conditional entropy, it measures the uncertainty of X given Y:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ12.gif)
+![mutual information](../../static/images/uploads/equ12.gif)
 
 </div>
 
@@ -224,7 +224,7 @@ The formula of joint entropy (the entropy of a joint probability distribution) o
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ13.gif)
+![mutual information](../../static/images/uploads/equ13.gif)
 
 </div>
 
@@ -232,7 +232,7 @@ Then, the equation mutual information will be:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
 
-![equation](../../static/images/uploads/equ14.gif)
+![mutual information](../../static/images/uploads/equ14.gif)
 
 </div>
 
@@ -240,13 +240,13 @@ Let's verify if it is equal to the above equation for mutual information of two 
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
-![equation](../../static/images/uploads/equ15.gif)
+![mutual information](../../static/images/uploads/equ15.gif)
 
 </div>
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
-![equation](../../static/images/uploads/equ16.gif)
+![mutual information](../../static/images/uploads/equ16.gif)
 
 </div>
 
@@ -256,7 +256,7 @@ And with a theorem H(X|Y) = H(X, Y) - H(Y) of conditional entropy (if X and Y ar
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ17.gif)
+![mutual information](../../static/images/uploads/equ17.gif)
 
 </div>
 
@@ -266,7 +266,7 @@ To be more clear about the above formula, let’s consider 2 cases:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ18.gif)
+![mutual information](../../static/images/uploads/equ18.gif)
 
 </div>
 
@@ -274,7 +274,7 @@ To be more clear about the above formula, let’s consider 2 cases:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
-![equation](../../static/images/uploads/equ19.gif)
+![mutual information](../../static/images/uploads/equ19.gif)
 
 </div>
 
@@ -294,7 +294,7 @@ For discrete variables:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
-![equation](../../static/images/uploads/equ20.gif)
+![mutual information](../../static/images/uploads/equ20.gif)
 
 </div>
 
@@ -302,7 +302,7 @@ For continuous variables:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
-![equation](../../static/images/uploads/equ21.gif)
+![mutual information](../../static/images/uploads/equ21.gif)
 
 </div>
 
@@ -314,7 +314,7 @@ The equation of Kullback-Leibler divergence of two distributions P(z) and Q(z):
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ22.gif)
+![mutual information](../../static/images/uploads/equ22.gif)
 
 </div>
 
@@ -322,7 +322,7 @@ The mutual information is actually the Kullback-Leibler distance between the joi
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ23.gif)
+![mutual information](../../static/images/uploads/equ23.gif)
 
 </div>
 
@@ -330,7 +330,7 @@ The symmetric property in mutual information:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![equation](../../static/images/uploads/equ24.gif)
+![mutual information](../../static/images/uploads/equ24.gif)
 
 </div>
 
@@ -338,7 +338,7 @@ The additive property for independent variables in mutual information. If
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![](../../static/images/uploads/equ25.gif)
+![mutual information](../../static/images/uploads/equ25.gif)
 
 </div>
 
@@ -346,7 +346,7 @@ then:
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![equation](../../static/images/uploads/equ26.gif)
+![mutual information](../../static/images/uploads/equ26.gif)
 
 </div>
 
