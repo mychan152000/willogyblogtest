@@ -363,7 +363,7 @@ In terms of a perceptual network with local feedforward connections \[7\] (see F
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-![](../../static/images/uploads/self_adaptive_network.jpg)
+![infomax](../../static/images/uploads/self_adaptive_network.jpg)
 
 </div>
 
