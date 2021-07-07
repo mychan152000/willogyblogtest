@@ -77,7 +77,6 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   width: 70%;
   margin: auto;
 }
-</style>
 
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80 img {
   width: 80%;
