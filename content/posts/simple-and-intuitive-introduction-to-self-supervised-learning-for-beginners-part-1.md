@@ -208,7 +208,9 @@ According to \[3], SSL methods can be divided into 3 main categories each of whi
 
 <div class="self-supervised-learning-image-70">
     
-![types of self supervised learning](../../static/images/uploads/3_types_of_ssl.jpg)
+
+
+![](../../static/images/uploads/3_types_of_ssl.jpg)
 
 </div>
 <p align=center>
@@ -275,7 +277,6 @@ Having known about the different properties of these model types, we definitely 
   * <span><b>PROS</b></span>: Generative models recreate the original data distribution without any premises at downstream tasks
 
     → It can widely apply to both generation and classification
-
   * <span style="color:gray"><b>CONS</b></span>: In classification, generative model performance is to a much lesser extent than contrastive learning because of its classific essence that has been mentioned above.
 
     The fact that generative objective has pointwise property results in some shortcomings:
@@ -297,7 +298,7 @@ Having known about the different properties of these model types, we definitely 
   * <span><b>PROS</b></span>: Generative-contrastive is successful in image generation, transformation and manipulation. Unlike generative, it gets rid of the pointwise objective and turns to distributional matching objective, which makes it better tackle the high-level data abstraction.
   * <span style="color:gray"><b>CONS</b></span>: There are still some challenges for future development:
 
-    * Limited applications in NLP and graph.
+    * Limited applications in NLP and graph problems.
     * Easy to collapse.
     * Not for feature extraction.
 
