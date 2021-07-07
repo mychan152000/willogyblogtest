@@ -46,6 +46,45 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
   border-collapse: collapse;
   width: 50%;
 }
+.self-supervised-learning-image-20 img {
+  width: 20%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-25 img {
+  width: 25%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-30 img {
+  width: 30%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-40 img {
+  width: 40%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-50 img {
+  width: 50%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-60 img {
+  width: 60%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-70 img {
+  width: 70%;
+  margin: auto;
+}
+
+.self-supervised-learning-image-80 img {
+  width: 80%;
+  margin: auto;
+}
 </style>
 
 ### MOTIVATIONS AND IDEAS
@@ -61,11 +100,11 @@ Another advantage of SSL is its ability to extract "common sense" features. Take
 
 When telling about SSL, we certainly have to mention pretext tasks and downstream tasks. The common-sense feature is learned through solving pretext tasks (coloring grayscale images, rotating images, super resolution on images, ...). Afterward, learned knowledge from the above tasks is used to solve downstream tasks - tasks at a higher level of difficulty (image classification, object segmentation, ...)
 
-<p align=center style="width: 10px;">
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/ssl_general_pipeline.jpg)
 
-</p>
+</div>
 
 <p align=center>
     <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\[2]).</em>
@@ -77,11 +116,11 @@ A downstream task is a task that is used for model finetuning. It can be any one
 
 Here are some pretext tasks.
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/color_transformation_as_pretext_task.jpg)
 
-</p>
+</div>
 <p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\[4]).</em> (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
@@ -89,41 +128,41 @@ Here are some pretext tasks.
 
 <p align=center>&#8680; By solving this task (color inpainting), a model can grasp the “common sense” of what the color of dog/grass should be.</p>
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/predicting_rotation_of_images_as_pretext_task.jpg)
 
-</p>
+</div>
 
 <p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from \\[6]). </em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</p>
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/solving_jigsaw_puzzle_as_pretext_task.jpg)
 
-</p>
+</div>
 <p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from \\[4]).</em> (a) Original image
 (b) Reshuffled image.
 The anchor is the original image while the positive sample is the reshuffled image.</p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of which location each part of a tiger should locate. Through this, a model can know the overall shape of a tiger and the correlative positions of different parts, not just its detailed information of each separated part.</p>
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/relative_position_prediction_as_pretext_task.jpg)
 
-</p>
+</div>
 <p align=center><em><b>Figure 5:</b> Relative position prediction (context-based) as a pretext task (Image from \\[5]).</em> Given 2 sub images, we need to find the relative positions of them in the original image.</p>
 
 <p align=center>&#8680; Like solving jigsaw puzzles, a model can grasp the knowledge about the overall shape and the relative positions of different parts of a cat.</p>
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/predicting_corrupted_region_of_images_as_pretext_task.jpg)
 
-</p>
+</div>
 <p align=center><em><b>Figure 6:</b> Predicting the corrupted region of an image as a pretext task (Image from \\[2]).</em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.</p>
@@ -132,7 +171,7 @@ The pictures shown above are just some types of pretext tasks, there are a lot m
 
 ### HOW TO DISCRIMINATE SELF-SUPERVISED LEARNING WITH OTHER LEARNING APPROACHES
 
-Reading until now, you may have question of how to discriminate Self-supervised learning with other learning methods. Below is the table that provides definitions of 5 learning methods with respect to data samples.
+Reading until now, you may have questions about how to discriminate self-supervised learning with other learning methods. Below is the table that provides definitions of 5 learning methods with respect to data samples.
 
 <table id="tabletype1">
 <tr>
@@ -167,12 +206,11 @@ Regardless of what category a learning method is included in, it will use simila
 
 According to \[3], SSL methods can be divided into 3 main categories each of which has architectures containing the generator and the last two types contain discriminator in addition:
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
     
+![3 types of Self-Supervised Learning](../../static/images/uploads/3_types_of_ssl.jpg)
 
-![3 types of Self-Supervised Learning](../../static/images/uploads/3_types_of_ssl.jpg "3 types of Self-Supervised Learning")
-
-</p>
+</div>
 <p align=center>
     <em><b>Figure 7:</b> 3 types of Self-supervised learning: Generative, Contrastive and Generative-contrastive (Image from \\[3]).</em>
 </p>
@@ -221,11 +259,11 @@ Here are some pretext tasks which correspond to each model type:
 
 Among the three, the contrastive model seems to be the one that is best suited for nearly all visual classification tasks due to the essence of finding the contrastive relation of 2 images, which tries to keep 2 same-class images near and 2 different-class images apart.
 
-<p align=center>
+<div class="self-supervised-learning-image-60">
 
 ![](../../static/images/uploads/contrastive_learning_intuition.jpg)
 
-</p>
+</div>
 <p align=center>
     <em><b>Figure 8:</b> The intuition behind contrastive learning approach (Image from \\[4]).</em>
 </p>
