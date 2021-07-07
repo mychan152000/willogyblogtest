@@ -87,7 +87,7 @@ description: "> _In the speech at AAAI 2020, Yann LeCun described
 }
 </style>
 
-### MOTIVATIONS AND IDEAS
+### MOTIVATIONS AND IDEAS [1, 2]
 
 Data makes a major contribution to the performance of today's machine learning/deep learning model. In general, having a big and good quality enough dataset is the main factor that makes your model perform well or not. However, the data collection and annotation work usually cost a lot of time and effort.
 This is where Self-supervised learning (SSL) comes in to help. The main goal of SSL is to learn visual features from large-scale unlabeled images. 
@@ -96,7 +96,7 @@ What makes SSL different from other methods is it takes advantage of ‘pseudo l
 
 Another advantage of SSL is its ability to extract "common sense" features. Take image classification as an example, to recognize between dog and cat, supervised methods may only need to extract feature representation in some way providing that they are correctly classified. Usually, this type of learning is not similar enough to that of humans. Self-supervised learning is also created for this reason, it can extract feature representation that has common sense properties, such as color, rotation angle, object position, context,... Common sense helps improve 2 things about generalization: the learned representation from one dataset gives good performance when evaluating on another dataset, the learned representation by this problem can be used well on another problem.
 
-### PRETEXT TASKS AND DOWNSTREAM TASKS
+### PRETEXT TASKS AND DOWNSTREAM TASKS [2, 4, 5, 6]
 
 When telling about SSL, we certainly have to mention pretext tasks and downstream tasks. The common-sense feature is learned through solving pretext tasks (coloring grayscale images, rotating images, super resolution on images, ...). Afterward, learned knowledge from the above tasks is used to solve downstream tasks - tasks at a higher level of difficulty (image classification, object segmentation, ...)
 
@@ -169,7 +169,7 @@ The anchor is the original image while the positive sample is the reshuffled ima
 
 The pictures shown above are just some types of pretext tasks, there are a lot more than that. And in practice, the selection of pretext tasks to use is a very significant factor that influences the performance of SSL. An efficacious pretext task guarantees deep models can exploit semantic features through solving it. However, we should not stick with choosing which tasks to use for too long, quickly go with the simple ones. Additionally, we can also let an SSL model solve multiple tasks at the same time, which is inherently called multi-task learning.
 
-### HOW TO DISCRIMINATE SELF-SUPERVISED LEARNING WITH OTHER LEARNING APPROACHES
+### HOW TO DISCRIMINATE SELF-SUPERVISED LEARNING WITH OTHER LEARNING APPROACHES [2]
 
 Reading until now, you may have questions about how to discriminate self-supervised learning with other learning methods. Below is the table that provides definitions of 5 learning methods with respect to data samples.
 
@@ -202,7 +202,7 @@ Reading until now, you may have questions about how to discriminate self-supervi
 
 Regardless of what category a learning method is included in, it will use similar network architectures as methods in the other categories. Some of the popular architectures such as AlexNet, VGG, GoogLeNet, ResNet, DenseNet, ...
 
-### CATEGORIES OF SELF-SUPERVISED LEARNING
+### CATEGORIES OF SELF-SUPERVISED LEARNING [3]
 
 According to \[3], SSL methods can be divided into 3 main categories each of which has architectures containing the generator and the last two types contain a discriminator in addition:
 
@@ -302,7 +302,7 @@ Having known about the different properties of these model types, we definitely 
     * Easy to collapse.
     * Not for feature extraction.
 
-### SEVERAL LAST WORDS
+### SEVERAL LAST WORDS [1, 2]
 
 Self-supervised learning has appeared in many aspects of NLP, but in computer vision, its impact has not achieved equal status. This is because ImageNet pretraining has been so popular and successful that pretraining on pretext tasks of SSL has not received much attention yet. One more reason is NLP is a discrete domain while CV is a continuous domain, which means that the learning space of CV is much bigger than that of NLP.
 
@@ -310,14 +310,14 @@ As we can infer, contrastive learning methods presently seem to work better than
 
 ### REFERENCES
 
-\[1] Yann LeCun and Ishan Misra, [Self-supervised learning: The dark matter of intelligence](https://ai.facebook.com/blog/self-supervised-learning-the-dark-matter-of-intelligence/), Facebook AI, 2021.
+[1] Yann LeCun and Ishan Misra, [Self-supervised learning: The dark matter of intelligence](https://ai.facebook.com/blog/self-supervised-learning-the-dark-matter-of-intelligence/), Facebook AI, 2021.
 
-\[2] Longlong Jing and Yingli Tian, [Self-supervised learning: The dark matter of intelligenceSelf-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf?ref=hackernoon.com), IEEE TPAMI, 2020.
+[2] Longlong Jing and Yingli Tian, [Self-supervised visual feature learning with deep neural networks: A survey](https://arxiv.org/pdf/1902.06162.pdf?ref=hackernoon.com), IEEE TPAMI, 2020.
 
-\[3] Xiao Liu et al., [Self-supervised learning: Generative or contrastive](https://arxiv.org/pdf/2006.08218.pdf), arXiv, 2021.
+[3] Xiao Liu et al., [Self-supervised learning: Generative or contrastive](https://arxiv.org/pdf/2006.08218.pdf), arXiv, 2021.
 
-\[4] Ashish Jaiswal et al., [A survey on contrastive self-supervised learning](https://www.mdpi.com/2227-7080/9/1/2/pdf), Technologies 9.1, 2021.
+[4] Ashish Jaiswal et al., [A survey on contrastive self-supervised learning](https://www.mdpi.com/2227-7080/9/1/2/pdf), Technologies 9.1, 2021.
 
-\[5] Jeremy Howard, [Self-supervised learning and computer vision](https://www.fast.ai/2020/01/13/self_supervised/), fast.ai, 2020.
+[5] Jeremy Howard, [Self-supervised learning and computer vision](https://www.fast.ai/2020/01/13/self_supervised/), fast.ai, 2020.
 
-\[6] Aniket Bhatnagar, Dhruv Goyal, Cole Smith and Nikhil Supekar, [Self-supervised learning - Pretext tasks](https://atcold.github.io/pytorch-Deep-Learning/en/week10/10-1/), atcold repo, 2020.
+[6] Aniket Bhatnagar, Dhruv Goyal, Cole Smith and Nikhil Supekar, [Self-supervised learning - Pretext tasks](https://atcold.github.io/pytorch-Deep-Learning/en/week10/10-1/), atcold repo, 2020.
