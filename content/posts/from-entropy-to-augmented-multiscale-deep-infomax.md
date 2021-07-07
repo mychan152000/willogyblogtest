@@ -48,13 +48,23 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   width: 50%;
 }
 
-.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50 img {
-  width: 50%;
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-20 img {
+  width: 20%;
   margin: auto;
 }
 
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30 img {
   width: 30%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50 img {
+  width: 50%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70 img {
+  width: 70%;
   margin: auto;
 }
 </style>
@@ -131,7 +141,7 @@ Using entropy equation, we have:
 
 Given that:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-20">
 
 ![equation](../../static/images/uploads/equ8.gif)
 
@@ -139,7 +149,7 @@ Given that:
 
 Using entropy equation, we have:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![equation](../../static/images/uploads/equ9.gif)
 
@@ -167,7 +177,7 @@ where P<sub>X</sub>(x) and P<sub>Y</sub>(y) are the marginals.
 
 Suppose we have an information system that can be split into 3 components: sender, channel, and receiver (or in the particular input image, neural network, and output representation). The channel can be represented by a transition probability matrix.
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![](../../static/images/uploads/sender_channel_receiver.jpg)
 
@@ -205,7 +215,7 @@ The formula of joint entropy (the entropy of a joint probability distribution) o
 
 Then, the equation mutual information will be:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
 
 ![equation](../../static/images/uploads/equ14.gif)
 
@@ -213,7 +223,7 @@ Then, the equation mutual information will be:
 
 Let's verify if it is equal to the above equation for mutual information of two random variables X and Y:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![equation](../../static/images/uploads/equ15.gif)
 
@@ -229,7 +239,7 @@ So yes, they are equal except for the difference in the base of the log. For you
 
 And with a theorem H(X|Y) = H(X, Y) - H(Y) of conditional entropy (if X and Y are discrete random variables), the mutual information formula can also be written as:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
 
 ![equation](../../static/images/uploads/equ17.gif)
 
@@ -247,7 +257,7 @@ To be more clear about the above formula, let’s consider 2 cases:
 
 * **Fully disturbed channel:** the output is totally not affected by the input, which means p(y_j | x_i) = p(y_j) => p(x_i, y_j) = p(x_i).p(y_j). We can prove that (more details in \[2]):
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![equation](../../static/images/uploads/equ19.gif)
 
@@ -356,7 +366,7 @@ In terms of a perceptual network with local feedforward connections \[7\] (see F
     <td>“attempt to (1) maximize the total information conveyed by the output message M, and (2) minimize the information that M conveys to one who already knows the input message L.”</td>
     <td>It is possible that the output message should contain as much information as possible (1) along with the condition that this output also does not share too much human information in accordance with the input (2).
 
-\=> to extract the most essential (and also relevant) part of the information for the balance of compactness and quality.
+→ to extract the most essential (and also relevant) part of the information for the balance of compactness and quality.
 
 </td>
 </tr>
