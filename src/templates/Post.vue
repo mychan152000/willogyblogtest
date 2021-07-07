@@ -70,6 +70,9 @@ export default {
   metaInfo() {
     return {
       title: this.$page.post.title,
+      link: [
+      {rel: 'canonical', href: 'https://insights.willogy.io/' + this.$page.post.title}
+      ],
       meta: [
         {
           property: "og:title",
