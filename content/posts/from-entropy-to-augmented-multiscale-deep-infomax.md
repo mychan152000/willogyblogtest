@@ -54,7 +54,7 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
 }
 </style>
 
-## Entropy \[1, 2]
+## Entropy [1, 2]
 
 The knowledge of entropy is required to understand mutual information.
 
