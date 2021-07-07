@@ -58,7 +58,17 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   margin: auto;
 }
 
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40 img {
+  width: 30%;
+  margin: auto;
+}
+
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50 img {
+  width: 50%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60 img {
   width: 50%;
   margin: auto;
 }
