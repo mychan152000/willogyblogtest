@@ -239,7 +239,7 @@ Let's verify if it is equal to the above equation for mutual information of two 
 
 </div>
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![equation](../../static/images/uploads/equ16.gif)
 
@@ -249,7 +249,7 @@ So yes, they are equal except for the difference in the base of the log. For you
 
 And with a theorem H(X|Y) = H(X, Y) - H(Y) of conditional entropy (if X and Y are discrete random variables), the mutual information formula can also be written as:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
 ![equation](../../static/images/uploads/equ17.gif)
 
@@ -287,7 +287,7 @@ Reformulation of the expression for the mutual information \[2]:
 
 For discrete variables:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
 ![equation](../../static/images/uploads/equ20.gif)
 
@@ -295,7 +295,7 @@ For discrete variables:
 
 For continuous variables:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
 ![equation](../../static/images/uploads/equ21.gif)
 
