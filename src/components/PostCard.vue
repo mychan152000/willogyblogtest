@@ -13,10 +13,6 @@
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
   </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 366f2752e3f2bd8d60ad24a5ded36ba972b87cf3
 </template>
 
 <script>
