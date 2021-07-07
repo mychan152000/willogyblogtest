@@ -89,6 +89,8 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
 }
 </style>
 
+DeepInfoMax and Amdim are two self-supervised models that are very popular in recent times. They are constructed based on the idea of the InfoMax principle. Therefore, to fully understand these two models, we must first know about the underlying basis of the InfoMax principle which includes entropy, mutual information, their properties, and relations.
+
 ## Entropy [1, 2]
 
 The knowledge of entropy is required to understand mutual information.
