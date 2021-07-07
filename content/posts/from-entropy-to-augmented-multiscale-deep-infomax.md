@@ -100,7 +100,7 @@ Using entropy equation, we have:
 
 Given that:
 
-<div class="equation-image">
+<div class="" width="10%">
 
 ![eqimage](../../static/images/uploads/equ5.gif)
 
@@ -288,7 +288,7 @@ The equation of Kullback-Leibler divergence of two distributions P(z) and Q(z):
 
 </div>
 
-The mutual information is actually the Kullback-Leibler distance between the joint distribution of X and Y, and the product of the marginal probabilities:
+The mutual information is actually the Kullback-Leibler distance between the joint distribution of X and Y. The product of the marginal probabilities:
 
 <div class="equation-image">
 
@@ -340,7 +340,7 @@ In terms of a perceptual network with local feedforward connections \[7\] (see F
 
 <table id="tabletype1">
 <tr>
-    <th id="colTitle1" width="50%">From the paper \\\\\\\[7]</th>
+    <th id="colTitle1" width="50%">From the paper [7]</th>
     <th id="colTitle2" width="50%">Our comment (if have)</th>
 </tr>
 <tr>
