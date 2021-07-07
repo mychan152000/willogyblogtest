@@ -70,11 +70,11 @@ export default {
         
         {
           property: "og:description",
-          cotent: 'Knowledge is common. Our insights and experience on-top of them is unique'
+          content: 'Knowledge is common. Our insights and experience on-top of them is unique'
         },
         {
           property: "og:type",
-          cotent: 'article, blog, content, research, insights'
+          content: 'article, blog, content, research, insights'
         },
         
         {

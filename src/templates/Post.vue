@@ -81,11 +81,11 @@ export default {
         },
         {
           property: "og:description",
-          cotent: this.$page.post.excerpt
+          content: this.$page.post.excerpt
         },
         {
           property: "og:type",
-          cotent: 'article, blog, content, research'
+          content: 'article, blog, content, research'
         },
         
         {
@@ -121,6 +121,11 @@ query Post ($id: ID!) {
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
+  margin: 1.8em 1em;
+
+  &__text {
+    font-size: 2em;
+  }
 }
 
 .post {

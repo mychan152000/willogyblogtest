@@ -13,7 +13,10 @@
       <g-link class="post-card__link" :to="post.path">Link</g-link>
     </div>
   </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 366f2752e3f2bd8d60ad24a5ded36ba972b87cf3
 </template>
 
 <script>
@@ -57,7 +60,9 @@ export default {
   }
 
   &__title {
-    margin-top: 0;
+    margin-bottom: 1em;
+    padding: 0.8em 0;
+    font-size: 1.6em;
   }
 
   &:hover {
