@@ -8,6 +8,7 @@ tags:
   - ai
   - machine-learning
   - computer-vision
+  - self-supervised learning
 cover_image: ../../static/images/uploads/3_types_of_ssl.jpg
 description: "> _In the speech at AAAI 2020, Yann LeCun described
   Self-supervised learning as \"The machine predicts any parts of its input for
