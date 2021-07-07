@@ -59,7 +59,7 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
 }
 
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40 img {
-  width: 30%;
+  width: 40%;
   margin: auto;
 }
 
@@ -69,12 +69,18 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
 }
 
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60 img {
-  width: 50%;
+  width: 60%;
   margin: auto;
 }
 
 .entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70 img {
   width: 70%;
+  margin: auto;
+}
+</style>
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80 img {
+  width: 80%;
   margin: auto;
 }
 </style>
@@ -159,7 +165,7 @@ Given that:
 
 Using entropy equation, we have:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80">
 
 ![equation](../../static/images/uploads/equ9.gif)
 
@@ -175,7 +181,7 @@ Mutual information can also be defined as “the reduction in uncertainty about 
 
 The equation for mutual information of two random variables X and Y where joint distribution is represented as P<sub>XY</sub>(x,y):
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
 ![equation](../../static/images/uploads/equ10.gif)
 
