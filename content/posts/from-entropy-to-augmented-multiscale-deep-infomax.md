@@ -93,7 +93,7 @@ The entropy calculates the “unpredictability” of a random variable, which me
 The entropy equation:
 
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
 
 ![entropy](../../static/images/uploads/equ1.gif)
 
@@ -164,7 +164,7 @@ Given that:
 
 Using entropy equation, we have:
 
-<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
 ![entropy](../../static/images/uploads/equ9.gif)
 
@@ -262,7 +262,7 @@ And with a theorem H(X|Y) = H(X, Y) - H(Y) of conditional entropy (if X and Y ar
 
 To be more clear about the above formula, let’s consider 2 cases:
 
-* **Ideal channel:** for any given i, x_i = y_i. All the things sent by the sender are received by the receiver. And we can prove that (more details in \[2]):
+* **Ideal channel:** for any given i, x<sub>i</sub> = y<sub>i</sub>. All the things sent by the sender are received by the receiver. And we can prove that (more details in \[2]):
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
@@ -270,7 +270,7 @@ To be more clear about the above formula, let’s consider 2 cases:
 
 </div>
 
-* **Fully disturbed channel:** the output is totally not affected by the input, which means p(y_j | x_i) = p(y_j) => p(x_i, y_j) = p(x_i).p(y_j). We can prove that (more details in \[2]):
+* **Fully disturbed channel:** the output is totally not affected by the input, which means p(y<sub>j</sub> | x<sub>i</sub>) = p(y<sub>j</sub>) => p(x<sub>i</sub>, y<sub>j</sub>) = p(x<sub>i</sub>).p(y<sub>j</sub>). We can prove that (more details in [2]):
 
 <div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
@@ -287,7 +287,7 @@ From the two cases, we can infer that in the AMDIM model, the network tries to k
 In \[2], the problem is formulated as follows: 
 “the central principle for an information-theoretical optimization in feedforward structure says: for a given x<sub>i</sub>, y<sub>j</sub> and a given input distribution p(x<sub>i</sub>), determine the matrix P(y<sub>j</sub> | x<sub>i</sub>) in such a way that the mutual information becomes maximized”
 
-\=> Therefore, in the case of DeepInfoMax, P(y<sub>j</sub> | x<sub>i</sub>) represents the parameters/weights of a neural network.
+→ Therefore, in the case of DeepInfoMax, P(y<sub>j</sub> | x<sub>i</sub>) represents the parameters/weights of a neural network.
 Reformulation of the expression for the mutual information \[2]:
 
 For discrete variables:
@@ -350,7 +350,7 @@ then:
 
 </div>
 
-## The InfoMax principle \[7, 8]
+## The InfoMax principle [7, 8]
 
 This principle is for optimization in information processing systems and also artificial neural networks. Its main point can be described by this sentence: a function that receives a collection of inputs I to produce a collection of outputs O needs to be chosen so that the mutual information between I and O is maximized \[7\].
 
@@ -363,7 +363,7 @@ In terms of a perceptual network with local feedforward connections \[7\] (see F
 </div>
 
 <p align=center>
-    <em><b>Figure 2:</b> A layered self-adaptive network with local feedforward connections (Image from `[7]`).</em>
+    <em><b>Figure 2:</b> A layered self-adaptive network with local feedforward connections (Image from [7]).</em>
 </p>
 
  In particular, there are some things that the InfoMax principle quantitatively implies about this perceptual network. Below is a table in which the first column holds some pieces of information about the InfoMax principle we notice in the paper \[7] and the second column is our comment:
@@ -379,11 +379,7 @@ In terms of a perceptual network with local feedforward connections \[7\] (see F
 </tr>
 <tr>
     <td>“attempt to (1) maximize the total information conveyed by the output message M, and (2) minimize the information that M conveys to one who already knows the input message L.”</td>
-    <td>It is possible that the output message should contain as much information as possible (1) along with the condition that this output also does not share too much human information in accordance with the input (2).
-
-→ to extract the most essential (and also relevant) part of the information for the balance of compactness and quality.
-
-</td>
+    <td>It is possible that the output message should contain as much information as possible (1) along with the condition that this output also does not share too much human information in accordance with the input (2). <br> → to extract the most essential (and also relevant) part of the information for the balance of compactness and quality.</td>
 </tr>
 <tr>
     <td>“These criteria are related, but not equivalent, to the property of encoding signals so as to reduce redundancies present among the inputs to the perceptual system.”</td>
