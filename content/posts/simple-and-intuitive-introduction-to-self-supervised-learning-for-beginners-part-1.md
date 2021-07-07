@@ -107,7 +107,7 @@ When telling about SSL, we certainly have to mention pretext tasks and downstrea
 </div>
 
 <p align=center>
-    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from \\\[2]).</em>
+    <em><b>Figure 1:</b> General pipeline of SSL - the knowledge learned in pretext task training is transferred to downstream task training (Image from [2]).</em>
 </p>
 
 A pretext task is a task that is used for model pretraining. By solving and studying objective functions of pretext tasks, the networks can learn visual features/representations or model weights which are useful for downstream tasks. Some examples of pretext tasks such as colorization, placing image patches in the right place, predicting rotation of images, placing frames in the right order, inpainting, recovering the input under some corruptions, ...
@@ -121,7 +121,7 @@ Here are some pretext tasks.
 ![color transformation pretext task](../../static/images/uploads/color_transformation_as_pretext_task.jpg)
 
 </div>
-<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from \\\[4]).</em> (a) Original
+<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from [4]).</em> (a) Original
 (b) Gaussian noise
 (c) Gaussian blur 
 (d) Color distortion (Jitter)</p>
@@ -134,7 +134,7 @@ Here are some pretext tasks.
 
 </div>
 
-<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from \\\[6]). </em></p>
+<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from [6]). </em></p>
 
 <p align=center>&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</p>
 
@@ -143,7 +143,7 @@ Here are some pretext tasks.
 ![jigsaw puzzle pretext task](../../static/images/uploads/solving_jigsaw_puzzle_as_pretext_task.jpg)
 
 </div>
-<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from \\\[4]).</em> (a) Original image
+<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from [4]).</em> (a) Original image
 (b) Reshuffled image.
 The anchor is the original image while the positive sample is the reshuffled image.</p>
 
@@ -274,7 +274,8 @@ Having known about the different properties of these model types, we definitely 
 
   * <span><b>PROS</b></span>: Generative models recreate the original data distribution without any premises at downstream tasks
 
-    \=> It can widely apply to both generation and classification
+    → It can widely apply to both generation and classification
+
   * <span style="color:gray"><b>CONS</b></span>: In classification, generative model performance is to a much lesser extent than contrastive learning because of its classific essence that has been mentioned above.
 
     The fact that generative objective has pointwise property results in some shortcomings:
@@ -285,7 +286,7 @@ Having known about the different properties of these model types, we definitely 
 
   * <span ><b>PROS</b></span>: Having assumed classification as the downstream applications, only the encoder is engaged and the decoder is discarded in contrastive learning.
 
-    \=> Therefore, contrastive models are mostly lightweight and perform better in discriminative downstream tasks.
+    → Therefore, contrastive models are mostly lightweight and perform better in discriminative downstream tasks.
   * <span style="color:gray"><b>CONS</b></span>: Contrastive is an emerging field and still has many problems to be solved:
 
     * Contrastive pre-training does not show good results in the NLP.
