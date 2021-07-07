@@ -12,8 +12,8 @@ description: "In the previous post, we have discussed some difficulties in AI.
   Experts” \\[1]."
 ---
 <style>
-.general-ai-image-75 img {
-  width: 75%;
+.general-ai-image-85 img {
+  width: 85%;
   margin: auto;
 }
 </style>
@@ -24,13 +24,13 @@ The survey is constituted by the personal opinions of 352 researchers (in machin
 
 There are 32 milestones that are given to the researchers to ask them when each milestone would become possible. Some interesting milestones are: writing a high school essay, generating a top 40 pop song, writing a New York Times bestseller,...
 
-<div class="general-ai-image-75">
+<div class="general-ai-image-85">
 
 ![general ai high-level machine intelligence human performance surgeon go lego retail starcraft](../../static/images/uploads/milestones1.jpg)
 
 </div>
 
-<div class="general-ai-image-75">
+<div class="general-ai-image-85">
  
 
 ![ai risks research full automation of labor](../../static/images/uploads/milestones2.jpg)
