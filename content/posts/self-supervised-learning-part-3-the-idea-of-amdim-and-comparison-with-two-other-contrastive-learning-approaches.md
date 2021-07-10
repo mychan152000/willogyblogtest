@@ -213,21 +213,17 @@ The authors of Amdim maximize the NCE lower bound by minimizing the loss below:
 
 </div>
 
-where 
+where <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20"> 
 
-<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+![](../../static/images/uploads/ssl3_inline1.gif) 
 
-![](../../static/images/uploads/ssl3_inline1.gif)
+</span>
 
-</p>
+ is a set of negative samples and <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
 
- is a set of negative samples and 
+![](../../static/images/uploads/ssl3_inline2.gif) 
 
-<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
-
-![](../../static/images/uploads/ssl3_inline2.gif)
-
-</p>
+</span>
 
  is a softmax function:
 
@@ -237,39 +233,31 @@ where
 
 </div>
 
-Here, 
-
-<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+Here, <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
 
 ![](../../static/images/uploads/ssl3_inline3.gif)
 
-</p>
+</span>
 
- and 
-
-<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+ and <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
 
 ![](../../static/images/uploads/ssl3_inline4.gif)
 
-</p>
+</span>
 
- are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, 
-
-<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+ are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
 
 ![](../../static/images/uploads/ssl3_inline4.gif)
 
-</p>
+</span>
 
  maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
 
-Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, 
-
-<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
 
 ![](../../static/images/uploads/ssl3_inline5.gif)
 
-</p>
+</span>
 
  is got from the union set of negative samples and positive samples, then the sum of exponentials is calculated. Their goal is to make this fraction high in the case of the positive pair and low in the case of the negative pair. The more this becomes true, the lower the loss function will be. What is the connection with the maximization of NCE bound? 
 
