@@ -25,9 +25,8 @@ In the pre-training stage of Self-supervised learning (the stage that a model so
 
 </div>
 
-
 <p align=center>
-    <em><b>Figure 1:</b> Self Supervised Contrastive (Image from \[6]).</em>
+    <em><b>Figure 1:</b> Self Supervised Contrastive (Image from \\[6]).</em>
     A single positive sample which is produced from the anchor (original image) is used to contrast with a set of negative samples to learn meaningful representations. The big gray circle in the center is the embedding space. Samples of the same class should be mapped to locations close to each other while those that are of different classes should be pushed apart. Due to the unlabeled data, there will be case a positive sample is falsely seen as a negative sample (as the white and black puppy here).
 </p>
 
@@ -53,7 +52,7 @@ The amount of information in high-dimensional data can be very huge, so it is a 
     <img src="images/contrastive_predictive_coding.JPG" width="1080" alt>
 </p>
 <p align=center>
-    <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from \[1]).</em>
+    <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from \\[1]).</em>
     Here, audio input is used as an example but it can be replaced with another type of input such as an image.
 </p>
 
@@ -75,9 +74,8 @@ DIM can work with various MI estimators.
 
 </div>
 
-
 <p align=center>
-    <em><b>Figure 2:</b> The base encoder model in the context of image data (Image from \[2]).</em>
+    <em><b>Figure 2:</b> The base encoder model in the context of image data (Image from \\[2]).</em>
 </p>
 <p align=left>
 An MxM feature map is first got by feeding the input image through a convolutional network. Then, all vectors along the depth dimension of the MxM feature map are summarized into a single high-level features vector. Their goal is that the trained model can produce high-level feature vectors which still contain useful information from input.
@@ -86,17 +84,14 @@ An MxM feature map is first got by feeding the input image through a convolution
 
 </p>
 
-
-
 <div>
 
 ![](../../static/images/uploads/deepinfomax_fig2.jpg)
 
 </div>
 
-
 <p align=center>
-    <em><b>Figure 3:</b> Basic mutual information maximization framework: Deep InfoMax (DIM) with a global MI(X;Y) objective. (Image from \[2]).</em>
+    <em><b>Figure 3:</b> Basic mutual information maximization framework: Deep InfoMax (DIM) with a global MI(X;Y) objective. (Image from \\[2]).</em>
 </p>
 <p align=left>
 In the first branch, both the MxM feature map and the feature vector Y, which are global features of the same image, are fed through a discriminator to have a score for “real”. Similarly, if we change the original MxM feature map to the MxM feature map of another image and feed it with the same feature vector Y as above into a discriminator, we will have a score for “fake”.
@@ -108,9 +103,8 @@ In the first branch, both the MxM feature map and the feature vector Y, which ar
 
 </div>
 
-
 <p align=center>
-    <em><b>Figure 4:</b> Their local DIM framework. Maximizing mutual information between local features and global features. (Image from \[2]).</em>
+    <em><b>Figure 4:</b> Their local DIM framework. Maximizing mutual information between local features and global features. (Image from \\[2]).</em>
 </p>
 <p align=left>
  It is the same as figure 3 except lower-level local feature vectors along the temporal dimension of the MxM feature map are sequentially combined with the global feature vector Y. The result is an MxM matrix of which each element is a score of a local-global pair.
@@ -143,21 +137,45 @@ As we know, people often do the computation on the Noise-Contrastive Estimation 
 
 The authors of Amdim maximize the NCE lower bound by minimizing the loss below:
 
-![equation](https://latex.codecogs.com/gif.image?%5Cdpi%7B100%7D%20%5Cmathop%7B%5Cmathbb%7BE%7D%7D_%7B(f_%7B1%7D(x),f_%7B7%7D(x)_%7Bij%7D)%7D%20%5Cleft%20%5B%20%5Cmathop%7B%5Cmathbb%7BE%7D%7D_%7BN_%7B7%7D%7D%20%5Cleft%20%5B%20%5Cmathcal%7BL%7D_%7B%5CPhi%7D(f_%7B1%7D(x),f_%7B7%7D(x)_%7Bij%7D,N_%7B7%7D)%20%5Cright%20%5D%20%5Cright%20%5D)
+![](../../static/images/uploads/ssl3_equ1.gif)
 
-where is a set of negative samples and is a softmax function:
+where 
 
-![equation](https://latex.codecogs.com/gif.image?%5Cdpi%7B100%7D%20%5Cmathcal%7BL%7D_%7B%5CPhi%7D(f_%7B1%7D,f_%7B7%7D,N_%7B7%7D)=-log%5Cfrac%7Bexp(%5CPhi(f_%7B1%7D,%20f_%7B7%7D))%7D%7B%5Csum_%7B%5Ctilde%7Bf%7D_7%20%5Cin%20N_%7B7%7D%20%5Ccup%7B%5C%7Bf_%7B7%7D%5C%7D%7D%7Dexp(%5CPhi(f_%7B1%7D,%5Ctilde%7Bf%7D_%7B7%7D))%7D)
+![](../../static/images/uploads/ssl3_inline1.gif)
 
-Here, *f* and theta are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
+ is a set of negative samples and 
 
-Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, is got from the union set of negative samples and positive samples, then the sum of exponentials is calculated. Their goal is to make this fraction high in the case of the positive pair and low in the case of the negative pair. The more this becomes true, the lower the loss function will be. What is the connection with the maximization of NCE bound? 
+![](../../static/images/uploads/ssl3_inline2.gif)
+
+ is a softmax function:
+
+![](../../static/images/uploads/ssl3_equ2.gif)
+
+Here, 
+
+![](../../static/images/uploads/ssl3_inline3.gif)
+
+ and 
+
+![](../../static/images/uploads/ssl3_inline4.gif)
+
+ are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, 
+
+![](../../static/images/uploads/ssl3_inline4.gif)
+
+ maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
+
+Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, 
+
+![](../../static/images/uploads/ssl3_inline5.gif)
+
+ is got from the union set of negative samples and positive samples, then the sum of exponentials is calculated. Their goal is to make this fraction high in the case of the positive pair and low in the case of the negative pair. The more this becomes true, the lower the loss function will be. What is the connection with the maximization of NCE bound? 
 
 *Data Augmentation*
 
 Some of the augmentation techniques used in this paper are random resized crop, random jitter in color space, and random grayscale transformation. Transforming for the case of augmented features (features of augmented samples), the loss will now become:
 
-![equation](https://latex.codecogs.com/gif.image?%5Cdpi%7B100%7D%20%5Cmathop%7B%5Cmathbb%7BE%7D%7D_%7B(f_%7B1%7D(x%5E%7B1%7D),f_%7B7%7D(x%5E%7B2%7D)_%7Bij%7D)%7D%5Cleft%20%5B%20%5Cmathop%7B%5Cmathbb%7BE%7D%7D_%7BN_%7B7%7D%7D%20%5Cleft%20%5B%20%5Cmathcal%7BL%7D_%7B%5CPhi%7D(f_%7B1%7D(x%5E%7B1%7D),f_%7B7%7D(x%5E%7B2%7D)_%7Bij%7D,N_%7B7%7D)%20%5Cright%20%5D%20%5Cright%20%5D)
+![](../../static/images/uploads/ssl3_equ3.gif)
 
 Note that the superscript does not have any connection with exponentiation. In this loss, *x<sup>1</sup>* is an augmented version of the original input *x*, *x<sup>2</sup>* is another augmented version of the original input *x*. One more change we can also infer from this loss is that the pair does not need to be constructed from the global feature and the local feature of the same sample, but it can be of two samples coming from different types of augmentation (see figure 4 below).
 
@@ -167,9 +185,8 @@ Note that the superscript does not have any connection with exponentiation. In t
 
 </div>
 
-
 <p align=center>
-    <em><b>Figure 5:</b> Local DIM with predictions across views generated by data augmentation. (Image from \[3]).</em>
+    <em><b>Figure 5:</b> Local DIM with predictions across views generated by data augmentation. (Image from \\[3]).</em>
 </p>
 
 *Multiscale Mutual Information*
@@ -182,9 +199,8 @@ Another specialty of AMDIM is multiscale mutual information. Multiscale means th
 
 </div>
 
-
 <p align=center>
-    <em><b>Figure 6:</b> Augmented Multiscale DIM, with multiscale infomax across views generated by data augmentation. (Image from \[3]).</em>
+    <em><b>Figure 6:</b> Augmented Multiscale DIM, with multiscale infomax across views generated by data augmentation. (Image from \\[3]).</em>
 </p>
 
 **Encoder**
