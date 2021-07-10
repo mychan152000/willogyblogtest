@@ -13,13 +13,86 @@ tags:
   - amdim
 description: "Amdim, CPC, Deep Infomax "
 ---
+<style>
+#tabletype1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tabletype1 td, #tabletype1 th {
+
+  width: 20%;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#tabletype1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#tabletype1 tr:hover {background-color: #ddd;}
+
+#tabletype1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}
+
+#tabletype2 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-20 img {
+  width: 20%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-25 img {
+  width: 25%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-30 img {
+  width: 30%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-40 img {
+  width: 40%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-50 img {
+  width: 50%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-60 img {
+  width: 60%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-70 img {
+  width: 70%;
+  margin: auto;
+}
+
+.self-supervised-learning-amdim-deep-infomax-cpc-image-80 img {
+  width: 80%;
+  margin: auto;
+}
+</style>
+
 ## Contrastive learning \[6] and Noise contrastive estimation \[7]
 
 Let's first briefly talk about the ideas of Contrastive Learing, Noise Contrastive Estimation and why they are used. 
 
 In the pre-training stage of Self-supervised learning (the stage that a model solves pretext tasks), this stage is carried out with the hope that the current model would learn meaningful representations from unlabeled data. Especially in the case of contrastive approach, researchers try to contrast one positive sample with a set of negative samples to learn useful representations (See Figure 1 below). Notice that all the mentioned samples are unlabeled.
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/self_supervised_contrastive.jpg)
 
@@ -30,11 +103,11 @@ In the pre-training stage of Self-supervised learning (the stage that a model so
     A single positive sample which is produced from the anchor (original image) is used to contrast with a set of negative samples to learn meaningful representations. The big gray circle in the center is the embedding space. Samples of the same class should be mapped to locations close to each other while those that are of different classes should be pushed apart. Due to the unlabeled data, there will be case a positive sample is falsely seen as a negative sample (as the white and black puppy here).
 </p>
 
-As we have known, a classification neural network is actually a multi-class classifier. When there are many classes in dataset, the network is also required to have as many output neurons. Usually, many networks use the cross entropy loss function, which needs output neurons to represent probabilities. And these probabilities are obtained by the softmax function of which the computation is not efficient enough in the case of huge output layer. 
+As we have known, a classification neural network is actually a multi-class classifier. When there are many classes in a dataset, the network is also required to have as many output neurons. Usually, many networks use the cross-entropy loss function, which needs output neurons to represent probabilities. And these probabilities are obtained by the softmax function of which the computation is not efficient enough in the case of a huge output layer. 
 
-To overcome this, Noise Contrastive Estimation (NCE) is used. The idea/purpose of NCE is transform a multi-class classification problem into a binary classification problem. The softmax to estimate the true distribution of a dataset is no longer used. Now, each training sample fed to the network includes a positive pair and a number of negative pair. Usually, a positive pair consists of different augmented versions of the anchor sample and a negative pair is constructed by the anchor with a sample randomly picked from the other classes. This pretext task of discriminating positive pairs and negative pairs will help the network learn to produce representations having great meaning. So, that is why it is called binary classification (as we have seen in the figure above).
+To overcome this, Noise Contrastive Estimation (NCE) is used. The idea/purpose of NCE is to transform a multi-class classification problem into a binary classification problem. The softmax to estimate the true distribution of a dataset is no longer used. Now, each training sample fed to the network includes a positive pair and a number of negative pairs. Usually, a positive pair consists of different augmented versions of the anchor sample and a negative pair is constructed by the anchor with a sample randomly picked from the other classes. This pretext task of discriminating positive pairs and negative pairs will help the network learn to produce representations having great meaning. So, that is why it is called binary classification (as we have seen in the figure above).
 
-Several things also worth noting here are the cross entropy is not robust enough to noisy labels \[8, 9] and it possibly produces poor margins \[10, 11]. These factors can badly affect the generalization performance.
+Several things also worth noting here are the cross-entropy is not robust enough to noisy labels \[8, 9] and it possibly produces poor margins \[10, 11]. These factors can badly affect the generalization performance.
 
 In the next sections, before coming to Amdim, it is necessary to first introduce two contrastive learning methods that were published earlier: Contrastive Predictive Coding (CPC) \[1] and Deep InfoMax (DIM) \[2].
 
@@ -42,15 +115,12 @@ In the next sections, before coming to Amdim, it is necessary to first introduce
 
 The amount of information in high-dimensional data can be very huge, so it is a very difficult task for the model to extract effective representations. CPC tries to deal with this problem by using autoregressive models. In particular, it uses these types of models to predict future representations in latent space (with the hypothesis that latent representation will be more compact than the input and directly predicting future representations from the previous ones also help to reduce the time execution). They also use a contrastive loss which makes maximally useful information can be captured by the latent space. With the contrastive loss, the model also becomes tractable by using negative sampling.
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/contrastive_predictive_coding.jpg)
 
 </div>
 
-<p align=center>
-    <img src="images/contrastive_predictive_coding.JPG" width="1080" alt>
-</p>
 <p align=center>
     <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from \\[1]).</em>
     Here, audio input is used as an example but it can be replaced with another type of input such as an image.
@@ -68,7 +138,7 @@ Their main contributions include: They formalize Deep InfoMax (DIM) model. DIM d
 
 DIM can work with various MI estimators.
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/deepinfomax_fig1.jpg)
 
@@ -84,7 +154,7 @@ An MxM feature map is first got by feeding the input image through a convolution
 
 </p>
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/deepinfomax_fig2.jpg)
 
@@ -97,7 +167,7 @@ An MxM feature map is first got by feeding the input image through a convolution
 In the first branch, both the MxM feature map and the feature vector Y, which are global features of the same image, are fed through a discriminator to have a score for “real”. Similarly, if we change the original MxM feature map to the MxM feature map of another image and feed it with the same feature vector Y as above into a discriminator, we will have a score for “fake”.
 </p>
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/deepinfomax_fig3.jpg)
 
@@ -109,7 +179,7 @@ In the first branch, both the MxM feature map and the feature vector Y, which ar
 <p align=left>
  It is the same as figure 3 except lower-level local feature vectors along the temporal dimension of the MxM feature map are sequentially combined with the global feature vector Y. The result is an MxM matrix of which each element is a score of a local-global pair.
 
-The reason why we have to consider “Real pair” and “Fake pair” as in figures 2 and 3 is DIM is based on the idea of a contrastive learning.
+The reason why we have to consider “Real pair” and “Fake pair” as in figures 2 and 3 is DIM is based on the idea of contrastive learning.
 
 </p>
 
@@ -137,37 +207,69 @@ As we know, people often do the computation on the Noise-Contrastive Estimation 
 
 The authors of Amdim maximize the NCE lower bound by minimizing the loss below:
 
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
+
 ![](../../static/images/uploads/ssl3_equ1.gif)
+
+</div>
 
 where 
 
+<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+
 ![](../../static/images/uploads/ssl3_inline1.gif)
+
+</p>
 
  is a set of negative samples and 
 
+<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+
 ![](../../static/images/uploads/ssl3_inline2.gif)
+
+</p>
 
  is a softmax function:
 
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
+
 ![](../../static/images/uploads/ssl3_equ2.gif)
+
+</div>
 
 Here, 
 
+<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+
 ![](../../static/images/uploads/ssl3_inline3.gif)
+
+</p>
 
  and 
 
+<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+
 ![](../../static/images/uploads/ssl3_inline4.gif)
+
+</p>
 
  are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, 
 
+<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+
 ![](../../static/images/uploads/ssl3_inline4.gif)
+
+</p>
 
  maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
 
 Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, 
 
+<p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
+
 ![](../../static/images/uploads/ssl3_inline5.gif)
+
+</p>
 
  is got from the union set of negative samples and positive samples, then the sum of exponentials is calculated. Their goal is to make this fraction high in the case of the positive pair and low in the case of the negative pair. The more this becomes true, the lower the loss function will be. What is the connection with the maximization of NCE bound? 
 
@@ -175,11 +277,15 @@ Now that we have understood the symbols, let’s analyze a little bit more about
 
 Some of the augmentation techniques used in this paper are random resized crop, random jitter in color space, and random grayscale transformation. Transforming for the case of augmented features (features of augmented samples), the loss will now become:
 
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
+
 ![](../../static/images/uploads/ssl3_equ3.gif)
+
+</div>
 
 Note that the superscript does not have any connection with exponentiation. In this loss, *x<sup>1</sup>* is an augmented version of the original input *x*, *x<sup>2</sup>* is another augmented version of the original input *x*. One more change we can also infer from this loss is that the pair does not need to be constructed from the global feature and the local feature of the same sample, but it can be of two samples coming from different types of augmentation (see figure 4 below).
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/amdim_fig1.jpg)
 
@@ -193,7 +299,7 @@ Note that the superscript does not have any connection with exponentiation. In t
 
 Another specialty of AMDIM is multiscale mutual information. Multiscale means the multi-level prediction in which each element of a feature pair can be extracted from different layers of a network. It is not strictly set as above that the mutual information must be between a global feature from the top-most layer and a local feature from a specific lower layer. In this procedure, features at every step in a forward pass of one view can transfer mutual information with those of another view. Although many pairs can be constructed and calculated, the authors only consider some specific pairs in the experiment.
 
-<div>
+<div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
 ![](../../static/images/uploads/amdim_fig2.jpg)
 
