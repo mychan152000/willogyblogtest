@@ -213,11 +213,13 @@ The authors of Amdim maximize the NCE lower bound by minimizing the loss below:
 
 </div>
 
-where <div class="self-supervised-learning-amdim-deep-infomax-cpc-image-20"> 
+where <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20"> ![](../../static/images/uploads/ssl3_inline1.gif) </span>
+
+where <p class="self-supervised-learning-amdim-deep-infomax-cpc-image-20"> 
 
 ![](../../static/images/uploads/ssl3_inline1.gif) 
 
-</div>
+</p>
 
  is a set of negative samples and <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-20">
 
