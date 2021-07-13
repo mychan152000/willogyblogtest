@@ -47,7 +47,8 @@ description: "Amdim, CPC, Deep Infomax "
 
 
 .inline-image img {
-
+   width: 10%;
+   margin: auto;
    display: inline-block;
 
 }
