@@ -45,11 +45,13 @@ description: "Amdim, CPC, Deep Infomax "
   width: 50%;
 }
 
-
-.inline-image img {
-   width: 10%;
-   margin: auto;
+.inline-image {
    display: inline-block;
+}
+.inline-image img {
+   margin: 0;
+   display: inline-block;
+   max-width: fit-content;
 
 }
 .self-supervised-learning-amdim-deep-infomax-cpc-image-5 img {
