@@ -229,7 +229,7 @@ The authors of Amdim maximize the NCE lower bound by minimizing the loss below:
 
 </div>
 
-where <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline1.gif) </span> is a set of negative samples and <span class="self-supervised-learning-amdim-deep-infomax-cpc-image-10"> ![](../../static/images/uploads/ssl3_inline2.gif) </span> is a softmax function:
+where <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline1.gif) </span> is a set of negative samples and <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline2.gif) </span> is a softmax function:
 
 <div class="self-supervised-learning-amdim-deep-infomax-cpc-image-70">
 
