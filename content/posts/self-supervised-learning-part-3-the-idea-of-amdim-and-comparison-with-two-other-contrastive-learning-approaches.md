@@ -240,11 +240,8 @@ where <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline1.g
 
 </div>
 
-Here, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> and 
-<span class="inline-image">
-
+Here, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> and <span class="inline-image">
 ![](../../static/images/uploads/ssl3_inline4.gif) 
-
 </span>
 are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline4.gif) </span> maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
 
