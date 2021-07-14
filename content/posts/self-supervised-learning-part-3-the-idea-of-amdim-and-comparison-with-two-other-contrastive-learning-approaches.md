@@ -47,6 +47,7 @@ description: "Amdim, CPC, Deep Infomax "
 
 .inline-image {
    display: inline-block;
+   height: 10px;
 }
 .inline-image img {
    margin: 0;
@@ -104,7 +105,7 @@ description: "Amdim, CPC, Deep Infomax "
 }
 </style>
 
-## Contrastive learning [6] and Noise contrastive estimation [7]
+## Contrastive learning \[6] and Noise contrastive estimation \[7]
 
 Let's first briefly talk about the ideas of Contrastive Learning, Noise Contrastive Estimation, and why they are used. 
 
@@ -117,7 +118,7 @@ In the pre-training stage of Self-supervised learning (the stage that a model so
 </div>
 
 <p align=center>
-    <em><b>Figure 1:</b> Self Supervised Contrastive (Image from [6]).</em>
+    <em><b>Figure 1:</b> Self Supervised Contrastive (Image from \[6]).</em>
     A single positive sample which is produced from the anchor (original image) is used to contrast with a set of negative samples to learn meaningful representations. The big gray circle in the center is the embedding space. Samples of the same class should be mapped to locations close to each other while those that are of different classes should be pushed apart. Due to the unlabeled data, there will be cases a positive sample is falsely seen as a negative sample (as the white and black puppy here).
 </p>
 
@@ -125,11 +126,11 @@ As we have known, a classification neural network is actually a multi-class clas
 
 To overcome this, Noise Contrastive Estimation (NCE) is used. The idea/purpose of NCE is to transform a multi-class classification problem into a binary classification problem. The softmax to estimate the true distribution of a dataset is no longer used. Now, each training sample fed to the network includes a positive pair and a number of negative pairs. Usually, a positive pair consists of different augmented versions of the anchor sample and a negative pair is constructed by the anchor with a sample randomly picked from the other classes. This pretext task of discriminating positive pairs and negative pairs will help the network learn to produce representations having great meaning. So, that is why it is called binary classification (as we have seen in the figure above).
 
-Several things also worth noting here are the cross-entropy is not robust enough to noisy labels [8, 9] and it possibly produces poor margins [10, 11]. These factors can badly affect the generalization performance.
+Several things also worth noting here are the cross-entropy is not robust enough to noisy labels \[8, 9] and it possibly produces poor margins \[10, 11]. These factors can badly affect the generalization performance.
 
-In the next sections, before coming to Amdim, it is necessary to first introduce two contrastive learning methods that were published earlier: Contrastive Predictive Coding (CPC) [1] and Deep InfoMax (DIM) [2].
+In the next sections, before coming to Amdim, it is necessary to first introduce two contrastive learning methods that were published earlier: Contrastive Predictive Coding (CPC) \[1] and Deep InfoMax (DIM) \[2].
 
-## Contrastive predictive coding [1]
+## Contrastive predictive coding \[1]
 
 The amount of information in high-dimensional data can be very huge, so it is a very difficult task for the model to extract effective representations. CPC tries to deal with this problem by using autoregressive models. In particular, it uses these types of models to predict future representations in latent space (with the hypothesis that latent representation will be more compact than the input and directly predicting future representations from the previous ones also help to reduce the time execution). They also use a contrastive loss which makes maximally useful information can be captured by the latent space. With the contrastive loss, the model also becomes tractable by using negative sampling.
 
@@ -140,7 +141,7 @@ The amount of information in high-dimensional data can be very huge, so it is a 
 </div>
 
 <p align=center>
-    <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from [1]).</em>
+    <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from \[1]).</em>
     Here, audio input is used as an example but it can be replaced with another type of input such as an image.
 </p>
 
@@ -148,7 +149,7 @@ Let’s describe the picture above. From bottom to top, the first thing is the a
 
 Some of the things proposed in this paper include: First, the embedding vectors are extracted from the high-dimensional input by a non-linear encoder. Those latent vectors should be more compact than the original ones, which gives a better opportunity to model conditional predictions. Additionally, powerful autoregressive models are used to accumulate the information (context latent representation) from the latent vectors through time. And these summary features are then used to (directly) predict the future latent vectors with the purpose of reduction in processing time. They build loss function on the Noise-Contrastive Estimation, which allows us to train the model end-to-end.
 
-## Deep infomax [2]
+## Deep infomax \[2]
 
 The representations are learned through the task of mutual information maximization between the input (global information) and output (local information) of a network encoder. Mutual information which is manually calculated by the equation in the previous post is infamous for its difficulty in computation, especially when data is continuous and high-dimensional. Due to this problem, recent advances have leveraged deep neural networks to compute mutual information more effectively. This paper emphasizes the importance of local information in the input instead of considering only the global information. Putting locality into the objective is supposed as a way to make a representation more high-grade and more appropriate to downstream tasks. Besides, the representations are also controlled in accordance with desired statistical properties by matching to a prior distribution adversarially?
 
@@ -163,7 +164,7 @@ DIM can work with various MI estimators.
 </div>
 
 <p align=center>
-    <em><b>Figure 2:</b> The base encoder model in the context of image data (Image from [2]).</em>
+    <em><b>Figure 2:</b> The base encoder model in the context of image data (Image from \[2]).</em>
 </p>
 <p align=left>
 An MxM feature map is first got by feeding the input image through a convolutional network. Then, all vectors along the depth dimension of the MxM feature map are summarized into a single high-level features vector. Their goal is that the trained model can produce high-level feature vectors which still contain useful information from input.
@@ -179,7 +180,7 @@ An MxM feature map is first got by feeding the input image through a convolution
 </div>
 
 <p align=center>
-    <em><b>Figure 3:</b> Basic mutual information maximization framework: Deep InfoMax (DIM) with a global MI(X;Y) objective. (Image from [2]).</em>
+    <em><b>Figure 3:</b> Basic mutual information maximization framework: Deep InfoMax (DIM) with a global MI(X;Y) objective. (Image from \[2]).</em>
 </p>
 <p align=left>
 In the first branch, both the MxM feature map and the feature vector Y, which are global features of the same image, are fed through a discriminator to have a score for “real”. Similarly, if we change the original MxM feature map to the MxM feature map of another image and feed it with the same feature vector Y as above into a discriminator, we will have a score for “fake”.
@@ -192,7 +193,7 @@ In the first branch, both the MxM feature map and the feature vector Y, which ar
 </div>
 
 <p align=center>
-    <em><b>Figure 4:</b> Their local DIM framework. Maximizing mutual information between local features and global features. (Image from [2]).</em>
+    <em><b>Figure 4:</b> Their local DIM framework. Maximizing mutual information between local features and global features. (Image from \[2]).</em>
 </p>
 <p align=left>
  It is the same as figure 3 except lower-level local feature vectors along the temporal dimension of the MxM feature map are sequentially combined with the global feature vector Y. The result is an MxM matrix of which each element is a score of a local-global pair.
@@ -201,7 +202,7 @@ The reason why we have to consider “Real pair” and “Fake pair” as in fig
 
 </p>
 
-## Augmented multiscale deep infomax [3]
+## Augmented multiscale deep infomax \[3]
 
 As the title of the paper has said, this approach is also about maximizing mutual information, but between features from different views of input rather than between input and the corresponding output. Views here can be multiple positions of view, different modalities, or even samples from different types of augmentations. It is hypothesized that common high-level factors that exist in most of the views can be acquired by solving the task of mutual information maximization.
 
@@ -262,7 +263,7 @@ Note that the superscript does not have any connection with exponentiation. In t
 </div>
 
 <p align=center>
-    <em><b>Figure 5:</b> Local DIM with predictions across views generated by data augmentation. (Image from [3]).</em>
+    <em><b>Figure 5:</b> Local DIM with predictions across views generated by data augmentation. (Image from \[3]).</em>
 </p>
 
 *Multiscale Mutual Information*
@@ -276,7 +277,7 @@ Another specialty of AMDIM is multiscale mutual information. Multiscale means th
 </div>
 
 <p align=center>
-    <em><b>Figure 6:</b> Augmented Multiscale DIM, with multiscale infomax across views generated by data augmentation. (Image from [3]).</em>
+    <em><b>Figure 6:</b> Augmented Multiscale DIM, with multiscale infomax across views generated by data augmentation. (Image from \[3]).</em>
 </p>
 
 **Encoder**
@@ -287,7 +288,7 @@ About the encoder, they use the one built on the standard ResNet with some modif
 
 All the 3 models follow a contrastive learning approach. Their idea is all about mutual information maximization, which is about maximizing the shared information of instance and corresponding context. Both CPC and DeepInfoMax do not use hard negative samples or hard positive samples, while AMDIM uses hard positive samples.
 
-<ins>Compare CPC and DIM</ins> [2]
+<ins>Compare CPC and DIM</ins> \[2]
 
 * Similarities: 
 
@@ -320,25 +321,25 @@ All the 3 models follow a contrastive learning approach. Their idea is all about
 
 ## References
 
-[1] Aaron van den Oord et al., [Representation Learning with Contrastive Predictive Coding](https://arxiv.org/pdf/1807.03748.pdf?fbclid=IwAR2G_jEkb54YSIvN0uY7JbW9kfhogUq9KhKrmHuXPi34KYOE8L5LD1RGPTo), arXiv, 2018.
+\[1] Aaron van den Oord et al., [Representation Learning with Contrastive Predictive Coding](https://arxiv.org/pdf/1807.03748.pdf?fbclid=IwAR2G_jEkb54YSIvN0uY7JbW9kfhogUq9KhKrmHuXPi34KYOE8L5LD1RGPTo), arXiv, 2018.
 
-[2] R Devon Hjelm et al., [Learning Deep Representations by Mutual Information Estimation and Maximization](https://arxiv.org/pdf/1808.06670.pdf?source=post_page---------------------------), ICLR, 2019.
+\[2] R Devon Hjelm et al., [Learning Deep Representations by Mutual Information Estimation and Maximization](https://arxiv.org/pdf/1808.06670.pdf?source=post_page---------------------------), ICLR, 2019.
 
-[3] Philip Bachman et al., [Learning Representations by Maximizing Mutual Information Across Views](https://arxiv.org/pdf/1906.00910.pdf), arXiv, 2019.
+\[3] Philip Bachman et al., [Learning Representations by Maximizing Mutual Information Across Views](https://arxiv.org/pdf/1906.00910.pdf), arXiv, 2019.
 
-[4] Michael Gutmann and Aapo Hyvarinen, [Noise-contrastive estimation: A new estimation principle for unnormalized statistical models](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf), JMLR, 2010.
+\[4] Michael Gutmann and Aapo Hyvarinen, [Noise-contrastive estimation: A new estimation principle for unnormalized statistical models](http://proceedings.mlr.press/v9/gutmann10a/gutmann10a.pdf), JMLR, 2010.
 
-[5] Kaiming He et al., [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf), CVPR, 2016.
+\[5] Kaiming He et al., [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf), CVPR, 2016.
 
-[6] Prannay Khosla et al., [Supervised Contrastive Learning](https://arxiv.org/pdf/2004.11362.pdf), arXiv, 2021.
+\[6] Prannay Khosla et al., [Supervised Contrastive Learning](https://arxiv.org/pdf/2004.11362.pdf), arXiv, 2021.
 
-[7] [Intuitive explanation of Noise Contrastive Estimation (NCE) loss?
+\[7] [Intuitive explanation of Noise Contrastive Estimation (NCE) loss?
 ](https://datascience.stackexchange.com/questions/13216/intuitive-explanation-of-noise-contrastive-estimation-nce-loss), StackExchange, 2017.
 
-[8] Zhilu Zhang and Mert Sabuncu, Generalized cross entropy loss for training deep neural networks with noisy labels, Advances in neural information processing systems, 2018.
+\[8] Zhilu Zhang and Mert Sabuncu, Generalized cross entropy loss for training deep neural networks with noisy labels, Advances in neural information processing systems, 2018.
 
-[9] Sainbayar Sukhbaatar et al., Training convolutional networks with noisy labels, arXiv, 2014.
+\[9] Sainbayar Sukhbaatar et al., Training convolutional networks with noisy labels, arXiv, 2014.
 
-[10] Gamaleldin Elsayed et al., Large margin deep networks for classification, Advances in neural information processing systems, 2018.
+\[10] Gamaleldin Elsayed et al., Large margin deep networks for classification, Advances in neural information processing systems, 2018.
 
-[11] Weiyang Liu et al., Large-margin softmax loss for convolutional neural network, ICML, 2016.
+\[11] Weiyang Liu et al., Large-margin softmax loss for convolutional neural network, ICML, 2016.
