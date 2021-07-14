@@ -118,7 +118,7 @@ In the pre-training stage of Self-supervised learning (the stage that a model so
 </div>
 
 <p align=center>
-    <em><b>Figure 1:</b> Self Supervised Contrastive (Image from \\\[6]).</em>
+    <em><b>Figure 1:</b> Self Supervised Contrastive (Image from \\\\[6]).</em>
     A single positive sample which is produced from the anchor (original image) is used to contrast with a set of negative samples to learn meaningful representations. The big gray circle in the center is the embedding space. Samples of the same class should be mapped to locations close to each other while those that are of different classes should be pushed apart. Due to the unlabeled data, there will be cases a positive sample is falsely seen as a negative sample (as the white and black puppy here).
 </p>
 
@@ -141,7 +141,7 @@ The amount of information in high-dimensional data can be very huge, so it is a 
 </div>
 
 <p align=center>
-    <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from \\\[1]).</em>
+    <em><b>Figure 1:</b> Overview of Contrastive Predictive Coding (Image from \\\\[1]).</em>
     Here, audio input is used as an example but it can be replaced with another type of input such as an image.
 </p>
 
@@ -164,7 +164,7 @@ DIM can work with various MI estimators.
 </div>
 
 <p align=center>
-    <em><b>Figure 2:</b> The base encoder model in the context of image data (Image from \\\[2]).</em>
+    <em><b>Figure 2:</b> The base encoder model in the context of image data (Image from \\\\[2]).</em>
 </p>
 <p align=left>
 An MxM feature map is first got by feeding the input image through a convolutional network. Then, all vectors along the depth dimension of the MxM feature map are summarized into a single high-level features vector. Their goal is that the trained model can produce high-level feature vectors which still contain useful information from input.
@@ -180,7 +180,7 @@ An MxM feature map is first got by feeding the input image through a convolution
 </div>
 
 <p align=center>
-    <em><b>Figure 3:</b> Basic mutual information maximization framework: Deep InfoMax (DIM) with a global MI(X;Y) objective. (Image from \\\[2]).</em>
+    <em><b>Figure 3:</b> Basic mutual information maximization framework: Deep InfoMax (DIM) with a global MI(X;Y) objective. (Image from \\\\[2]).</em>
 </p>
 <p align=left>
 In the first branch, both the MxM feature map and the feature vector Y, which are global features of the same image, are fed through a discriminator to have a score for “real”. Similarly, if we change the original MxM feature map to the MxM feature map of another image and feed it with the same feature vector Y as above into a discriminator, we will have a score for “fake”.
@@ -193,7 +193,7 @@ In the first branch, both the MxM feature map and the feature vector Y, which ar
 </div>
 
 <p align=center>
-    <em><b>Figure 4:</b> Their local DIM framework. Maximizing mutual information between local features and global features. (Image from \\\[2]).</em>
+    <em><b>Figure 4:</b> Their local DIM framework. Maximizing mutual information between local features and global features. (Image from \\\\[2]).</em>
 </p>
 <p align=left>
  It is the same as figure 3 except lower-level local feature vectors along the temporal dimension of the MxM feature map are sequentially combined with the global feature vector Y. The result is an MxM matrix of which each element is a score of a local-global pair.
@@ -240,7 +240,11 @@ where <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline1.g
 
 </div>
 
-Here, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> and <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline4.gif) </span> maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
+Here, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> and 
+
+![](../../static/images/uploads/ssl3_inline4.gif)
+
+ are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline4.gif) </span> maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
 
 Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline5.gif) </span> is got from the union set of negative samples and positive samples, then the sum of exponentials is calculated. Their goal is to make this fraction high in the case of the positive pair and low in the case of the negative pair. The more this becomes true, the lower the loss function will be. What is the connection with the maximization of NCE bound? 
 
@@ -263,7 +267,7 @@ Note that the superscript does not have any connection with exponentiation. In t
 </div>
 
 <p align=center>
-    <em><b>Figure 5:</b> Local DIM with predictions across views generated by data augmentation. (Image from \\\[3]).</em>
+    <em><b>Figure 5:</b> Local DIM with predictions across views generated by data augmentation. (Image from \\\\[3]).</em>
 </p>
 
 *Multiscale Mutual Information*
@@ -277,7 +281,7 @@ Another specialty of AMDIM is multiscale mutual information. Multiscale means th
 </div>
 
 <p align=center>
-    <em><b>Figure 6:</b> Augmented Multiscale DIM, with multiscale infomax across views generated by data augmentation. (Image from \\\[3]).</em>
+    <em><b>Figure 6:</b> Augmented Multiscale DIM, with multiscale infomax across views generated by data augmentation. (Image from \\\\[3]).</em>
 </p>
 
 **Encoder**
