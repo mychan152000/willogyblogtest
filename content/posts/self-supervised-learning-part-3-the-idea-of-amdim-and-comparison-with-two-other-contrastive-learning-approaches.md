@@ -240,7 +240,13 @@ where <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline1.g
 
 </div>
 
-Here, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> and ![](../../static/images/uploads/ssl3_inline4.gif) are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline4.gif) </span> maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
+Here, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline3.gif) </span> and 
+<span class="inline-image">
+
+![](../../static/images/uploads/ssl3_inline4.gif) 
+
+</span>
+are two parametric functions that need to be calculated. In this case, these functions are deep neural networks and parameters are their weights. Concretely, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline4.gif) </span> maps a pair of (antecedent feature, consequent feature) into a single scalar value/a score. The higher score leads to the higher possibility that this is a positive pair which means both the antecedent and consequent are extracted from the same sample.
 
 Now that we have understood the symbols, let’s analyze a little bit more about the softmax function. In the numerator is the exponential of the score of a pair of antecedent and consequent (can be positive or negative). In the denominator, <span class="inline-image"> ![](../../static/images/uploads/ssl3_inline5.gif) </span> is got from the union set of negative samples and positive samples, then the sum of exponentials is calculated. Their goal is to make this fraction high in the case of the positive pair and low in the case of the negative pair. The more this becomes true, the lower the loss function will be. What is the connection with the maximization of NCE bound? 
 
