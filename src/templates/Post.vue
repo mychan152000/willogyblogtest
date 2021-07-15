@@ -22,7 +22,9 @@
     </div>
 
     <div class="post-comments">
-      <!-- Add comment widgets here -->
+        <div class="vue-utterances" ref="vueUtterances">
+          <!-- utterances comment here -->
+        </div>
     </div>
 
     <Author class="post-author" />
@@ -40,16 +42,44 @@ export default {
     PostMeta,
     PostTags
   },
-  metaInfo () {
+  mounted() {
+    let utterances = document.createElement("script");
+    utterances.async = true;
+    utterances.setAttribute("src", "https://utteranc.es/client.js");
+    utterances.setAttribute("repo","willogy-team/insights-cms");
+    utterances.setAttribute("issue-term", "pathname");
+    utterances.setAttribute("theme", "github-light");
+    utterances.setAttribute("async", true);
+    utterances.setAttribute("crossorigin", "anonymous");
+    this.$refs.vueUtterances.appendChild(utterances);
+  },
+  metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
         {
-          name: 'description',
-          content: this.$page.post.description
-        }
+          property: "og:title",
+          content: this.$page.post.title
+        },
+        {
+          name: "twitter:card",
+          content: this.$page.post.image ? "summary_large_image" : "summary",
+        },
+        {
+          property: "og:description",
+          content: this.$page.post.excerpt
+        },
+        {
+          property: "og:type",
+          content: 'article, blog, content, research'
+        },
+        
+        {
+          property: "og:image",
+          content: this.$page.post.cover_image || ""
+        },
       ]
-    }
+    };
   }
 }
 </script>

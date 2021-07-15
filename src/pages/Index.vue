@@ -52,8 +52,37 @@ export default {
     Author,
     PostCard
   },
-  metaInfo: {
-    title: 'Home'
+  metaInfo() {
+    return {
+      link: [
+      {rel: 'canonical', href: 'https://insights.willogy.io'}
+      ],
+      title: 'Willogy Insights',
+      meta: [
+        {
+          property: "og:title",
+          content: 'Willogy Insights'
+        },
+        {
+          name: "twitter:card",
+          content: './src/assets/logo.svg' ? "summary_large_image" : "summary",
+        },
+        
+        {
+          property: "og:description",
+          content: 'Knowledge is common. Our insights and experience on-top of them is unique'
+        },
+        {
+          property: "og:type",
+          content: 'article, blog, content, research, insights'
+        },
+        
+        {
+          property: "og:image",
+          content: './src/assets/logo.svg' || ""
+        },
+      ]
+    };
   }
 }
 </script>
