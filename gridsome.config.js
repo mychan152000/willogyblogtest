@@ -8,6 +8,7 @@ module.exports = {
   icon: './src/assets/logo.svg',
   siteName: 'Willogy Insights',
   siteDescription: 'AI and Software Development enthusiasts. Knowledge is common. Our insights and experience on it is unique',
+  siteUrl: 'https://insights.willogy.io/',
 
   templates: {
     Post: '/:title',
