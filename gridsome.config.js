@@ -47,7 +47,7 @@ module.exports = {
       use: 'gridsome-plugin-robots-txt',
       options: {
         host: 'https://insights.willogy.io/',
-        sitemap: 'https://insights.willogy.io//configs/sitemap.xml',
+        sitemap: 'https://insights.willogy.io/configs/sitemap.xml',
         policy: [
           {
             userAgent: "Googlebot",
