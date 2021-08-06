@@ -47,26 +47,15 @@ export default {
     let utterances = document.createElement("script");
     utterances.async = true;
     utterances.setAttribute("src", "https://utteranc.es/client.js");
-    utterances.setAttribute("repo","mychan152000/willogyblogtest");
+
+
     utterances.setAttribute("issue-term", "pathname");
     utterances.setAttribute("theme", "github-light");
     utterances.setAttribute("async", true);
     utterances.setAttribute("crossorigin", "anonymous");
     this.$refs.vueUtterances.appendChild(utterances);
   },
-  //OLD META INFO 
-  // metaInfo () {
-  //   return {
-  //     title: this.$page.post.title,
-  //     meta: [
-  //       {
-  //         name: 'description',
-  //         content: this.$page.post.description
-  //       }
-  //     ]
-  //   }
-  // }
-  
+
   metaInfo() {
     return {
       title: this.$page.post.title,

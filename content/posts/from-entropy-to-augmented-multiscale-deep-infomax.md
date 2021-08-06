@@ -48,26 +48,64 @@ description: DeepInfoMax and Amdim are two self-supervised models that are very
   width: 50%;
 }
 
-.image {
-
-  width: 50%;
-
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-20 img {
+  width: 20%;
   margin: auto;
+}
 
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-25 img {
+  width: 25%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30 img {
+  width: 30%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40 img {
+  width: 40%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50 img {
+  width: 50%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60 img {
+  width: 60%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70 img {
+  width: 70%;
+  margin: auto;
+}
+
+.entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80 img {
+  width: 80%;
+  margin: auto;
 }
 </style>
 
-## Entropy \[1, 2]
+DeepInfoMax and Amdim are two self-supervised models that are very popular in recent times. They are constructed based on the idea of the InfoMax principle. Therefore, to fully understand these two models, we must first know about the underlying basis of the InfoMax principle which includes entropy, mutual information, their properties, and relations.
+
+## Entropy [1, 2]
 
 The knowledge of entropy is required to understand mutual information.
 
-The entropy calculates the “unpredictability” of a random variable, which means that it will return high value for a random variable with high level of unpredictability and low value for the one that is more easily predictable.
+The entropy calculates the “unpredictability” of a random variable, which means that it will return a high value for a random variable with a high level of unpredictability and a low value for the one that is more easily predictable.
 
 The entropy equation:
 
-<img src="../../static/images/uploads/equ1.gif" class="image" alt="alt">
 
-![](../../static/images/uploads/equ1.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
+
+![entropy](../../static/images/uploads/equ1.gif)
+
+</div>
+
 
 Two examples to show when entropy is low and when it is high. 
 
@@ -75,41 +113,73 @@ Two examples to show when entropy is low and when it is high.
 
 Given that:
 
-![equation](../../static/images/uploads/equ2.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![equation](../../static/images/uploads/equ3.gif)
+![entropy](../../static/images/uploads/equ2.gif)
+
+</div>
+
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+
+![entropy](../../static/images/uploads/equ3.gif)
+
+</div>
 
 Using entropy equation, we have:
 
-![equation](../../static/images/uploads/equ4.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+
+![entropy](../../static/images/uploads/equ4.gif)
+
+</div>
 
 **Example 2** Compute the entropy of an unfair coin
 
 Given that:
 
-![equation](../../static/images/uploads/equ5.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
 
-![equation](../../static/images/uploads/equ6.gif)
+![entropy](../../static/images/uploads/equ5.gif)
+
+</div>
+
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+
+![entropy](../../static/images/uploads/equ6.gif)
+
+</div>
 
 Using entropy equation, we have:
 
-![equation](../../static/images/uploads/equ7.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
 
-\=> The entropy value is less than that in example 1. Because the coin will appear heads most of the time, which means it is more predictable (less unpredictable). Thus, the entropy is low.
+![entropy](../../static/images/uploads/equ7.gif)
+
+</div>
+
+=> The entropy value is less than that in example 1. Because the coin will appear heads most of the time, which means it is more predictable (less unpredictable). Thus, the entropy is low.
 
 **Example 3** Compute the entropy of an unfair 6-sided dice (from \[1])
 
 Given that:
 
-![equation](../../static/images/uploads/equ8.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-20">
+
+![entropy](../../static/images/uploads/equ8.gif)
+
+</div>
 
 Using entropy equation, we have:
 
-![equation](../../static/images/uploads/equ9.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-80">
 
-\=> The more values a random variable can take, the more unpredictable it becomes.
+![entropy](../../static/images/uploads/equ9.gif)
 
-## Mutual information \[1, 2, 3, 4, 5, 6]
+</div>
+
+=> The more values a random variable can take, the more unpredictable it becomes.
+
+## Mutual information [1, 2, 3, 4, 5, 6]
 
 Mutual information measures a relationship between two random variables which are sampled concurrently. In other words, mutual information is an estimation of the amount of information in one variable which uncovers another variable. It tells how much information on one variable can averagely convey about the other. The value of mutual information is 0 if the two random variables are statistically independent.
 
@@ -117,61 +187,105 @@ Mutual information can also be defined as “the reduction in uncertainty about 
 
 The equation for mutual information of two random variables X and Y where joint distribution is represented as P<sub>XY</sub>(x,y):
 
-![equation](../../static/images/uploads/equ10.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
+
+![mutual information](../../static/images/uploads/equ10.gif)
+
+</div>
 
 where P<sub>X</sub>(x) and P<sub>Y</sub>(y) are the marginals.
 
 ### Another way to think about the mutual information
 
-Suppose we have an information system that can be split into 3 components: sender, channel, and receiver (or in particular input image, neural network, and output representation). The channel can be represented by a transition probability matrix.
+Suppose we have an information system that can be split into 3 components: sender, channel, and receiver (or in the particular input image, neural network, and output representation). The channel can be represented by a transition probability matrix.
 
-![](../../static/images/uploads/sender_channel_receiver.jpg)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
+
+![mutual information](../../static/images/uploads/sender_channel_receiver.jpg)
+
+</div>
 
 <p align=center>
-    <em><b>Figure 1:</b> The formal decomposition Sender-Channel-Receiver (Image from \\\\\\[2]).</em>
+    <em><b>Figure 1:</b> The formal decomposition Sender-Channel-Receiver (Image from [2]).</em>
 </p>
 
 Considering that the sender is represented by a pattern set X including x<sub>i</sub>s and the corresponding probability density function p(x<sub>i</sub>), the receiver is represented by a pattern set Y including y<sub>i</sub>s and the corresponding probability density function p(y<sub>i</sub>). The channel is characterized by the conditional probability matrix P(y<sub>j</sub> | x<sub>i</sub>) in which each element is the conditional probability density function pairwise calculated between elements in X and Y.
 
 The Shannon entropy equation on X and on Y:
 
-![equation](../../static/images/uploads/equ11.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-30">
+
+![mutual information](../../static/images/uploads/equ11.gif)
+
+</div>
 
 The formula of conditional entropy, it measures the uncertainty of X given Y:
 
-![equation](../../static/images/uploads/equ12.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+
+![mutual information](../../static/images/uploads/equ12.gif)
+
+</div>
 
 The formula of joint entropy (the entropy of a joint probability distribution) on X and Y:
 
-![equation](../../static/images/uploads/equ13.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+
+![mutual information](../../static/images/uploads/equ13.gif)
+
+</div>
 
 Then, the equation mutual information will be:
 
-![equation](../../static/images/uploads/equ14.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-40">
+
+![mutual information](../../static/images/uploads/equ14.gif)
+
+</div>
 
 Let's verify if it is equal to the above equation for mutual information of two random variables X and Y:
 
-![equation](../../static/images/uploads/equ15.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
 
-![equation](../../static/images/uploads/equ16.gif)
+![mutual information](../../static/images/uploads/equ15.gif)
+
+</div>
+
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
+
+![mutual information](../../static/images/uploads/equ16.gif)
+
+</div>
 
 So yes, they are equal except for the difference in the base of the log. For your information, the log base can be 2, 10, or e, which depends on what information units an information system needs.
 
 And with a theorem H(X|Y) = H(X, Y) - H(Y) of conditional entropy (if X and Y are discrete random variables), the mutual information formula can also be written as:
 
-![equation](../../static/images/uploads/equ17.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-To be more clearly about the above formula, let’s consider 2 cases:
+![mutual information](../../static/images/uploads/equ17.gif)
 
-* **Ideal channel:** for any given i, x_i = y_i. All the things sent by the sender are received by the receiver. And we can prove that (more details in \[2]):
+</div>
 
-![equation](../../static/images/uploads/equ18.gif)
+To be more clear about the above formula, let’s consider 2 cases:
 
-* **Fully disturbed channel:** the output is totally not affected by the input, which means p(y_j | x_i) = p(y_j) => p(x_i, y_j) = p(x_i).p(y_j). We can prove that (more details in \[2]):
+* **Ideal channel:** for any given i, x<sub>i</sub> = y<sub>i</sub>. All the things sent by the sender are received by the receiver. And we can prove that (more details in \[2]):
 
-![equation](../../static/images/uploads/equ19.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-Finally, the mutual information can be defined as a measurement which quantifies the transmitted information in the channel.
+![mutual information](../../static/images/uploads/equ18.gif)
+
+</div>
+
+* **Fully disturbed channel:** the output is totally not affected by the input, which means p(y<sub>j</sub> | x<sub>i</sub>) = p(y<sub>j</sub>) => p(x<sub>i</sub>, y<sub>j</sub>) = p(x<sub>i</sub>).p(y<sub>j</sub>). We can prove that (more details in [2]):
+
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
+
+![mutual information](../../static/images/uploads/equ19.gif)
+
+</div>
+
+Finally, mutual information can be defined as a measurement that quantifies the transmitted information in the channel.
 
 From the two cases, we can infer that in the AMDIM model, the network tries to keep the two samples of the same class (despite being from different viewpoints) as close as possible. From a different view, ‘close’ here means there is an “invisible” channel from one sample to another sample and this channel is ideal so that the mutual information of two samples are maximized. Then meaningful features/representations can be learned, especially those that can deal with the challenge of varying viewpoints (location, color, light, scale variation due to augmentation).
 
@@ -180,16 +294,24 @@ From the two cases, we can infer that in the AMDIM model, the network tries to k
 In \[2], the problem is formulated as follows: 
 “the central principle for an information-theoretical optimization in feedforward structure says: for a given x<sub>i</sub>, y<sub>j</sub> and a given input distribution p(x<sub>i</sub>), determine the matrix P(y<sub>j</sub> | x<sub>i</sub>) in such a way that the mutual information becomes maximized”
 
-\=> Therefore, in the case of DeepInfoMax, P(y<sub>j</sub> | x<sub>i</sub>) represents the parameters/weights of a neural network.
+→ Therefore, in the case of DeepInfoMax, P(y<sub>j</sub> | x<sub>i</sub>) represents the parameters/weights of a neural network.
 Reformulation of the expression for the mutual information \[2]:
 
 For discrete variables:
 
-![equation](../../static/images/uploads/equ20.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-60">
+
+![mutual information](../../static/images/uploads/equ20.gif)
+
+</div>
 
 For continuous variables:
 
-![equation](../../static/images/uploads/equ21.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-70">
+
+![mutual information](../../static/images/uploads/equ21.gif)
+
+</div>
 
 ### Properties
 
@@ -197,41 +319,65 @@ Mutual information is closely related to the Kullback-Leibler divergence - a mea
 
 The equation of Kullback-Leibler divergence of two distributions P(z) and Q(z):
 
-![equation](../../static/images/uploads/equ22.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-The mutual information is actually the Kullback-Leibler distance between the joint distribution of X and Y, and the product of the marginal probabilities:
+![mutual information](../../static/images/uploads/equ22.gif)
 
-![equation](../../static/images/uploads/equ23.gif)
+</div>
+
+The mutual information is actually the Kullback-Leibler distance between the joint distribution of X and Y. The product of the marginal probabilities:
+
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+
+![mutual information](../../static/images/uploads/equ23.gif)
+
+</div>
 
 The symmetric property in mutual information:
 
-![equation](../../static/images/uploads/equ24.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-25">
+
+![mutual information](../../static/images/uploads/equ24.gif)
+
+</div>
 
 The additive property for independent variables in mutual information. If
 
-![](../../static/images/uploads/equ25.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+
+![mutual information](../../static/images/uploads/equ25.gif)
+
+</div>
 
 then:
 
-![equation](../../static/images/uploads/equ26.gif)
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
 
-## The InfoMax principle \[7, 8]
+![mutual information](../../static/images/uploads/equ26.gif)
 
-This principle is for optimization in information processing systems and also artificial neural networks. Its main point can be described by this sentence: a function that receives a collection of inputs I to produce a collection of outputs O needs to be chosen so that the mutual information between I and O is maximized \[7].
+</div>
 
-In terms of a perceptual network with local feedforward connections \[7] (see Figure 2, which is very similar to the neural network nowadays), we can point out some knowledge to understand more clearly about the Infomax principle. This paper of Linsker is actually the research work from which the InfoMax principle derives.
+## The InfoMax principle [7, 8]
 
-![](../../static/images/uploads/self_adaptive_network.jpg)
+This principle is for optimization in information processing systems and also artificial neural networks. Its main point can be described by this sentence: a function that receives a collection of inputs I to produce a collection of outputs O needs to be chosen so that the mutual information between I and O is maximized \[7\].
+
+In terms of a perceptual network with local feedforward connections \[7\] (see Figure 2, which is very similar to the neural network nowadays), we can point out some knowledge to understand more clearly about the Infomax principle. This paper of Linsker is actually the research work from which the InfoMax principle derives.
+
+<div class="entropy-mutual-information-infomax-deep-infomax-amdim-equation-image-50">
+
+![infomax](../../static/images/uploads/self_adaptive_network.jpg)
+
+</div>
 
 <p align=center>
-    <em><b>Figure 2:</b> A layered self-adaptive network with local feedforward connections (Image from \\\\\\[7]).</em>
+    <em><b>Figure 2:</b> A layered self-adaptive network with local feedforward connections (Image from [7]).</em>
 </p>
 
  In particular, there are some things that the InfoMax principle quantitatively implies about this perceptual network. Below is a table in which the first column holds some pieces of information about the InfoMax principle we notice in the paper \[7] and the second column is our comment:
 
 <table id="tabletype1">
 <tr>
-    <th id="colTitle1" width="50%">From the paper \\\\\\\[7]</th>
+    <th id="colTitle1" width="50%">From the paper [7]</th>
     <th id="colTitle2" width="50%">Our comment (if have)</th>
 </tr>
 <tr>
@@ -240,11 +386,7 @@ In terms of a perceptual network with local feedforward connections \[7] (see Fi
 </tr>
 <tr>
     <td>“attempt to (1) maximize the total information conveyed by the output message M, and (2) minimize the information that M conveys to one who already knows the input message L.”</td>
-    <td>It is possible that the output message should contain as much information as possible (1) along with the condition that this output also does not share too much human information in accordance with the input (2).
-
-\=> to extract the most essential (and also relevant) part of the information for the balance of compactness and quality.
-
-</td>
+    <td>It is possible that the output message should contain as much information as possible (1) along with the condition that this output also does not share too much human information in accordance with the input (2). <br> → to extract the most essential (and also relevant) part of the information for the balance of compactness and quality.</td>
 </tr>
 <tr>
     <td>“These criteria are related, but not equivalent, to the property of encoding signals so as to reduce redundancies present among the inputs to the perceptual system.”</td>
@@ -285,7 +427,7 @@ The last one - Amdim is developed based on the DeepInfoMax with some modificatio
 
 ### Inheritance from DeepInfoMax
 
-Amdim is a self-supervised learning model based on local Deep InfoMax (DIM). “Local DIM maximizes mutual information between a global summary feature vector, which depends on the full input, and a collection of local feature vectors pulled from an intermediate layer (or from different patches of the input image?) in the encoder.” 
+Amdim is a self-supervised learning model based on local Deep InfoMax (DIM). “Local DIM maximizes the mutual information between a global summary feature vector, which depends on the full input, and a collection of local feature vectors pulled from an intermediate layer (or from different patches of the input image?) in the encoder.” 
 
 ### What are its differences with DeepInfoMax
 
