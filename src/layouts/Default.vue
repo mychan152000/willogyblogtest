@@ -7,15 +7,35 @@
         <Logo v-if="showLogo" />
       </div>
 
-      <!-- <div class="header__right">
-        <ToggleTheme />
-      </div> -->
+      <div class="header__right">
+        <g-link to="/about" style="padding-right: 2em; color: black">About us</g-link>
+        <g-link to="/work" style="color: black">Work with us</g-link>
+      </div>
     </header>
 
     <main class="main">
       <slot/>
     </main>
 
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="content">
+              <h2>Join Our Newsletter</h2>
+              <h3></h3>
+              <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                      <span class="input-group-btn">
+                        <button class="btn" type="submit">Subscribe Now</button>
+                      </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer flex">
       <span class="footer__copyright">Copyright © Willogy {{ new Date().getFullYear() }}. </span>
       <ul class="footer__list">
@@ -97,5 +117,42 @@ export default {
   &__list {
     list-style-type: none;
   }
+}
+
+a {
+  color: black;
+  text-decoration: none !important;
+}
+
+.newsletter {
+padding: 30px 0px;
+background: white;
+box-shadow: 0px 2px 8px 0px;
+}
+
+.newsletter .content {
+max-width: 500px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 2; }
+.newsletter .content h2 {
+color: #243c4f;
+margin-bottom: 40px; }
+.newsletter .content .form-control {
+height: 50px;
+border-color: gray;
+border-radius:0;
+}
+.newsletter .content.form-control:focus {
+box-shadow: none;
+border: 2px solid #243c4f;
+}
+.newsletter .content .btn {
+min-height: 50px; 
+border-radius:0;
+background: #243c4f;
+color: #fff;
+font-weight:600;
 }
 </style>
