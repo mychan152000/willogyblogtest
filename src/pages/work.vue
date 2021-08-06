@@ -118,7 +118,7 @@ export default {
                 ...this.formData,
             }),
             })
-            .then(() => this.$router.push('/success'))
+            .then(() => alert("Success"))
             .catch(error => alert(error))
         }
         }
