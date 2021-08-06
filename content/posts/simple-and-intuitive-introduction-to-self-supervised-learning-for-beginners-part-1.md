@@ -121,84 +121,9 @@ Here are some pretext tasks.
 
 ![color transformation pretext task](../../static/images/uploads/color_transformation_as_pretext_task.jpg)
 
-</div>
-<p align=center><em><b>Figure 2:</b> Color Transformation as a pretext task (Image from [4]).</em> (a) Original
-(b) Gaussian noise
-(c) Gaussian blur 
-(d) Color distortion (Jitter)</p>
-
-<p align=center>&#8680; By solving this task (color inpainting), a model can grasp the “common sense” of what the color of dog/grass should be.</p>
-
-<div class="self-supervised-learning-image-70">
-
-![rotation of image pretext task](../../static/images/uploads/predicting_rotation_of_images_as_pretext_task.jpg)
 
 </div>
 
-<p align=center><em><b>Figure 3:</b> Predicting rotation of image as a pretext task (Image from [6]). </em></p>
-
-<p align=center>&#8680; By solving this task, a model can grasp the “common sense” of what is the top and what is the bottom of a tree.</p>
-
-<div class="self-supervised-learning-image-70">
-
-![jigsaw puzzle pretext task](../../static/images/uploads/solving_jigsaw_puzzle_as_pretext_task.jpg)
-
-</div>
-<p align=center><em><b>Figure 4:</b> Solving jigsaw puzzle (context-based) as a pretext task (Image from [4]).</em> (a) Original image
-(b) Reshuffled image.
-The anchor is the original image while the positive sample is the reshuffled image.</p>
-
-<p align=center>&#8680; By solving this task, a model can grasp the “common sense” of which location each part of a tiger should locate. Through this, a model can know the overall shape of a tiger and the correlative positions of different parts, not just its detailed information of each separated part.</p>
-
-<div class="self-supervised-learning-image-70">
-
-![relative position prediction pretext task](../../static/images/uploads/relative_position_prediction_as_pretext_task.jpg)
-
-</div>
-<p align=center><em><b>Figure 5:</b> Relative position prediction (context-based) as a pretext task (Image from [5]).</em> Given 2 sub images, we need to find the relative positions of them in the original image.</p>
-
-<p align=center>&#8680; Like solving jigsaw puzzles, a model can grasp the knowledge about the overall shape and the relative positions of different parts of a cat.</p>
-
-<div class="self-supervised-learning-image-70">
-
-![corrupted region of images pretext task](../../static/images/uploads/predicting_corrupted_region_of_images_as_pretext_task.jpg)
-
-</div>
-<p align=center><em><b>Figure 6:</b> Predicting the corrupted region of an image as a pretext task (Image from [2]).</em></p>
-
-<p align=center>&#8680; By solving this task, a model can grasp the “common sense” of how to get the semantic meaning of objects derived from the information of context around.</p>
-
-The pictures shown above are just some types of pretext tasks, there are a lot more than that. And in practice, the selection of pretext tasks to use is a very significant factor that influences the performance of SSL. An efficacious pretext task guarantees deep models can exploit semantic features through solving it. However, we should not stick with choosing which tasks to use for too long, quickly go with the simple ones. Additionally, we can also let an SSL model solve multiple tasks at the same time, which is inherently called multi-task learning.
-
-### HOW TO DISCRIMINATE SELF-SUPERVISED LEARNING WITH OTHER LEARNING APPROACHES [2]
-
-Reading until now, you may have questions about how to discriminate self-supervised learning with other learning methods. Below is the table that provides definitions of 5 learning methods with respect to data samples.
-
-<table id="tabletype1">
-<tr>
-    <th id="colTitle1" width="40%">Learning method</th>
-    <th id="colTitle2" width="60%">Definition</th>
-</tr>
-<tr>
-    <td>Supervised learning</td>
-    <td>requires data samples with human annotated labels for training</td>
-</tr>
-<tr>
-    <td>Unsupervised learning</td>
-    <td>Data samples don’t have any labels or correct outputs</td>
-</tr>
-<tr>
-    <td>Weakly supervised learning</td>
-    <td>Data samples only have coarse-grained labels or inaccurate labels</td>
-</tr>
-<tr>
-    <td>Semi-supervised learning</td>
-    <td>Dataset is comprised of 2 parts: small amount of labeled data and large amount of unlabeled data</td>
-</tr>
-<tr>
-    <td>Self-supervised learning</td>
-    <td>Data samples has pseudo labels instead of human annotated labels; or labels from a coexisting modality (visual content and sound in a video)</td>
-</tr>
 </table>
 
 Regardless of what category a learning method is included in, it will use similar network architectures as methods in the other categories. Some of the popular architectures such as AlexNet, VGG, GoogLeNet, ResNet, DenseNet, ...

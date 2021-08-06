@@ -83,10 +83,5 @@ export default {
     z-index: 0;
   }
 }
-@media screen and (max-width: 600px) {
-  .post-card {
-      width: 100%;
 
-  }
-}
 </style>

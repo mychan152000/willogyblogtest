@@ -7,8 +7,11 @@
 module.exports = {
   icon: './src/assets/logo.svg',
   siteName: 'Willogy Insights',
+  titleTemplate: '%s - Willogy.Insights',
+  siteUrl: 'https://insights.willogy.io/',
   siteDescription: 'AI and Software Development enthusiasts. Knowledge is common. Our insights and experience on it is unique',
   siteUrl: 'https://insights.willogy.io/',
+
 
   templates: {
     Post: '/:title',
@@ -16,6 +19,42 @@ module.exports = {
   },
 
   plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/exclude-me'],
+        config: {
+          '/': {
+            changefreq: 'weekly',
+            priority: 0.5,
+            lastmod: '2020-02-19',
+          },
+          
+        }
+      }
+    },
+    {
+      use: 'gridsome-plugin-robots-txt',
+      options: {
+        host: 'https://insights.willogy.io/',
+        sitemap: 'https://insights.willogy.io//configs/sitemap.xml',
+        policy: [
+          {
+            userAgent: "Googlebot",
+            allow: "/",
+            disallow: "/search",
+            crawlDelay: 2
+          },
+          {
+            userAgent: "*",
+            allow: "/",
+            disallow: "/search",
+            crawlDelay: 10,
+            cleanParam: "ref /"
+          }
+        ]
+      }
+    },
     {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',

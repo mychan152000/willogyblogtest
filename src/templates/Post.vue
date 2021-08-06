@@ -26,11 +26,12 @@
           <!-- utterances comment here -->
         </div>
     </div>
-
     <Author class="post-author" />
   </Layout>
+  
 </template>
-
+<script >
+</script>
 <script>
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
@@ -40,22 +41,27 @@ export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
   },
   mounted() {
     let utterances = document.createElement("script");
     utterances.async = true;
     utterances.setAttribute("src", "https://utteranc.es/client.js");
-    utterances.setAttribute("repo","willogy-team/insights-cms");
+
+
     utterances.setAttribute("issue-term", "pathname");
     utterances.setAttribute("theme", "github-light");
     utterances.setAttribute("async", true);
     utterances.setAttribute("crossorigin", "anonymous");
     this.$refs.vueUtterances.appendChild(utterances);
   },
+
   metaInfo() {
     return {
       title: this.$page.post.title,
+      link: [
+      {rel: 'canonical', href: 'https://insights.willogy.io/' + this.$page.post.title}
+      ],
       meta: [
         {
           property: "og:title",
