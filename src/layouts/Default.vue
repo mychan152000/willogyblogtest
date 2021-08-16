@@ -17,25 +17,26 @@
       <slot/>
     </main>
 
-
     <section class="newsletter">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div class="content">
-              <h2>Join Our Newsletter</h2>
-              <h3></h3>
-              <div class="input-group">
-                    <input type="email" class="form-control" placeholder="Enter your email">
-                      <span class="input-group-btn">
-                        <button class="btn" type="submit">Subscribe Now</button>
+              <h2 style="font-weight: 800">Join Our Newsletter</h2>
+              <form action="https://gmail.us5.list-manage.com/subscribe/post?u=eebdfd426b21787d3fd02fe52&amp;id=1b45ca86d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div class="input-group">
+                      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                      <span>
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn">
                       </span>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
     <footer class="footer flex">
       <span class="footer__copyright">Copyright © Willogy {{ new Date().getFullYear() }}. </span>
       <ul class="footer__list">
@@ -66,10 +67,14 @@ export default {
 <style lang="scss">
 .footer li{
   display: inline;
-   margin: 0px 12px;   
-
-
+  margin: 0px 12px;   
 }
+
+.newsletter {
+  margin-top: 2em;
+  padding: 0 5em;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -136,23 +141,34 @@ margin: 0 auto;
 text-align: center;
 position: relative;
 z-index: 2; }
+
 .newsletter .content h2 {
 color: #243c4f;
-margin-bottom: 40px; }
+margin-bottom: 40px; 
+}
+
 .newsletter .content .form-control {
 height: 50px;
 border-color: gray;
 border-radius:0;
 }
+
 .newsletter .content.form-control:focus {
 box-shadow: none;
 border: 2px solid #243c4f;
 }
+
 .newsletter .content .btn {
 min-height: 50px; 
-border-radius:0;
+border-radius:10px;
 background: #243c4f;
 color: #fff;
 font-weight:600;
+margin-top:1em;
+
+}
+
+.newsletter .input-group {
+  flex-direction: column;
 }
 </style>
