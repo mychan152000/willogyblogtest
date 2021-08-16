@@ -8,37 +8,71 @@
             <g-image src="~/assets/handshake.png" style="width:100%"/>
         </div>
         <form
-            name="contact"
-            method="post"
-            v-on:submit.prevent="handleSubmit"
-            action="/success/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            >
-            <input type="hidden" name="form-name" value="contact" />
-            <p hidden>
-                <label>
-                Don’t fill this out: <input name="bot-field" />
-                </label>
-            </p>
-            <div class="sender-info">
-                <div>
-                <label for="name" class="label" >Your name</label>
-                <input type="text" name="name" v-model="formData.name" />
-                </div>
-                <div>
-                <label for="email">Your email</label>
-                <input type="email" name="email" v-model="formData.email" />
-                </div>
-            </div>
-
-            <div class="message-wrapper">
-                <label for="message">Message</label>
-                <textarea name="message" v-model="formData.message"></textarea>
-            </div>
-
-            <button type="submit">Submit form</button>
+        name="contact"
+        method="post"
+        v-on:submit.prevent="handleSubmit"
+        action="/success/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+            <label>
+            Don’t fill this out: <input name="bot-field" />
+            </label>
+        </p>
+          <div class="form-group">
+            <label for="name" class="label">Your Name</label>
+            <input type="text" name="name" v-model="formData.name" class="form-control" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="email" class="label">Email</label>
+            <input type="email" name="email" v-model="formData.email" class="form-control" placeholder="Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="message" class="label">Message</label>
+            <textarea name="message" v-model="formData.message" class="form-control" placeholder="Type your message here"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+
+
+
+
+        <!-- <div class="container">
+          <form
+              name="contact"
+              method="post"
+              v-on:submit.prevent="handleSubmit"
+              action="/success/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                  <label>
+                  Don’t fill this out: <input name="bot-field" />
+                  </label>
+              </p>
+              <div class="sender-info">
+                  <div>
+                  <label for="name" class="label" >Your name</label>
+                  <input type="text" name="name" v-model="formData.name" />
+                  </div>
+                  <div>
+                  <label for="email">Your email</label>
+                  <input type="email" name="email" v-model="formData.email" />
+                  </div>
+              </div>
+
+              <div class="message-wrapper">
+                  <label for="message">Message</label>
+                  <textarea name="message" v-model="formData.message"></textarea>
+              </div>
+
+              <button type="submit">Submit form</button>
+          </form>
+        </div> -->
         <div class="row head">
             <div class="mx-auto">Willogy's history</div>
         </div>
