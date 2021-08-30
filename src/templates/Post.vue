@@ -1,4 +1,5 @@
 <template>
+<div class="container">
   <Layout>
     <div class="post-title">
       <h1 class="post-title__text">
@@ -28,7 +29,7 @@
     </div>
     <Author class="post-author" />
   </Layout>
-  
+</div>
 </template>
 <script >
 </script>

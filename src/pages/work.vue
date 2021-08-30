@@ -4,10 +4,11 @@
         <div class="row title">
             <div class="mx-auto">Work With Us</div>
         </div>
-        <div class="row">
+        <div class="row" style="padding-bottom: 2em">
             <g-image src="~/assets/handshake.png" style="width:100%"/>
         </div>
         <form
+        class="form"
         name="contact"
         method="post"
         v-on:submit.prevent="handleSubmit"
@@ -20,20 +21,20 @@
             Don’t fill this out: <input name="bot-field" />
             </label>
         </p>
-          <div class="form-group">
-            <label for="name" class="label">Your Name</label>
-            <input type="text" name="name" v-model="formData.name" class="form-control" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <label for="email" class="label">Email</label>
-            <input type="email" name="email" v-model="formData.email" class="form-control" placeholder="Email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="message" class="label">Message</label>
-            <textarea name="message" v-model="formData.message" class="form-control" placeholder="Type your message here"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+                <label for="name" class="label">Your Name</label>
+                <input type="text" name="name" v-model="formData.name" class="form-control" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="email" class="label">Email</label>
+                <input type="email" name="email" v-model="formData.email" class="form-control" placeholder="Email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="message" class="label">Message</label>
+                <textarea name="message" v-model="formData.message" class="form-control" placeholder="Type your message here"></textarea>
+            </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
         </form>
 
 
@@ -73,18 +74,32 @@
               <button type="submit">Submit form</button>
           </form>
         </div> -->
-        <div class="row head">
-            <div class="mx-auto">Willogy's history</div>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="row head">
+                <div>Willogy's history</div>
+                </div>
+                <div class="row">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui metus, malesuada a tincidunt non, facilisis sit amet sem. Aliquam pharetra vitae est a mollis. Integer congue auctor quam. Sed felis ligula, vulputate ac euismod a, ullamcorper luctus dolor. In hac habitasse platea dictumst. Aenean eleifend luctus mi. Phasellus condimentum lorem enim, at consequat libero commodo ut.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12"></div>
+            </div>
         </div>
-        <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui metus, malesuada a tincidunt non, facilisis sit amet sem. Aliquam pharetra vitae est a mollis. Integer congue auctor quam. Sed felis ligula, vulputate ac euismod a, ullamcorper luctus dolor. In hac habitasse platea dictumst. Aenean eleifend luctus mi. Phasellus condimentum lorem enim, at consequat libero commodo ut.</p>
-        </div>
-        <div class="row head">
-            <div class="mx-auto">Our Goals</div>
-        </div>
-        <div class="row">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui metus, malesuada a tincidunt non, facilisis sit amet sem. Aliquam pharetra vitae est a mollis. Integer congue auctor quam. Sed felis ligula, vulputate ac euismod a, ullamcorper luctus dolor. In hac habitasse platea dictumst. Aenean eleifend luctus mi. Phasellus condimentum lorem enim, at consequat libero commodo ut.
-            </p>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="row head">
+                <div>Our Goals</div>
+                </div>
+                <div class="row">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui metus, malesuada a tincidunt non, facilisis sit amet sem. Aliquam pharetra vitae est a mollis. Integer congue auctor quam. Sed felis ligula, vulputate ac euismod a, ullamcorper luctus dolor. In hac habitasse platea dictumst. Aenean eleifend luctus mi. Phasellus condimentum lorem enim, at consequat libero commodo ut.
+                    </p>
+                </div>
+            </div>
+            </div>
         </div>
         <div class="row head">
             <div class="mx-auto">Take a look at the Office</div>
@@ -174,5 +189,10 @@ export default {
 .row {
   padding: 0.6em 0em;
 }
-
+.form {
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 3em;
+    box-shadow: 0px 2px 5px 1px;
+}
 </style>

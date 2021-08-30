@@ -39,3 +39,24 @@ Access `yourwebsite.com/admin`, e.g. `netfliycms-gridsome.netlify.com/admin` or 
 2. `cd my-gridsome-site` to open folder
 3. `gridsome develop` to start local dev server at `http://localhost:8080`
 4. Happy coding 🎉🙌
+
+## About this app (For onboarding)
+ 
+### UI 
+
+Bootstrap
+
+### Plugins
+
+1. To Generate sitemap: .https://gridsome.org/plugins/@gridsome/plugin-sitemap
+2. To generate robot.txt: https://gridsome.org/plugins/gridsome-plugin-robots-txt
+3. Comment section: https://utteranc.es/ 
+4. Contact Form: Netlify
+5. Subscription Form: Mailchimp 
+
+### Notes
+1. For contact Form to work you must enable Form function in Netlify and remember to make forms redirect to willogy's email (all in Form function in Netlify)
+2. Utterances' code is already in Post.vue, but haven't edited to the right path of willogy, repo haven't install Utterance like instructions
+3. To get Mailchimp api's key in details, this is the video to watch: https://www.youtube.com/watch?v=Gjk25N7WFkI&t=1790s
+But in short, just sign up, go to audience => Sign Up Form => Embedded Forms, just choose any, and you can find our own api's key 
+in their auto-generated codes, copy and paste it into our template form, which I placed it in Default.vue.
