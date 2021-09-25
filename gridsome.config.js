@@ -1,9 +1,8 @@
 // This is where project configuration and plugin options are located.
 // Learn more: https://gridsome.org/docs/config
-
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-
+require('dotenv').config()
 module.exports = {
   icon: './src/assets/logo.svg',
   siteName: 'Willogy Insights',
@@ -12,7 +11,11 @@ module.exports = {
   siteDescription: 'AI and Software Development enthusiasts. Knowledge is common. Our insights and experience on it is unique',
   siteUrl: 'https://insights.willogy.io/',
 
-
+  chainWebpack: config => {
+    config
+      .plugin('env')
+      .use(require.resolve('webpack/lib/EnvironmentPlugin'), ['MAILCHIMP'])
+  },
   templates: {
     Post: '/:title',
     Tag: '/tag/:id'

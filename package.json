@@ -15,10 +15,10 @@
     "@vssue/api-github-v3": "^1.4.7",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
+    "dotenv": "^10.0.0",
     "gridsome": "^0.7.23",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "vue": "^2.6.12"
-
   },
   "devDependencies": {
     "node-sass": "^5.0.0",
