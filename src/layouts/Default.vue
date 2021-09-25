@@ -25,7 +25,7 @@
               <h2 style="font-weight: 800">Join Our Newsletter</h2>
               <form action="https://gmail.us5.list-manage.com/subscribe/post?u=eebdfd426b21787d3fd02fe52&amp;id=1b45ca86d0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div class="input-group">
-                      <input style="outline: 0; border-width: 0 0 2px; background-color: #F4F4F4" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                      <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
                       <span>
                         <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn">
                       </span>
@@ -61,7 +61,6 @@ export default {
   components: {
     Logo,
   }
-
 }
 </script>
 
@@ -74,7 +73,6 @@ export default {
 .newsletter {
   margin-top: 2em;
   padding: 0 5em;
-  border-radius: 10px;
 }
 
 .header {
@@ -133,7 +131,8 @@ a {
 
 .newsletter {
 padding: 30px 0px;
-background: #F4F4F4;
+background: white;
+box-shadow: 0px 2px 8px 0px;
 }
 
 .newsletter .content {
@@ -144,7 +143,7 @@ position: relative;
 z-index: 2; }
 
 .newsletter .content h2 {
-color: #000000;
+color: #243c4f;
 margin-bottom: 40px; 
 }
 
@@ -156,13 +155,13 @@ border-radius:0;
 
 .newsletter .content.form-control:focus {
 box-shadow: none;
-border: 2px solid #000000;
+border: 2px solid #243c4f;
 }
 
 .newsletter .content .btn {
 min-height: 50px; 
 border-radius:10px;
-background: #000000;
+background: #243c4f;
 color: #fff;
 font-weight:600;
 margin-top:1em;
